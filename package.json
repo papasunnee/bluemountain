@@ -6,8 +6,8 @@
   "description": "a website developed by altitude technology",
   "author": "adetona sunday",
   "engines": {
-    "node": "10.1.0",
-    "yarn": "1.9.4"
+    "node": "10.8.0",
+    "yarn": "1.9.2"
   },
   "scripts": {
     "dev": "next",

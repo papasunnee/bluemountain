@@ -11,7 +11,7 @@ const Banner = props => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundImage: "url('/static/svgs/images/headerbg.svg')",
+          backgroundImage: `url(/static/svgs/images/${props.bgImage}.svg)`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           borderRadius: "0px",
