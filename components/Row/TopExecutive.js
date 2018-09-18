@@ -8,7 +8,7 @@ export default class extends Component {
   render() {
     return (
       <Fragment>
-        <Container style={{ margin: "80px" }}>
+        <Container style={{ margin: "80px auto" }}>
           <Row>
             <Col xs="12">
               <h3 className="text-primary text-center mb-4">

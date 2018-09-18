@@ -6,7 +6,7 @@ export default class extends Component {
   render() {
     return (
       <Fragment>
-        <Container style={{ margin: "80px" }}>
+        <Container style={{ marginTop: "80px" }}>
           <Row>
             <Col>
               <div className="text-justify">

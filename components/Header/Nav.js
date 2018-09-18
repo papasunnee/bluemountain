@@ -6,6 +6,7 @@ import {
   faEnvelope,
   faSearch,
   faPhone,
+  faHome,
   faBars
 } from "@fortawesome/fontawesome-free-solid";
 import {
@@ -55,19 +56,24 @@ export default class Example extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="">
-                  <FontAwesomeIcon icon={faSearch} size="lg" />
+            <NavItem>
+                <NavLink href="/">
+                  <FontAwesomeIcon icon={faHome} size="md" color="#fff" />
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="">
-                  <FontAwesomeIcon icon={faEnvelope} size="lg" />
+                  <FontAwesomeIcon icon={faSearch} size="md" color="#fff" />
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="">
-                  <FontAwesomeIcon icon={faPhone} size="lg" />
+                  <FontAwesomeIcon icon={faEnvelope} size="md" color="#fff" />
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="">
+                  <FontAwesomeIcon icon={faPhone} size="md" color="#fff" />
                 </NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
