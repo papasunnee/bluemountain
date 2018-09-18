@@ -10,7 +10,7 @@ export default class extends Component {
   render() {
     return (
       <Layout>
-        <Banner />
+        <Banner bgImage="locations" />
         <Title title="LOCATIONS" />
         <Location />
         <Ready />

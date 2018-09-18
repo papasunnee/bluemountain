@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Head from 'next/head';
 import Banner from "../components/Header/Banner";
 import FullText from "../components/Assessment/FullText";
 import ServiceRow from "../components/Assessment/ServiceRow";
@@ -11,7 +12,10 @@ export default class extends Component {
   render() {
     return (
       <Layout>
-        <Banner />
+        <Head>
+        <title>Executive Assessment</title>
+        </Head>
+        <Banner bgImage="executiveassessment" />
         <Title title="EXECUTIVE ASSESSMENT" />
         <FullText />
         <ServiceRow />

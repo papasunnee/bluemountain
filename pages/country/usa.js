@@ -11,7 +11,7 @@ export default class extends Component {
   render() {
     return (
       <Layout>
-        <Banner />
+        <Banner bgImage="usa" />
         <Title title="USA" country="usa" />
         <FullText bgColor="red" />
         <ServiceRow />

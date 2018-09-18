@@ -11,7 +11,7 @@ export default class extends Component {
         <Container style={{ margin: "80px" }}>
           <Row>
             <Col xs="12">
-              <h3 class="text-primary text-center mb-4">
+              <h3 className="text-primary text-center mb-4">
                 <span style={{ fontWeight: "bold", display: "block" }}>
                   Top Executive Retained Search Firm
                 </span>

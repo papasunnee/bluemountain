@@ -3,6 +3,7 @@ import { Jumbotron } from "reactstrap";
 import Nav from "./Nav";
 
 const Banner = props => {
+  const banner = props.bgImage || 'headerbg' ;
   return (
     <div>
       <Jumbotron
@@ -11,14 +12,14 @@ const Banner = props => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundImage: `url(/static/svgs/images/${props.bgImage}.svg)`,
+          backgroundImage: `url(/static/svgs/images/${banner}.svg)`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           borderRadius: "0px",
           paddingTop: "10rem",
           paddingBottom: "0.5rem",
           paddingTop: "0px",
-          minHeight: "80vh",
+          minHeight: "60vh",
           padding: "0px"
         }}
       >

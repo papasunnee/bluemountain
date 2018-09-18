@@ -11,7 +11,7 @@ export default class extends Component {
   render() {
     return (
       <Layout>
-        <Banner />
+        <Banner bgImage="strategicconsulting" />
         <Title title="STRATEGIC CONSULTING" />
         <FullText />
         <ServiceRow />
