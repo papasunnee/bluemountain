@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Container, Col, Row } from "reactstrap";
-import RegForm from "./RegForm";
+import RegForm2 from "./RegForm2";
 
 export default class FullText extends Component {
   state = {};
@@ -17,7 +17,7 @@ export default class FullText extends Component {
           <Row>
             <Col>
               <h3 style={{ fontWeight: "bold", color: "#0069D1" }}>
-                Organization
+                For Executive Candidates
               </h3>
             </Col>
           </Row>
@@ -41,7 +41,7 @@ export default class FullText extends Component {
           </Row>
           <Row>
             <Col md="12" style={{ margin: "30px auto" }}>
-              <RegForm />
+              <RegForm2 />
             </Col>
           </Row>
         </Container>

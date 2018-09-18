@@ -53,53 +53,13 @@ export default class Example extends React.Component {
           </Col>
           <Col xs={12} md={6}>
             <FormGroup>
+              <FormText color="muted">(Upload Your Resume Here)</FormText>
               <Input
                 style={{ height: "60px", fontSize: "1.2em" }}
-                type="select"
-                name="select"
-                id="exampleSelect"
-              >
-                <option>Select Service</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </Input>
-            </FormGroup>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col xs={12} md={6}>
-            <FormGroup>
-              <Input
-                style={{ height: "60px", fontSize: "1.2em" }}
-                type="select"
-                name="select"
-                id="exampleSelect"
-              >
-                <option>Select Country</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </Input>
-            </FormGroup>
-          </Col>
-          <Col xs={12} md={6}>
-            <FormGroup>
-              <Input
-                style={{ height: "60px", fontSize: "1.2em" }}
-                type="select"
-                name="select"
-                id="exampleSelect"
-              >
-                <option>Size of Company</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </Input>
+                type="file"
+                name="file"
+                id="exampleFile"
+              />
             </FormGroup>
           </Col>
         </Row>

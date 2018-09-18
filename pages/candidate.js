@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Banner from "../components/Header/Banner";
-import FullText2 from "../components/Assessment/FullText2";
+import FullText3 from "../components/Assessment/FullText3";
 import Layout from "../components/Layout";
 import Title from "../components/About/Title";
 import Ready from "../components/Footer/Ready";
@@ -10,9 +10,9 @@ export default class extends Component {
   render() {
     return (
       <Layout>
-        <Banner />
+        <Banner bgImage="registration" />
         <Title title="REGISTRATION" />
-        <FullText2 />
+        <FullText3 />
         <Ready />
       </Layout>
     );

@@ -14,6 +14,48 @@ const positions = [
     company: "Altitude Technology Worldwide",
     location: "Abuja, Nigeria",
     condition: "Fulltime"
+  },
+  {
+    title: "Senior Front-end Developer",
+    company: "Altitude Technology Worldwide",
+    location: "Abuja, Nigeria",
+    condition: "Fulltime"
+  },
+  {
+    title: "Senior Front-end Developer",
+    company: "Altitude Technology Worldwide",
+    location: "Abuja, Nigeria",
+    condition: "Fulltime"
+  },
+  {
+    title: "Senior Front-end Developer",
+    company: "Altitude Technology Worldwide",
+    location: "Abuja, Nigeria",
+    condition: "Fulltime"
+  },
+  {
+    title: "Senior Front-end Developer",
+    company: "Altitude Technology Worldwide",
+    location: "Abuja, Nigeria",
+    condition: "Fulltime"
+  },
+  {
+    title: "Senior Front-end Developer",
+    company: "Altitude Technology Worldwide",
+    location: "Abuja, Nigeria",
+    condition: "Fulltime"
+  },
+  {
+    title: "Senior Front-end Developer",
+    company: "Altitude Technology Worldwide",
+    location: "Abuja, Nigeria",
+    condition: "Fulltime"
+  },
+  {
+    title: "Senior Front-end Developer",
+    company: "Altitude Technology Worldwide",
+    location: "Abuja, Nigeria",
+    condition: "Fulltime"
   }
 ];
 export default class ExecutivePosition extends Component {
@@ -22,7 +64,7 @@ export default class ExecutivePosition extends Component {
     return (
       <Fragment>
         <Container>
-          <Row>
+          <Row style={{ margin: "60px auto" }}>
             {positions.map((p, i) => {
               return <Position key={i} position={p} />;
             })}
