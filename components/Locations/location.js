@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import SvgLoader from "bv-react-svgloader";
 import Link from "next/link";
 import { Container, Col, Row } from "reactstrap";
+import './style.scss' ;
 
 export default class Location extends Component {
   constructor(props) {
@@ -11,74 +12,73 @@ export default class Location extends Component {
   render() {
     return (
       <Fragment>
-        <Container>
+        <Container style={{margin: 'auto'}}>
           <Row style={{ marginBottom: "30px" }}>
-            <Col md={12}>
-              <SvgLoader src="/static/svgs/images/locationmap.svg" />
+            <Col md={12} style={{ overflow : 'hidden'}}>
+              <SvgLoader  src="/static/svgs/images/locationmap.svg" />
             </Col>
           </Row>
-          <Row style={{ marginBottom: "30px" }}>
-            <Col md={3} xs={12}>
-              <Link href="/country/usa">
+          <Row className="grid">
+            <div>
+              <Link href="/country/usa" prefetch>
                 <a>
                   <SvgLoader src="/static/svgs/country/usa.svg" />
                 </a>
               </Link>
-            </Col>
-            <Col md={3} xs={12}>
-              <Link href="/country/uk">
+            </div>
+            <div>
+              <Link href="/country/uk" prefetch>
                 <a>
                   <SvgLoader src="/static/svgs/country/uk.svg" />
                 </a>
               </Link>
-            </Col>
-            <Col md={3} xs={12}>
-              <Link href="/country/australia">
+            </div>
+            <div>
+              <Link href="/country/australia" prefetch>
                 <a>
                   <SvgLoader src="/static/svgs/country/australia.svg" />
                 </a>
               </Link>
-            </Col>
-            <Col md={3} xs={12}>
-              <Link href="/country/canada">
+            </div>
+            <div>
+              <Link href="/country/canada" prefetch>
                 <a>
                   <SvgLoader src="/static/svgs/country/canada.svg" />
                 </a>
               </Link>
-            </Col>
-          </Row>
-          <Row style={{ marginBottom: "30px" }}>
-            <Col md={3} xs={12}>
-              <Link href="/country/sa">
+            </div>
+         
+            <div>
+              <Link href="/country/sa" prefetch>
                 <a>
                   <SvgLoader src="/static/svgs/country/sa.svg" />
                 </a>
               </Link>
-            </Col>
-            <Col md={3} xs={12}>
-              <Link href="/country/uae">
+            </div>
+            <div>
+              <Link href="/country/uae" prefetch>
                 <a>
                   <SvgLoader src="/static/svgs/country/uae.svg" />
                 </a>
               </Link>
-            </Col>
-            <Col md={3} xs={12}>
-              <Link href="/country/germany">
+            </div>
+            <div>
+              <Link href="/country/germany" prefetch>
                 <a>
                   <SvgLoader src="/static/svgs/country/germany.svg" />
                 </a>
               </Link>
-            </Col>
-            <Col md={3} xs={12}>
+            </div>
+            <div>
               <Link
-                href="/country/nigeria"
+                href="/country/nigeria prefetch"
                 style={{ backgroundColor: "red", margin: "auto" }}
               >
                 <a>
                   <SvgLoader src="/static/svgs/country/nigeria.svg" />
                 </a>
               </Link>
-            </Col>
+            </div>
           </Row>
         </Container>
       </Fragment>

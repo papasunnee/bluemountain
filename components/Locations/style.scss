@@ -1,0 +1,32 @@
+.grid{
+    display:  grid ;
+    grid-template-columns: repeat(auto-fit, 200px) ;
+    text-align: center ;
+    line-height:60px ;
+    div{
+        height : 120px ;
+        width : 120px ;
+        margin : 60px ;
+        line-height: 7;
+        border : 1px solid red ;
+    }
+    div:hover{
+        background : #FFDA44 ;
+    }
+
+    @media(min-width : 995px){
+        grid-template-columns: repeat(4, 1fr) ;
+    }
+
+    @media(max-width : 418px){
+        grid-template-columns: repeat(1, 1fr) ;
+
+        div{
+            height : 120px ;
+            width : 80% ;
+            margin : 30px ;
+            line-height: 7;
+            border : 1px solid red ;
+        }
+    }
+}

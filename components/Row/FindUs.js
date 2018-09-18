@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Container, Row, Col } from "reactstrap";
 import SvgLoader from "bv-react-svgloader";
+import "./findus.scss";
 
 export default class FindUs extends Component {
   state = {};
@@ -11,29 +12,10 @@ export default class FindUs extends Component {
           <Row>
             <Col xs="12" md="6">
               <div className="parent">
-                <div className="child">
-                  <h3
-                    className="display-6 text-center"
-                    style={{
-                      color: "#fff",
-                      lineHeight: "300px",
-                      textTransform: "uppercase"
-                    }}
-                  >
-                    Find Us Around The World
-                  </h3>
-                  <a
-                    href=""
-                    style={{
-                      position: "absolute",
-                      bottom: "10px",
-                      marginLeft: "20px",
-                      color: "#fff"
-                    }}
-                  >
-                    View All Loctions
-                  </a>
-                </div>
+                <h3 className="display-6 text-center">
+                  Find Us Around The World
+                </h3>
+                <a href="">View All Loctions</a>
               </div>
             </Col>
             <Col xs="12" md="6">
@@ -78,25 +60,6 @@ export default class FindUs extends Component {
             </Col>
           </Row>
         </Container>
-        <style jsx>{`
-          .parent {
-            height: 300px;
-            background-color: #00f;
-            overflow: hidden;
-          }
-          .child {
-            width: 100%;
-            height: inherit;
-            background-image: url("/static/svgs/images/world.svg");
-            background-position: center;
-            background-size: cover;
-            transition: all linear 250ms;
-          }
-          .parent:hover .child,
-          .parent:focus .child {
-            transform: scale(1.1);
-          }
-        `}</style>
       </Fragment>
     );
   }

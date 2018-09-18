@@ -7,15 +7,12 @@ export default class DoubleParagraph extends Component {
   render() {
     return (
       <Fragment>
-        <div className="text-justify">
+        <div className="text-justify" style={{margin : '15px auto'}}>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo libero
             sapiente dolorem rem ipsam enim reprehenderit architecto molestiae
             ducimus aperiam, aut dolorum eos facilis vero alias tempore, hic
-            assumenda? Porro! Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit. Tenetur blanditiis harum deleniti aut ab labore
-            quam eaque nesciunt fuga expedita officiis odio voluptatibus, illum
-            vero fugiat error debitis saepe qui!
+            assumenda? Porro! Lorem ipsum dolor, sit amet 
           </p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo libero

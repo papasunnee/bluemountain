@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Link from "next/link";
 import { Container, Col, Row } from "reactstrap";
 import SvgLoader from "bv-react-svgloader";
+import './ready.scss'
 export default class Ready extends Component {
   render() {
     return (
@@ -85,20 +86,13 @@ export default class Ready extends Component {
           </Col>
           <Col md={12}>
             <div
-              className="text-justify bg-primary text-center p-4"
-              style={{ color: "#fff" }}
+              className="text-justify bg-primary text-center p-4 readyText"
             >
               <h2>
                 Ready to discuss your project ?{" "}
                 <a
                   href=""
                   className="pl-3 pr-3 pt-1 pb-1"
-                  style={{
-                    backgroundColor: "#E5CE00",
-                    color: "#fff",
-                    textDecoration: "none",
-                    borderRadius: "3px"
-                  }}
                 >
                   Click Here
                 </a>
@@ -106,13 +100,6 @@ export default class Ready extends Component {
             </div>
           </Col>
         </Row>
-        <style jsx>{`
-          .country {
-            display: flex;
-            justify-content: space-between;
-            margin: 40px 0px;
-          }
-        `}</style>
       </Container>
     );
   }

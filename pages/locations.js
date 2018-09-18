@@ -13,7 +13,6 @@ export default class extends Component {
         <Banner bgImage="locations" />
         <Title title="LOCATIONS" />
         <Location />
-        <Ready />
       </Layout>
     );
   }
