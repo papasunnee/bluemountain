@@ -1,20 +1,22 @@
 import React, { Component } from "react";
+import Head from 'next/head';
 import Banner from "../components/Header/Banner";
-import FullText from "../components/About/FullText";
-import ServiceRow from "../components/About/ServiceRow";
 import Layout from "../components/Layout";
 import Title from "../components/About/Title";
 import Ready from "../components/Footer/Ready";
+import ServiceBody from "../components/Sector/ServiceBody";
 
 export default class extends Component {
   state = {};
   render() {
     return (
       <Layout>
-        <Banner bgImage="executivesearch"/>
+        <Head>
+        <title>Executive Search</title>
+        </Head>
+        <Banner bgImage="executivesearch" />
         <Title title="EXECUTIVE SEARCH" />
-        <FullText />
-        <ServiceRow />
+        <ServiceBody serviceImage="executivesearch" />
         <Ready />
       </Layout>
     );

@@ -1,14 +1,16 @@
 import React, { Component, Fragment } from "react";
+import TextComponent from "../TinyComponent/TextComponent.js"
+import ImageWithShareComponent from "../TinyComponent/ImageWithShareComponent.js"
 
 import { Container, Col, Row } from "reactstrap";
 
-export default class FullText extends Component {
+export default class SectorBody extends Component {
   state = {};
   render() {
     return (
       <Fragment>
         <Container>
-          <div className="mt-4 mb-4">
+          <div className="mt-5 mb-5">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
             officia beatae officiis. Sint, ad dolores. Hic commodi officia ab?
             At odio quasi cum modi nulla atque, neque repellendus minima ad.
@@ -18,64 +20,46 @@ export default class FullText extends Component {
           </div>
           <Row>
             <Col xs={12} md={6}>
-              <h2 style={{ background: "#00f", padding: "5px", color: "#fff" }}>
-                Lorem ipsum dolor sit amet,
-              </h2>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Expedita officia beatae officiis. Sint, ad dolores. Hic commodi
-                officia ab? At odio quasi cum modi nulla atque, neque
-                repellendus minima ad. Lorem ipsum dolor sit, amet consectetur
-                adipisicing elit. Expedita officia beatae officiis. Sint, ad
-                dolores. Hic commodi officia ab? At odio quasi cum modi nulla
-                atque, neque repellendus minima ad.
-              </p>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Expedita officia beatae officiis. Sint, ad dolores. Hic commodi
-                officia ab? At odio quasi cum modi nulla atque, neque
-                repellendus minima ad. Lorem ipsum dolor sit, amet consectetur
-                adipisicing elit. Expedita officia beatae officiis. Sint, ad
-                dolores. Hic commodi officia ab? At odio quasi cum modi nulla
-                atque, neque repellendus minima ad.
-              </p>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Expedita officia beatae officiis. Sint, ad dolores. Hic commodi
-                officia ab? At odio quasi cum modi nulla atque, neque
-              </p>
+              <TextComponent color="#0069D1" />
             </Col>
             <Col xs={12} md={6}>
               <div className="statContent">
-                <h2>TYPICAL EXECUTIVE POSTS</h2>
+                <h2>TYPICAL<br /> EXECUTIVE POSTS</h2>
                 <ul>
-                  <li>Lorem ipsum dolor sit</li>
-                  <li>Lorem ipsum dolor sit</li>
-                  <li>Lorem ipsum dolor sit</li>
-                  <li>Lorem ipsum dolor sit</li>
-                  <li>Lorem ipsum dolor sit</li>
-                  <li>Lorem ipsum dolor sit</li>
-                  <li>Lorem ipsum dolor sit</li>
-                  <li>Lorem ipsum dolor sit</li>
-                  <li>Lorem ipsum dolor sit</li>
+                  <li>Lorem ipsum dolor sit amet,</li>
+                  <li>Lorem ipsum dolor sit amet,</li>
+                  <li>Lorem ipsum dolor sit amet,</li>
+                  <li>Lorem ipsum dolor sit amet,</li>
+                  <li>Lorem ipsum dolor sit amet,</li>
+                  <li>Lorem ipsum dolor sit amet,</li>
                 </ul>
               </div>
+            </Col>
+          </Row>
+          <br/>
+          <br/>
+          <Row>
+            <Col xs={12} md={6}>
+              <ImageWithShareComponent />
+              <h3>SHARE COMPONENT HERE</h3>
+            </Col>
+            <Col xs={12} md={6}>
+              <TextComponent textColor="#000" />
             </Col>
           </Row>
         </Container>
         <style jsx>{`
           .statContent {
-            margin: auto;
             background-color: #e7d10d;
             height: 100%;
-            width: 80%;
-            padding: 20px;
+            width: 100%;
+            padding: 40px 20px;
           }
           .statContent ul {
             list-style: none;
           }
           .statContent ul li {
-            font-size: 20px;
+            font-size: 25px !important;
             margin-bottom: 10px;
           }
           .statContent ul li::before {

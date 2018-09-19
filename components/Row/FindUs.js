@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import Link from "next/link";
 import { Container, Row, Col } from "reactstrap";
 import SvgLoader from "bv-react-svgloader";
 import "./findus.scss";
@@ -15,7 +16,9 @@ export default class FindUs extends Component {
                 <h3 className="display-6 text-center">
                   Find Us Around The World
                 </h3>
-                <a href="">View All Loctions</a>
+                <Link href="/locations" prefetch>
+                  <a>View All Loctions</a>
+                </Link>
               </div>
             </Col>
             <Col xs="12" md="6">
@@ -35,17 +38,18 @@ export default class FindUs extends Component {
                 >
                   ACCELERATE PERSONAL AND PROFESSIONAL TRANSFORMATION
                 </h3>
-                <a
-                  href=""
-                  style={{
-                    position: "absolute",
-                    bottom: "10px",
-                    marginLeft: "20px",
-                    color: "#0069D1"
-                  }}
-                >
-                  Register With Us
-                </a>
+                <Link href="/candidate" prefetch>
+                  <a
+                    style={{
+                      position: "absolute",
+                      bottom: "10px",
+                      marginLeft: "20px",
+                      color: "#0069D1"
+                    }}
+                  >
+                    Register With Us
+                  </a>
+                </Link>
                 <a
                   href=""
                   style={{

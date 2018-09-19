@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import Head from 'next/head';
 import Banner from "../components/Header/Banner";
-import FullText from "../components/Assessment/FullText";
-import ServiceRow from "../components/Assessment/ServiceRow";
 import Layout from "../components/Layout";
 import Title from "../components/About/Title";
 import Ready from "../components/Footer/Ready";
+import ServiceBody from "../components/Sector/ServiceBody";
 
 export default class extends Component {
   state = {};
@@ -17,8 +16,7 @@ export default class extends Component {
         </Head>
         <Banner bgImage="executiveassessment" />
         <Title title="EXECUTIVE ASSESSMENT" />
-        <FullText />
-        <ServiceRow />
+        <ServiceBody serviceImage="executiveassessment" />
         <Ready />
       </Layout>
     );

@@ -39,6 +39,9 @@
     font-size: 15px;
     text-decoration: none;
   }
+  a:hover {
+    text-decoration: none;
+  }
   a:after {
     content: " > ";
     color: yellow;
