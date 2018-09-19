@@ -23,6 +23,10 @@
     color: #fff;
     text-decoration: none;
     border-radius: 3px;
+    transition: all 1000ms;
+  }
+  a:hover {
+    text-decoration: none;
   }
   @media (max-width: 992px) {
     a {

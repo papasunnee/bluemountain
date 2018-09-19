@@ -9,7 +9,7 @@ export default class ServiceRow extends Component {
       <Fragment>
         <Container style={{ marginTop: "30px" }}>
           <Row>
-            <Service title="Banking & Finance" />
+            <Service title="Banking & Finance" url="banking_finance" />
             <Service title="Energy, Oil & Gas" />
             <Service title="Telecommunication" />
           </Row>
