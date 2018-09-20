@@ -41,7 +41,7 @@ export default class SectorBody extends Component {
           <Row>
             <Col xs={12} md={6}>
               <ImageWithShareComponent />
-              <h3>SHARE COMPONENT HERE</h3>
+              <h4 className="text-center">SHARE LINK COMPONENT HERE</h4>
             </Col>
             <Col xs={12} md={6}>
               <TextComponent textColor="#000" />
