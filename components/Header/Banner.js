@@ -1,9 +1,10 @@
 import React from "react";
 import { Jumbotron } from "reactstrap";
+import Link from "next/link";
 import Nav from "./Nav";
 
 const Banner = props => {
-  const banner = props.bgImage || 'headerbg' ;
+  const banner = props.bgImage || "headerbg";
   return (
     <div>
       <Jumbotron
@@ -36,14 +37,20 @@ const Banner = props => {
             {props.title1}
             <br /> {props.title2}
           </h1>
-          <p
-            style={{
-              color: "yellow",
-              fontWeight: "bold",
-              textTransform: "uppercase"
-            }}
-          >
-            {props.subtitle}
+
+          <p>
+            <Link href="/about" prefetch>
+              <a
+                style={{
+                  color: "yellow",
+                  fontWeight: "bold",
+                  textTransform: "uppercase",
+                  textDecoration: "none"
+                }}
+              >
+                {props.subtitle}
+              </a>
+            </Link>
           </p>
         </div>
       </Jumbotron>

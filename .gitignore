@@ -12,6 +12,7 @@
 /dist
 /.next
 /pages/delete
+/mycss
 .env
 # misc
 .DS_Store

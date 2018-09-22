@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import Link from "next/link" ;
 import { Container, Row, Col } from "reactstrap";
 import "./footer.scss";
 import {
@@ -44,7 +45,9 @@ export default class Footer extends Component {
                   </div>
                 </Col>
                 <Col md="4" xs="12" className="bmcn">
-                  <SvgLoader src="/static/svgs/images/yellowmount.svg" />
+                <Link href="/consulting-network"><a>
+                  <SvgLoader src="/static/svgs/images/yellowmount.svg" /></a>
+                </Link>
                 </Col>
               </Row>
             </Container>
