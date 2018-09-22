@@ -23,6 +23,8 @@ import {
   DropdownItem
 } from "reactstrap";
 
+const baseUrl = "consulting-network";
+
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
@@ -56,7 +58,7 @@ export default class Example extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-            <NavItem>
+              <NavItem>
                 <NavLink href="/">
                   <FontAwesomeIcon icon={faHome} size="md" color="#fff" />
                 </NavLink>
@@ -82,39 +84,28 @@ export default class Example extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    <Link href="/executive-search">
-                      <a>Executive Search</a>
+                    <Link href={`/${baseUrl}`}>
+                      <a>Home</a>
                     </Link>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link href="/executive-assessment">
-                      <a>Executive Assessment</a>
+                    <Link href={`/${baseUrl}/what-we-do`}>
+                      <a>What We Do</a>
                     </Link>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link href="/executive-coaching">
-                      <a>Executive Coaching</a>
+                    <Link href={`/${baseUrl}/what-we-think`}>
+                      <a>What We Think</a>
                     </Link>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link href="/strategic-consulting">
-                      <a>Strategic Consulting</a>
-                    </Link>
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    <Link href="/about">
+                    <Link href={`/${baseUrl}/about-us`}>
                       <a>About Us</a>
                     </Link>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link href="/insights">
-                      <a>Insight</a>
-                    </Link>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <Link href="/locations">
-                      <a>Locations</a>
+                    <Link href={`/${baseUrl}/talk-to-us`}>
+                      <a>Talk To Us</a>
                     </Link>
                   </DropdownItem>
                 </DropdownMenu>
