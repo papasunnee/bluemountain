@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Head from "next/head";
 import Banner2 from "../../components/cn/Header/Banner2";
 
-import AboutTop from "../../components/cn/About/AboutTop";
+import ApplyTop from "../../components/cn/Apply/ApplyTop";
+import ApplyForm from "../../components/cn/Apply/ApplyForm";
 import FooterTop2 from "../../components/cn/Row/FooterTop2";
 import Layout from "../../components/cn/Layout";
 import PersonArray from "../../components/cn/About/PersonArray";
@@ -13,16 +14,17 @@ export default class extends Component {
     return (
       <Layout>
         <Head>
-          <title>Blue Mountain Consulting Network - About Us </title>
+          <title>
+            Blue Mountain Consulting Network - Apply To Join Network
+          </title>
         </Head>
         <Banner2
           bgImage="cn/cnbg2"
-          title1="OUR TEAM"
-          subtitle="Bringing together experience from across multiple sectors and regions"
+          title1="APPLY TO JOIN OUR NETWORK"
+          subtitle="Enjoy the freedom to choose your projects and get involved in the delivery of exceptional results"
         />
-        <AboutTop />
-        <PersonArray />
-        <FooterTop2 />
+        <ApplyTop />
+        <ApplyForm />
       </Layout>
     );
   }

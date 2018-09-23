@@ -23,7 +23,7 @@ import {
   DropdownItem
 } from "reactstrap";
 
-const baseUrl = "consulting-network";
+const baseUrl = "/consulting-network";
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -84,27 +84,27 @@ export default class Example extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    <Link href={`/${baseUrl}`}>
+                    <Link href={`${baseUrl}`}>
                       <a>Home</a>
                     </Link>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link href={`/${baseUrl}/what-we-do`}>
+                    <Link href={`${baseUrl}/what-we-do`}>
                       <a>What We Do</a>
                     </Link>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link href={`/${baseUrl}/what-we-think`}>
+                    <Link href={`${baseUrl}/what-we-think`}>
                       <a>What We Think</a>
                     </Link>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link href={`/${baseUrl}/about-us`}>
+                    <Link href={`${baseUrl}/about-us`}>
                       <a>About Us</a>
                     </Link>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link href={`/${baseUrl}/talk-to-us`}>
+                    <Link href={`${baseUrl}/talk-to-us`}>
                       <a>Talk To Us</a>
                     </Link>
                   </DropdownItem>

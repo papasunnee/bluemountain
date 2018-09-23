@@ -57,7 +57,7 @@ export default class FindUs extends Component {
                     Vestibulum interdum suspendisse
                   </p>
                   <p style={{ textAlign: "right" }}>
-                    <Link href="" prefetch>
+                    <Link href="/consulting-network/discuss-project" prefetch>
                       <a
                         style={{
                           backgroundColor: "#0069D1",
@@ -123,7 +123,7 @@ export default class FindUs extends Component {
                     Vestibulum interdum suspendisse
                   </p>
                   <p style={{ textAlign: "right" }}>
-                    <Link href="" prefetch>
+                    <Link href="/consulting-network/apply-to-join" prefetch>
                       <a
                         style={{
                           backgroundColor: "#DD071C",

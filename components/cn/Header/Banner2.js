@@ -1,5 +1,5 @@
 import React from "react";
-import { Jumbotron } from "reactstrap";
+import { Container, Row, Col, Jumbotron } from "reactstrap";
 import Link from "next/link";
 import Nav from "./Nav";
 
@@ -24,32 +24,33 @@ const Banner = props => {
         }}
       >
         <Nav />
-        <div className="ml-5" style={{ marginLeft: "20px" }}>
-          <h1
-            className="display-5"
-            style={{
-              color: "#0069D1",
-              textTransform: "uppercase",
-              fontWeight: "bold"
-            }}
-          >
-            {props.title1}
-          </h1>
-
-          <p>
-            <Link href="/about" prefetch>
-              <a
-                style={{
-                  color: "#000",
-                  fontWeight: "bold",
-                  textTransform: "uppercase",
-                  textDecoration: "none"
-                }}
-              >
-                {props.subtitle}
-              </a>
-            </Link>
-          </p>
+        <div>
+          <Container>
+            <Row>
+              <Col>
+                <h1
+                  className="display-5"
+                  style={{
+                    color: "#0069D1",
+                    textTransform: "uppercase",
+                    fontWeight: "bold"
+                  }}
+                >
+                  {props.title1}
+                </h1>
+                <p
+                  style={{
+                    color: "#000",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    textDecoration: "none"
+                  }}
+                >
+                  {props.subtitle}
+                </p>
+              </Col>
+            </Row>
+          </Container>
         </div>
       </Jumbotron>
     </div>
