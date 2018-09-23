@@ -24,7 +24,7 @@ export default class ImageContent extends Component {
               voluptate velit esse quam.
             </p>
             <p>
-              <Link href="" prefetch>
+              <Link href="/consulting-network/apply-to-join" prefetch>
                 <a
                   style={{
                     backgroundColor: "#E5CE00",
