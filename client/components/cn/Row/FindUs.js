@@ -32,7 +32,8 @@ export default class FindUs extends Component {
                   style={{
                     backgroundColor: "#fff",
                     padding: "20px",
-                    height: "250px"
+                    height: "280px",
+                    overflow: "hidden"
                   }}
                 >
                   <h3>Lorem ipsum dolor sit amet</h3>
@@ -97,7 +98,8 @@ export default class FindUs extends Component {
                     backgroundColor: "#4285F4",
                     color: "#fff",
                     padding: "20px",
-                    height: "250px"
+                    height: "280px",
+                    overflow: "hidden"
                   }}
                 >
                   <p>
