@@ -3,7 +3,7 @@
   "author": "Bello Oladipupo <bellooladipupo41@gmail.com>",
   "version": "0.0.1",
   "engines": {
-    "node": "^8.11.4",
+    "node": "^10.8.0",
     "yarn": "^1.9.4"
   },
   "scripts": {
