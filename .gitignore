@@ -25,6 +25,8 @@ client/dist
 client/.next
 client/out
 
+/mycss
+
 # misc
 .DS_Store
 .env
