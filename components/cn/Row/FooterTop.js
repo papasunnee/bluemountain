@@ -3,52 +3,21 @@ import { Container } from "reactstrap";
 import Link from "next/link";
 
 export default class FooterTop extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <Fragment>
         <section className="imageBg">
-          <Container>
-            <div
-              style={{
-                width: "60%",
-                color: "#fff",
-                top: "80px ",
-                left: "80px",
-                marginTop: "40px"
-              }}
-            >
-              <h2>LOREM IPSUM</h2>
-              <p style={{ fontSize: "15px", margin: "40px 0px" }}>
-                Aliquam ante. Nunc dapibus tortor vel mi dapibus sollicitudin.
-                Nulla quis diam. Quis autem vel eum iure reprehenderit qui in ea
-                voluptate velit esse quam.
-              </p>
-              <p>
-                <Link href="" prefetch>
-                  <a
-                    style={{
-                      backgroundColor: "#E5CE00",
-                      color: "#000",
-                      fontWeight: "bold",
-                      fontSize: "12px",
-                      padding: " 5px 10px ",
-                      display: "inline-block",
-                      borderRadius: "5px",
-                      textDecoration: "none"
-                    }}
-                  >
-                    Meet our consultants
-                  </a>
-                </Link>
-              </p>
-            </div>
-          </Container>
+          <Container>{this.props.children}</Container>
         </section>
         <style jsx>{`
           .imageBg {
             position: relative;
             min-height: 400px;
             padding: 50px;
+            color: #fff;
           }
           .imageBg::after {
             content: "";

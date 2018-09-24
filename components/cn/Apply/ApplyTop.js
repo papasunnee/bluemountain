@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Container, Row, Col } from "reactstrap";
+import Link from "next/link";
 import TextWithBorderLeft from "../About/TextWithBorderLeft";
 
 export default class ApplyTop extends Component {
@@ -36,10 +37,12 @@ export default class ApplyTop extends Component {
                 }}
               >
                 <h4 className="mb-3 text-center">Talk To Us</h4>
-                <TextWithBorderLeft borderColor="#E5CE00">
-                  Discuss your project with us
-                </TextWithBorderLeft>
                 <TextWithBorderLeft>
+                  <Link href="/consulting-network/discuss-project" prefetch>
+                    <a>Discuss your project with us</a>
+                  </Link>
+                </TextWithBorderLeft>
+                <TextWithBorderLeft borderColor="#E5CE00">
                   Apply to join our network
                 </TextWithBorderLeft>
               </div>

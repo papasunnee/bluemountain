@@ -21,6 +21,15 @@ export default class TextWithBorderLeft extends Component {
             div.aboutText{
                 padding-left : 15px ;
             }
+            a{
+              text-decoration : none ;
+              color : #fff ;
+              transition : 150ms ;
+            }
+            a:hover{
+              text-decoration : none ;
+              color : #bfbfbf ;
+            }
         `}</style>
       </Fragment>
     );
