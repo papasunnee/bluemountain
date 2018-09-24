@@ -1,25 +1,21 @@
 {
-  "env": {
-    "development": {
-      "presets": ["next/babel",
+  "presets": [
+    [
+      "next/babel",
       {
         "styled-jsx": {
           "plugins": [
             "styled-jsx-plugin-sass"
           ]
         }
-      }],
+      }
+    ]
+  ],
+  "env": {
+    "development": {
       "plugins": ["inline-react-svg", "inline-dotenv"]
     },
     "production": {
-      "presets": ["next/babel",
-      {
-        "styled-jsx": {
-          "plugins": [
-            "styled-jsx-plugin-sass"
-          ]
-        }
-      }],
       "plugins": ["inline-react-svg", "transform-inline-environment-variables"]
     }
   }
