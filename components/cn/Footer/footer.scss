@@ -21,6 +21,32 @@ footer {
       margin-left: 10px;
       margin-right: 10px;
       padding: 7px;
+      position: relative;
+      overflow: hidden;
+
+      &.linkedIn {
+        background-color: #0077b5;
+      }
+      &.google {
+        background-color: #c71610;
+      }
+      &.twitter {
+        background-color: #0084b4;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -28px;
+        width: 25px;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.6);
+        transform: skewX(-30deg);
+        transition: 1000ms;
+      }
+      &:hover::before {
+        left: 45px;
+      }
     }
   }
 

@@ -37,13 +37,13 @@ export default class Footer extends Component {
                 <Col md="4" xs="12" className="follow">
                   <h4 style={{ fontWeight: "bold" }}>FOLLOW US</h4>
                   <div className="socials">
-                    <div style={{ backgroundColor: "#0077B5" }}>
+                    <div className="linkedIn">
                       <img src="/static/social/linkedin.png" />
                     </div>
-                    <div style={{ backgroundColor: "#C71610" }}>
+                    <div className="google">
                       <img src="/static/social/google.png" />
                     </div>
-                    <div style={{ backgroundColor: "#0084B4" }}>
+                    <div className="twitter">
                       <img src="/static/social/twitter.png" />
                     </div>
                   </div>
