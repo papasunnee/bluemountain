@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Container, Row, Col } from "reactstrap";
+import Link from "next/link";
 import TextWithBorderLeft from "../About/TextWithBorderLeft";
 
 export default class DiscussTop extends Component {
@@ -40,7 +41,9 @@ export default class DiscussTop extends Component {
                   Discuss your project with us
                 </TextWithBorderLeft>
                 <TextWithBorderLeft>
-                  Apply to join our network
+                  <Link href="/consulting-network/apply-to-join" prefetch>
+                    <a>Apply to join our network</a>
+                  </Link>
                 </TextWithBorderLeft>
               </div>
             </Col>

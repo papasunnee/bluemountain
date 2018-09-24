@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Head from "next/head";
 import Banner2 from "../../components/cn/Header/Banner2";
-
 import AboutTop from "../../components/cn/About/AboutTop";
 import FooterTop2 from "../../components/cn/Row/FooterTop2";
 import Layout from "../../components/cn/Layout";

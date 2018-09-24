@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
 import { Container, Row, Col } from "reactstrap";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import { Button, Form, FormGroup, FormText } from "reactstrap";
 import InputComponent from "../InputComponent";
 
-export default class ApplyForm extends Component {
+export default class EventForm extends Component {
   render() {
     return (
       <Fragment>
@@ -30,40 +30,15 @@ export default class ApplyForm extends Component {
                   />
                 </FormGroup>
                 <FormGroup>
-                  <InputComponent
-                    labelFor="fullname"
-                    label="Your Phone Nummber"
-                    type="phone"
-                    name="phone"
-                    id="phone"
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <InputComponent
-                    labelFor="cvUpload"
-                    label="Upload Your CV"
-                    type="file"
-                    name="file"
-                    id="file"
-                  />
-                  <FormText color="muted">File upload information</FormText>
-                </FormGroup>
-                <FormGroup>
                   <FormText color="muted">
-                    Your data will be securely stored in line with our Privacy
-                    Policy.
+                    I accept to receive newsletters from Blue Mountain. Read the
+                    Blue Mountain Privacy Policy.
                   </FormText>
                 </FormGroup>
-                <Button>SEND</Button>
+                <Button>SUBSCRIBE</Button>
               </Form>
             </Col>
           </Row>
-          <style jsx>{`
-            .leftBorder {
-              border-left: 1px solid red !important;
-              background-color: red;
-            }
-          `}</style>
         </Container>
       </Fragment>
     );

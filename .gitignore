@@ -24,8 +24,9 @@ client/build
 client/dist
 client/.next
 client/out
-client/pages/delete
-client/mycss
+
+/mycss
+
 # misc
 .DS_Store
 .env
