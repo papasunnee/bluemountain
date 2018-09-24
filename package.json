@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "engines": {
     "node": "^10.8.0",
-    "yarn": "^1.9.4"
+    "yarn": "^1.9.2"
   },
   "scripts": {
     "start": "yarn start:api",
