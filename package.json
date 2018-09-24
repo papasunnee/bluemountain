@@ -1,48 +1,30 @@
 {
-  "name": "bluemountain",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "description": "a website developed by altitude technology",
-  "author": "adetona sunday",
+  "name": "blue-mountain",
+  "author": "DavyBello <bellooladipupo41@gmail.com>",
+  "version": "0.0.1",
   "engines": {
-    "node": "10.8.0",
-    "yarn": "1.9.2"
+    "node": "^8.11.4",
+    "yarn": "^1.9.4"
   },
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start -p $PORT",
-    "start-win": "next start",
-    "heroku-postbuild": "next build"
+    "start": "yarn start:api",
+    "start:api": "cd api && yarn start",
+    "start:client": "cd client && yarn start",
+    "dev:client": "cd client && yarn dev",
+    "dev:api": "cd api && yarn dev",
+    "dev": "concurrently \"yarn dev:api\" \"yarn dev:client\"",
+    "install:api": "cd api && yarn install",
+    "install:client": "cd client && yarn install",
+    "install": "yarn install:api && yarn install:client",
+    "export": "cd client && yarn export",
+    "premove": "yarn export",
+    "move": "node move.js",
+    "heroku-postbuild": "yarn move"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free-solid": "^5.0.13",
-    "@fortawesome/fontawesome-svg-core": "^1.2.4",
-    "@fortawesome/free-solid-svg-icons": "^5.3.1",
-    "@fortawesome/react-fontawesome": "^0.1.3",
-    "@material-ui/core": "^3.0.3",
-    "@material-ui/icons": "^3.0.1",
-    "@zeit/next-css": "^0.2.0",
-    "@zeit/next-sass": "^0.2.0",
-    "apollo-boost": "^0.1.15",
-    "bootstrap": "4.1.1",
-    "bv-react-svgloader": "^1.1.0",
-    "graphql": "^14.0.2",
-    "graphql-tag": "^2.9.2",
-    "next": "^6.1.2",
-    "node-sass": "^4.9.3",
-    "nprogress": "^0.2.0",
-    "react": "^16.5.0",
-    "react-accordion-with-header": "^0.1.2",
-    "react-dom": "^16.5.0",
-    "react-particles-js": "^2.3.0",
-    "react-player": "^1.6.4",
-    "reactstrap": "^6.4.0",
-    "styled-components": "^3.4.7",
-    "styled-jsx-plugin-sass": "^0.2.4"
+    "fs-extra": "^7.0.0"
   },
   "devDependencies": {
-    "babel-plugin-inline-react-svg": "^0.5.4"
+    "concurrently": "^3.4.0"
   }
 }
