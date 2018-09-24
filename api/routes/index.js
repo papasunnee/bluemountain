@@ -1,16 +1,16 @@
-const cors = require('cors');
+// const cors = require('cors');
 const bodyParser = require('body-parser');
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 // const { ApolloServer } = require('apollo-server-express');
 
-// const serveStatic = require('serve-static');
+const serveStatic = require('serve-static');
 
 const schema = require('../graphql/schema');
 const getContext = require('../graphql/lib/getContext');
 
 // Setup Route Bindings
 module.exports = (app) => {
-  if (process.env.NODE_ENV === 'development') app.use(cors())
+  if (process.env.NODE_ENV === 'development') app.use(require('cors')())
 
   // Register API middleware
   app.use(
@@ -32,6 +32,5 @@ module.exports = (app) => {
   // Views
   app.get('/admin', (req, res) => { res.redirect('/keystone'); });
   // Client App
-  // app.use(serveStatic(`${__dirname}/client`));
-
+  app.use(serveStatic(`${__dirname}/client`));
 };
