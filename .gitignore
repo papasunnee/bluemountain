@@ -24,14 +24,9 @@ client/build
 client/dist
 client/.next
 client/out
-<<<<<<< HEAD
 
 /mycss
 
-=======
-client/pages/delete
-client/mycss
->>>>>>> 69900568e58cd1df19e2d98ca4d232ab371bb8c4
 # misc
 .DS_Store
 .env
