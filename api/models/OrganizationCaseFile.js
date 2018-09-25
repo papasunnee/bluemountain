@@ -4,17 +4,17 @@ const keystone = require('keystone');
 const { Types } = keystone.Field;
 
 /**
- * EmployerCaseFile Model
+ * OrganizationCaseFile Model
  * ==========
  */
 
-const EmployerCaseFile = new keystone.List('EmployerCaseFile', {
+const OrganizationCaseFile = new keystone.List('OrganizationCaseFile', {
   map: { name: 'title' },
 });
 
-EmployerCaseFile.add({
+OrganizationCaseFile.add({
   title: { type: String, required: true },
-  employerId: { type: Types.Relationship, ref: 'Employer', index: true },
+  OrganizationId: { type: Types.Relationship, ref: 'Organization', index: true },
   fileNumber: {
     type: Types.Number, default: 1, required: true, index: true,
   },
@@ -22,5 +22,5 @@ EmployerCaseFile.add({
   content: { type: Types.Html, wysiwyg: true, height: 200 },
 });
 
-EmployerCaseFile.defaultColumns = 'title, candidate|20%, createdAt|20%, employerId';
-EmployerCaseFile.register();
+OrganizationCaseFile.defaultColumns = 'title, candidate|20%, createdAt|20%, OrganizationId';
+OrganizationCaseFile.register();

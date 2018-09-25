@@ -25,8 +25,8 @@ Job.add({
   role: {
     type: String, required: true, index: true, initial: true,
   },
-  employerId: {
-    type: Types.Relationship, ref: 'Employer', required: true, initial: true,
+  OrganizationId: {
+    type: Types.Relationship, ref: 'Organization', required: true, initial: true,
   },
   state: { type: Types.Select, options: STATES },
   basicDescription: { type: Types.Textarea, initial: true },
@@ -60,5 +60,5 @@ Job.add({
 /**
  * Registration
  */
-Job.defaultColumns = 'role, employerId, industry';
+Job.defaultColumns = 'role, OrganizationId, industry';
 Job.register();

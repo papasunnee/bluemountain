@@ -8,13 +8,13 @@ const Post = keystone.list('Post').model;
 const PostCategory = keystone.list('PostCategory').model;
 const Enquiry = keystone.list('Enquiry').model;
 const Candidate = keystone.list('Candidate').model;
-const Employer = keystone.list('Employer').model;
+const Organization = keystone.list('Organization').model;
 
 const PostTC = composeWithMongoose(Post);
 const PostCategoryTC = composeWithMongoose(PostCategory);
 const EnquiryTC = composeWithMongoose(Enquiry);
 const CandidateTC = composeWithMongoose(Candidate);
-const EmployerTC = composeWithMongoose(Employer);
+const OrganizationTC = composeWithMongoose(Organization);
 
 /**
 * Exports
@@ -24,5 +24,5 @@ module.exports = {
   PostCategoryTC,
   EnquiryTC,
   CandidateTC,
-  EmployerTC,
+  OrganizationTC,
 };
