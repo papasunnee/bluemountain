@@ -1,27 +1,22 @@
 module.exports = [
   {
-    label: 'Talent Identification, Aquisition and Development',
-    image: '/static/images/experitise/1-ti.jpg',
-    value: 'ti'
-  },
-  {
-    label: 'Strategic Human Capital Consulting',
-    image: '/static/images/experitise/2-sh.jpg',
-    value: 'sh'
-  },
-  {
-    label: 'Executive Search, Assesment and Selection',
-    image: '/static/images/experitise/3-es.jpg',
+    label: 'Executive Search',
+    // image: '/static/images/experitise/1-ti.jpg',
     value: 'es'
   },
   {
-    label: 'Transformative Career and Executive Coaching',
-    image: '/static/images/experitise/4-tc.jpg',
-    value: 'tc'
+    label: 'Executive Assesment',
+    // image: '/static/images/experitise/2-sh.jpg',
+    value: 'ea'
   },
   {
-    label: 'Human Resource Analytics, Diversity and Inclusion',
-    image: '/static/images/experitise/5-hr.jpg',
-    value: 'hr'
+    label: 'Executive Coaching',
+    // image: '/static/images/experitise/3-es.jpg',
+    value: 'ec'
   },
+  {
+    label: 'Strategic Consulting',
+    // image: '/static/images/experitise/4-tc.jpg',
+    value: 'sc'
+  }
 ]

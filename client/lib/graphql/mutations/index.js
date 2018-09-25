@@ -2,10 +2,19 @@ import gql from "graphql-tag";
 
 export const REGISTER_CANDIDATE = gql`
   mutation regC(
-    $firstName: String
-    $lastName: String
-    $email: String
-    $message: String
+    $firstName: String,
+    $lastName: String,
+    $email: String,
+    $message: String,
+    $public_id: String,
+    $version: Float,
+    $signature: String,
+    $format: String,
+    $resource_type: String,
+    $url: String,
+    $width: Float,
+    $height: Float,
+    $secure_url: String
   ) {
     registerCandidate(
       record: {
@@ -13,9 +22,17 @@ export const REGISTER_CANDIDATE = gql`
         lastName: $lastName
         email: $email
         message: $message
-        # cvFile: {
-        #   public_id:
-        # }
+        cvFile: {
+          public_id: $public_id,
+          version: $version,
+          signature: $signature,
+          format: $format,
+          resource_type: $resource_type,
+          url: $url,
+          width: $width,
+          height: $height,
+          secure_url: $secure_url,
+        }
       }
     ) {
       recordId
@@ -29,20 +46,21 @@ export const REGISTER_CANDIDATE = gql`
 
 export const REGISTER_ORGANIZATION = gql`
   mutation regOrg(
-    $firstName: String
-    $lastName: String
-    $email: String
+    $name: String,
+    $email: String,
     $message: String
+    $service: EnumOrganizationServices,
+    $country: EnumOrganizationCountry,
+    $companySize: EnumOrganizationStaffSize,
   ) {
     registerOrganization(
       record: {
-        firstName: $firstName
-        lastName: $lastName
-        email: $email
-        message: $message
-        # cvFile: {
-        #   public_id:
-        # }
+        name: $name,
+        email: $email,
+        message: $message,
+        country: $country,
+        services: $service,
+        staffSize: $companySize
       }
     ) {
       recordId

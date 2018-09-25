@@ -10,6 +10,8 @@ const initState = {
   lastName: "",
   email: "",
   message: "",
+  cv: null,
+  isBusy: false,
   successMessage: "",
   errorMessage: ""
 };
@@ -47,49 +49,42 @@ export default class Example extends React.Component {
               e.preventDefault();
               e.stopPropagation();
 
-              console.log(this.state);
-              const { file } = this.props;
-              const { isBusy } = this.state;
-              // console.log(this.props.file);
+              // console.log(this.state);
+              const { cv, firstName, lastName, email, message } = this.state;
+              // const { isBusy } = this.state;
 
-              if (file){
+              if (cv){
                 const uploadPreset = 'zuk2fkkh'; //process.env.REACT_APP_UPLOAD_PRESET;
                 const cloudName = 'hxbgo7vbm'; //process.env.REACT_APP_CLOUD_NAME;
 
                 const formData = new FormData();
-                formData.append('file', file);
+                formData.append('file', cv);
                 formData.append('upload_preset', uploadPreset);
 
                 try {
                   this.setState({isBusy: true})
-                  const response = await fetch.post(
-                    `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
-                    formData,
+                  const response = await fetch(
+                    `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,{
+                      method: 'POST',
+                      body: formData
+                    }
                   );
 
-                  console.log(response.data);
+                  const cvFile = await response.json();
 
-                  // runMutation({ variables: {
-                  //   ...this.state,
-                  //   ...response.data
-                  // }})
+                  registerCandidate({ variables: {
+                    firstName,
+                    lastName,
+                    email,
+                    message,
+                    ...cvFile
+                  }})
                 } catch (e) {
                   this.setState({isBusy: false})
                   console.log(e);
-                  toast("Something went wrong while uploading document", {...TOAST_STYLE.fail});
+                  console.log("Something went wrong while uploading document");
                 }
               }
-
-              // registerCandidate({ variables: this.state });
-              // if (serviceChosen) {
-              //   this.setState({
-              //     errorMessage: ""
-              //   });
-              // } else {
-              //   this.setState({
-              //     errorMessage: "Select at least one service"
-              //   });
-              // }
             }}
             >
             <Row>
@@ -142,6 +137,7 @@ export default class Example extends React.Component {
                     style={{ height: "60px", fontSize: "1.2em" }}
                     type="file"
                     name="file"
+                    onChange={e=>this.handleChange("cv", e.target.files[0])}
                   />
                 </FormGroup>
               </Col>
@@ -167,11 +163,27 @@ export default class Example extends React.Component {
               </Col>
             </Row>
 
-            <Button type="submit">SEND MESSAGE</Button>
+            {errorMessage && (
+              <p className="error-text">{errorMessage}</p>
+            )}
+            {errorMessage ? null : successMessage ? (
+              <p>{successMessage}</p>
+            ) : (
+              <br />
+            )}
+            {loading ?
+              <Loading />
+              :
+              <Button type="submit">SEND MESSAGE</Button>
+            }
             <style jsx>
               {`
                 .input {
                   height: 100px !important;
+                }
+                .error-text {
+                  color: red;
+                  transition: all 0.5s ease-in;
                 }
               `}
             </style>

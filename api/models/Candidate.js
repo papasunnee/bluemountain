@@ -1,5 +1,9 @@
 /* eslint-disable func-names */
 const keystone = require('keystone');
+const {
+  sendConfirmationEmail,
+  sendNotificationEmail,
+} = require('../modelMethods/candidate')
 
 const { Types } = keystone.Field;
 
@@ -33,11 +37,31 @@ Candidate.add({
   // passwordVersion: { type: Types.Number, required: true, default: 1 },
 });
 
+Candidate.schema.pre('save', function (next) {
+  // this.wasNew = this.isNew;
+  this.name = `${this.lastName} ${this.firstName}`;
+  next();
+});
+
+// Candidate.schema.post('save', function () {
+//   if (this.wasNew) {
+//     try {
+//       // this.sendNotificationEmail();
+//       // this.sendConfirmationEmail();
+//     } catch (e) {
+//       console.log(e);
+//     }
+//   }
+// });
+
+// Methods
+Candidate.schema.methods.sendConfirmationEmail = sendConfirmationEmail;
+Candidate.schema.methods.sendNotificationEmail = sendNotificationEmail;
+
 /**
  * Relationships
  */
 Candidate.relationship({ ref: 'CaseFile', path: 'Case Files', refPath: 'candidateId' });
-
 
 /**
  * Registration

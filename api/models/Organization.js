@@ -10,7 +10,10 @@ const { COUNTRIES, SERVICES, COMPANY_SIZES } = require('../../constants');
  * ==========
  */
 const Organization = new keystone.List('Organization', {
-  track: true,
+  track: {
+    createdAt: true,
+    updatedAt: true,
+  },
 });
 
 Organization.add({
@@ -18,8 +21,6 @@ Organization.add({
   email: {
     type: Types.Email, initial: true, required: true, unique: true, index: true,
   },
-  password: { type: Types.Password, initial: true, required: true },
-  passwordVersion: { type: Types.Number, required: true, default: 1 },
   country: {
     type: Types.Select, options: COUNTRIES, required: true, initial: true,
   },
@@ -43,5 +44,5 @@ Organization.relationship({ ref: 'OrganizationCaseFile', path: 'Case Files', ref
 /**
  * Registration
  */
-Organization.defaultColumns = 'name, email, canAccessKeystone, isOrganization';
+Organization.defaultColumns = 'name, email, country, staffSize, services';
 Organization.register();
