@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { Container, Row, Col } from "reactstrap";
-import SvgLoader from "bv-react-svgloader";
 
 export default class ServiceRow extends Component {
   state = {};
@@ -17,14 +16,16 @@ export default class ServiceRow extends Component {
                 }}
               >
                 <p
-                  className="display-6 text-center"
+                  className="text-center"
                   style={{
                     color: "#fff",
                     lineHeight: "300px",
-                    textTransform: "uppercase"
+                    textTransform: "uppercase",
+                    fontSize: "25px",
+                    fontWeight: "bold"
                   }}
                 >
-                  Lorem Ipsum Dolor
+                  EMERGING CEO
                 </p>
               </div>
             </Col>
@@ -36,11 +37,13 @@ export default class ServiceRow extends Component {
                 }}
               >
                 <p
-                  className="display-6 text-center"
+                  className="text-center"
                   style={{
                     color: "#0069D1",
                     lineHeight: "300px",
-                    textTransform: "uppercase"
+                    textTransform: "uppercase",
+                    fontSize: "25px",
+                    fontWeight: "bold"
                   }}
                 >
                   Lorem Ipsum Dolor
@@ -55,14 +58,16 @@ export default class ServiceRow extends Component {
                 }}
               >
                 <p
-                  className="display-6 text-center"
+                  className="text-center"
                   style={{
                     color: "#fff",
                     lineHeight: "300px",
-                    textTransform: "uppercase"
+                    textTransform: "uppercase",
+                    fontSize: "25px",
+                    fontWeight: "bold"
                   }}
                 >
-                  Lorem Ipsum Dolor
+                  BEST PRACTICE FOR DATA PROTECTION
                 </p>
               </div>
             </Col>

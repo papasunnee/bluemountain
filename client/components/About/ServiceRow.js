@@ -26,43 +26,51 @@ export default class ServiceRow extends Component {
             <Service
               title="Banking & Finance"
               url="banking_finance"
-              imageUrl="bf"
+              imageUrl="sectorBox/bf"
             />
             <Service
               title="Energy, Oil & Gas"
               url="energy_oil_gas"
-              imageUrl="energy"
+              imageUrl="sectorBox/energy"
             />
             <Service
               title="Telecommunication"
               url="telecommunication"
-              imageUrl="telecommunication"
+              imageUrl="sectorBox/telecommunication"
             />
           </Row>
           <Row>
             <Service
               title="Technology"
               url="technology"
-              imageUrl="technology"
+              imageUrl="sectorBox/technology"
             />
             <Service
               title="Government & Non-Profit"
               url="government"
-              imageUrl="government"
+              imageUrl="sectorBox/government"
             />
-            <Service title="Education" url="education" imageUrl="education" />
+            <Service
+              title="Education"
+              url="education"
+              imageUrl="sectorBox/education"
+            />
           </Row>
           <Row>
             <Service
               title="Life Service & Pharmaciticals"
               url="life_service"
-              imageUrl="life"
+              imageUrl="sectorBox/life"
             />
-            <Service title="Health Care" url="health_care" imageUrl="health" />
+            <Service
+              title="Health Care"
+              url="health_care"
+              imageUrl="sectorBox/health"
+            />
             <Service
               title="Manufacturing"
               url="manufacturing"
-              imageUrl="manufacturing"
+              imageUrl="sectorBox/manufacturing"
             />
           </Row>
         </Container>
