@@ -2,7 +2,7 @@ import React from "react";
 import { Mutation } from "react-apollo";
 import { Col, Row, Button, Form, FormGroup, Input, FormText } from "reactstrap";
 
-import { CREATE_CANDIDATE } from "../../lib/graphql/mutations";
+import { REGISTER_CANDIDATE } from "../../lib/graphql/mutations";
 import Loading from "../Loading";
 
 const initState = {
@@ -13,6 +13,7 @@ const initState = {
   successMessage: "",
   errorMessage: ""
 };
+
 export default class Example extends React.Component {
   state = {
     ...initState
@@ -25,7 +26,7 @@ export default class Example extends React.Component {
     const { successMessage, errorMessage } = this.state;
     return (
       <Mutation
-        mutation={CREATE_CANDIDATE}
+        mutation={REGISTER_CANDIDATE}
         onCompleted={() =>
           this.setState({
             ...initState,
@@ -42,23 +43,54 @@ export default class Example extends React.Component {
       >
         {(registerCandidate, { loading }) => (
           <Form
-            onSubmit={e => {
-                  e.preventDefault();
-                  e.stopPropagation();
+            onSubmit={async e => {
+              e.preventDefault();
+              e.stopPropagation();
 
-                  console.log(this.state);
+              console.log(this.state);
+              const { file } = this.props;
+              const { isBusy } = this.state;
+              // console.log(this.props.file);
 
-                  // registerCandidate({ variables: this.state });
-                  // if (serviceChosen) {
-                  //   this.setState({
-                  //     errorMessage: ""
-                  //   });
-                  // } else {
-                  //   this.setState({
-                  //     errorMessage: "Select at least one service"
-                  //   });
-                  // }
-                }}
+              if (file){
+                const uploadPreset = 'zuk2fkkh'; //process.env.REACT_APP_UPLOAD_PRESET;
+                const cloudName = 'hxbgo7vbm'; //process.env.REACT_APP_CLOUD_NAME;
+
+                const formData = new FormData();
+                formData.append('file', file);
+                formData.append('upload_preset', uploadPreset);
+
+                try {
+                  this.setState({isBusy: true})
+                  const response = await fetch.post(
+                    `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+                    formData,
+                  );
+
+                  console.log(response.data);
+
+                  // runMutation({ variables: {
+                  //   ...this.state,
+                  //   ...response.data
+                  // }})
+                } catch (e) {
+                  this.setState({isBusy: false})
+                  console.log(e);
+                  toast("Something went wrong while uploading document", {...TOAST_STYLE.fail});
+                }
+              }
+
+              // registerCandidate({ variables: this.state });
+              // if (serviceChosen) {
+              //   this.setState({
+              //     errorMessage: ""
+              //   });
+              // } else {
+              //   this.setState({
+              //     errorMessage: "Select at least one service"
+              //   });
+              // }
+            }}
             >
             <Row>
               <Col xs={12} md={6}>
