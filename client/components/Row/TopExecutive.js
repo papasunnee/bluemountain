@@ -35,8 +35,12 @@ export default class extends Component {
         <style jsx>
           {`
             .darker {
-              height: 300px;
+              height: 386px;
               background-color: #b2b2b2;
+              background-image: url(/static/svgs/images/topexecutive.svg);
+              background-position: 0 0;
+              background-size: 100% 100%;
+              background-repeat: no-repeat;
               transition: all linear 200ms;
             }
             .darker:hover {

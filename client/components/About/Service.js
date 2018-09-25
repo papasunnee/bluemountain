@@ -5,11 +5,11 @@ import { Col } from "reactstrap";
 export default class Service extends Component {
   constructor(props) {
     super(props);
-    let imageName =
-      `/static/svgs/images/sectorBox/${this.props.imageUrl}.svg` ||
-      "/static/svgs/images/sectorBox/bf.svg";
   }
   render() {
+    let imageName =
+      `/static/svgs/images/${this.props.imageUrl}.svg` ||
+      "/static/svgs/images/sectorBox/bf.svg";
     return (
       <Fragment>
         <Col xs={this.props.xs || "12"} md={this.props.md || "4"}>
@@ -45,9 +45,7 @@ export default class Service extends Component {
             height: 100%;
             top: 0;
             left: 0;
-            background-image: url(
-              "/static/svgs/images/sectorBox/${this.props.imageUrl ||
-                "bf"}.svg");
+            background-image: url("${imageName}");
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;

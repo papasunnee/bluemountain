@@ -14,12 +14,29 @@ export default class ServiceRow extends Component {
             </Col>
           </Row>
           <Row>
-            <Service title="Executive Search" md="6" />
-            <Service title="Executive Assessment" md="6" />
+            <Service
+              imageUrl="service/executivesearchsm"
+              title="Executive Search"
+              md="6"
+            />
+            <Service
+              imageUrl="service/executiveassessmentsm"
+              title="Executive Assessment"
+              md="6"
+            />
           </Row>
           <Row>
-            <Service title="Executive Coaching" md="6" />
-            <Service title="Strategic Consulting" md="6" />
+            <Service
+              imageUrl="service/executivecoachingsm"
+              title="Executive Coaching"
+              md="6"
+            />
+
+            <Service
+              imageUrl="service/strategicconsultingsm"
+              title="Strategic Consulting"
+              md="6"
+            />
           </Row>
         </Container>
         <style jsx>{`
