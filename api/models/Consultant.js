@@ -35,9 +35,9 @@ Consultant.add({
     type: Types.Email, initial: true, required: true, unique: true, index: true,
   },
   cvFile: { type: Types.CloudinaryImage, initial: true },
-  message: {
-    type: Types.Textarea, initial: true, required: true, index: true,
-  },
+  // message: {
+  //   type: Types.Textarea, initial: true, required: true, index: true,
+  // },
   // password: { type: Types.Password, initial: true, required: true },
   // passwordVersion: { type: Types.Number, required: true, default: 1 },
 });

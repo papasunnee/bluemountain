@@ -75,40 +75,36 @@ export default class ApplyForm extends Component {
 
                       const { cv, name, phone, email, message } = this.state;
 
-                      if (cv){
-                        const uploadPreset = 'zuk2fkkh'; //process.env.REACT_APP_UPLOAD_PRESET;
-                        const cloudName = 'hxbgo7vbm'; //process.env.REACT_APP_CLOUD_NAME;
+                      const uploadPreset = 'zuk2fkkh'; //process.env.REACT_APP_UPLOAD_PRESET;
+                      const cloudName = 'hxbgo7vbm'; //process.env.REACT_APP_CLOUD_NAME;
 
-                        const formData = new FormData();
-                        formData.append('file', cv);
-                        formData.append('upload_preset', uploadPreset);
+                      const formData = new FormData();
+                      formData.append('file', cv);
+                      formData.append('upload_preset', uploadPreset);
 
-                        try {
-                          this.setState({isBusy: true})
-                          const response = await fetch(
-                            `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,{
-                              method: 'POST',
-                              body: formData
-                            }
-                          );
+                      try {
+                        this.setState({isBusy: true})
+                        const response = await fetch(
+                          `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,{
+                            method: 'POST',
+                            body: formData
+                          }
+                        );
 
-                          const cvFile = await response.json();
-                          this.setState({isBusy: false})
+                        const cvFile = await response.json();
+                        this.setState({isBusy: false})
 
-                          registerConsultant({ variables: {
-                            name,
-                            phone,
-                            email,
-                            // message,
-                            ...cvFile
-                          }})
-                        } catch (e) {
-                          this.setState({isBusy: false})
-                          console.log(e);
-                          this.displayError("Something went wrong while uploading document");
-                        }
-                      } else {
-                        this.displayError("No cv selected")
+                        registerConsultant({ variables: {
+                          name,
+                          phone,
+                          email,
+                          // message,
+                          ...cvFile
+                        }})
+                      } catch (e) {
+                        this.setState({isBusy: false})
+                        console.log(e);
+                        this.displayError("Something went wrong while uploading document");
                       }
                     }}
                     >
