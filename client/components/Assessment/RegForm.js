@@ -37,13 +37,33 @@ export default class Example extends React.Component {
     ...initState
   };
 
-  handleChange = (name, value) => {
-    this.setState({
-      [name]: value,
-      successMessage: "",
-      errorMessage: ""
-    });
-  };
+  handleChange = (name, value) => this.setState({
+    [name]: value,
+    successMessage: "",
+    errorMessage: ""
+  });
+
+
+  displayError = errorMessage => this.setState({ errorMessage });
+
+  onError = error => {
+    console.log(error);
+    if (error.graphQLErrors.length==0)
+      this.displayError("There was an issue submitting your request try again later.")
+
+    error.graphQLErrors.forEach(error=>{
+      switch(error.message) {
+        case `Validation failed`:
+        console.log(error);
+          if (error.extensions.exception.errors.email) {
+            this.displayError("This email is already registered")
+          }
+        break;
+        default:
+        this.props.showLoginError("Please Try Again Later")
+      }
+    })
+  }
 
   isPlaceholder = (name) => placeholders[name] === this.state[name]
   render() {
@@ -57,13 +77,7 @@ export default class Example extends React.Component {
             successMessage: "Thank you for your message. It has been sent."
           })
         }
-        onError={error => {
-          console.log(error);
-          this.setState({
-            errorMessage:
-              "There was an issue submitting your request try again later."
-          });
-        }}
+        onError={this.onError}
       >
         {(registerOrganization, { loading }) => (
           <Form

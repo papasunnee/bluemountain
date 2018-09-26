@@ -16,6 +16,7 @@ const InputComponent = props => {
         type={props.type || "text"}
         name={props.name || "file"}
         id={props.id || "file"}
+        {...props}
       />
     </Fragment>
   );

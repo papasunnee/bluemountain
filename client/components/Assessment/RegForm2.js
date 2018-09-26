@@ -21,11 +21,35 @@ export default class Example extends React.Component {
     ...initState
   };
 
-  handleChange = (name, value) => {
-    this.setState({ [name]: value });
-  };
+  handleChange = (name, value) => this.setState({
+    [name]: value,
+    successMessage: "",
+    errorMessage: ""
+  });
+
+  displayError = errorMessage => this.setState({ errorMessage });
+
+  onError = error => {
+    console.log(error);
+    if (error.graphQLErrors.length==0)
+      this.displayError("There was an issue submitting your request try again later.")
+
+    error.graphQLErrors.forEach(error=>{
+      switch(error.message) {
+        case `Validation failed`:
+        console.log(error);
+          if (error.extensions.exception.errors.email) {
+            this.displayError("This email is already registered")
+          }
+        break;
+        default:
+        this.props.showLoginError("Please Try Again Later")
+      }
+    })
+  }
+
   render() {
-    const { successMessage, errorMessage } = this.state;
+    const { successMessage, errorMessage, isBusy } = this.state;
     return (
       <Mutation
         mutation={REGISTER_CANDIDATE}
@@ -35,13 +59,7 @@ export default class Example extends React.Component {
             successMessage: "Thank you for your message. It has been sent."
           })
         }
-        onError={error => {
-          console.log(error);
-          this.setState({
-            errorMessage:
-              "There was an issue submitting your request try again later."
-          });
-        }}
+        onError={this.onError}
       >
         {(registerCandidate, { loading }) => (
           <Form
@@ -53,37 +71,36 @@ export default class Example extends React.Component {
               const { cv, firstName, lastName, email, message } = this.state;
               // const { isBusy } = this.state;
 
-              if (cv){
-                const uploadPreset = 'zuk2fkkh'; //process.env.REACT_APP_UPLOAD_PRESET;
-                const cloudName = 'hxbgo7vbm'; //process.env.REACT_APP_CLOUD_NAME;
+              const uploadPreset = 'zuk2fkkh'; //process.env.REACT_APP_UPLOAD_PRESET;
+              const cloudName = 'hxbgo7vbm'; //process.env.REACT_APP_CLOUD_NAME;
 
-                const formData = new FormData();
-                formData.append('file', cv);
-                formData.append('upload_preset', uploadPreset);
+              const formData = new FormData();
+              formData.append('file', cv);
+              formData.append('upload_preset', uploadPreset);
 
-                try {
-                  this.setState({isBusy: true})
-                  const response = await fetch(
-                    `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,{
-                      method: 'POST',
-                      body: formData
-                    }
-                  );
+              try {
+                this.setState({isBusy: true})
+                const response = await fetch(
+                  `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,{
+                    method: 'POST',
+                    body: formData
+                  }
+                );
 
-                  const cvFile = await response.json();
+                const cvFile = await response.json();
+                this.setState({isBusy: false})
 
-                  registerCandidate({ variables: {
-                    firstName,
-                    lastName,
-                    email,
-                    message,
-                    ...cvFile
-                  }})
-                } catch (e) {
-                  this.setState({isBusy: false})
-                  console.log(e);
-                  console.log("Something went wrong while uploading document");
-                }
+                registerCandidate({ variables: {
+                  firstName,
+                  lastName,
+                  email,
+                  message,
+                  ...cvFile
+                }})
+              } catch (e) {
+                this.setState({isBusy: false})
+                console.log(e);
+                this.displayError("Something went wrong while uploading document");
               }
             }}
             >
@@ -137,7 +154,9 @@ export default class Example extends React.Component {
                     style={{ height: "60px", fontSize: "1.2em" }}
                     type="file"
                     name="file"
+                    files={[this.state.cv]}
                     onChange={e=>this.handleChange("cv", e.target.files[0])}
+                    required
                   />
                 </FormGroup>
               </Col>
@@ -171,7 +190,7 @@ export default class Example extends React.Component {
             ) : (
               <br />
             )}
-            {loading ?
+            {loading || isBusy ?
               <Loading />
               :
               <Button type="submit">SEND MESSAGE</Button>
