@@ -1,5 +1,6 @@
 /* eslint-disable func-names */
 const keystone = require('keystone');
+const beautifyUnique = require('mongoose-beautiful-unique-validation');
 
 const { Types } = keystone.Field;
 
@@ -34,6 +35,9 @@ Organization.add({
     type: Types.Textarea, initial: true, required: true, index: true,
   },
 });
+
+// Plugins
+Organization.schema.plugin(beautifyUnique);
 
 /**
  * Relationships

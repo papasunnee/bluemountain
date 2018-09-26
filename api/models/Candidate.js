@@ -1,9 +1,11 @@
 /* eslint-disable func-names */
 const keystone = require('keystone');
+const beautifyUnique = require('mongoose-beautiful-unique-validation');
+
 const {
   sendConfirmationEmail,
   sendNotificationEmail,
-} = require('../modelMethods/candidate')
+} = require('../modelMethods/candidate');
 
 const { Types } = keystone.Field;
 
@@ -58,13 +60,12 @@ Candidate.schema.pre('save', function (next) {
 Candidate.schema.methods.sendConfirmationEmail = sendConfirmationEmail;
 Candidate.schema.methods.sendNotificationEmail = sendNotificationEmail;
 
-/**
- * Relationships
- */
+// Plugins
+Candidate.schema.plugin(beautifyUnique);
+
+// Relationships
 Candidate.relationship({ ref: 'CaseFile', path: 'Case Files', refPath: 'candidateId' });
 
-/**
- * Registration
- */
+// Registration
 Candidate.defaultColumns = 'name, email';
 Candidate.register();

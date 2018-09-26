@@ -1,9 +1,11 @@
 /* eslint-disable func-names */
 const keystone = require('keystone');
+const beautifyUnique = require('mongoose-beautiful-unique-validation');
+
 const {
   sendConfirmationEmail,
   sendNotificationEmail,
-} = require('../modelMethods/candidate')
+} = require('../modelMethods/candidate');
 
 const { Types } = keystone.Field;
 
@@ -61,6 +63,9 @@ Consultant.schema.post('save', function () {
 // Methods
 Consultant.schema.methods.sendConfirmationEmail = sendConfirmationEmail;
 Consultant.schema.methods.sendNotificationEmail = sendNotificationEmail;
+
+// Plugins
+Consultant.schema.plugin(beautifyUnique);
 
 /**
  * Relationships
