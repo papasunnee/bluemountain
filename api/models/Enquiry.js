@@ -24,17 +24,12 @@ Enquiry.add({
   email: {
     type: Types.Email, initial: true, required: true, index: true,
   },
-// }, 'Interests', {
-//   ...expertise.map(item => ({
-//     [item.key]: {
-//       type: Types.Boolean,
-//       required: true,
-//       initial: true,
-//       default: false,
-//       index: true,
-//       label: item.title,
-//     },
-//   })).reduce((a, b) => Object.assign(a, b), {}),
+  orgName: {
+    type: Types.Text, index: true, required: true, initial: true,
+  },
+  timeTocall: {
+    type: Types.Text, required: true, initial: true,
+  },
 });
 
 Enquiry.schema.pre('save', function (next) {
