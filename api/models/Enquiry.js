@@ -27,7 +27,7 @@ Enquiry.add({
   orgName: {
     type: Types.Text, index: true, required: true, initial: true,
   },
-  timeTocall: {
+  timeToCall: {
     type: Types.Text, required: true, initial: true,
   },
 });

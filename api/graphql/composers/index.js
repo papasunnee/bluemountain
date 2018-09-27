@@ -1,4 +1,5 @@
 const keystone = require('keystone');
+const { GQC } = require('graphql-compose');
 const { composeWithMongoose } = require('graphql-compose-mongoose');
 
 /**
@@ -18,6 +19,9 @@ const CandidateTC = composeWithMongoose(Candidate);
 const ConsultantTC = composeWithMongoose(Consultant);
 const OrganizationTC = composeWithMongoose(Organization);
 
+const NewsletterSubscriberTC = GQC.getOrCreateTC('NewsletterSubscriber');
+NewsletterSubscriberTC.addFields({ address: 'String', subscribed: 'Boolean', name: 'String' });
+
 /**
 * Exports
 */
@@ -28,4 +32,5 @@ module.exports = {
   CandidateTC,
   ConsultantTC,
   OrganizationTC,
+  NewsletterSubscriberTC,
 };

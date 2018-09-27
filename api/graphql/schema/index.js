@@ -5,6 +5,7 @@ const { schemaComposer } = require('graphql-compose');
 
 // Add relationships and resolvers to schema
 require('../relationships');
+require('../resolvers');
 
 const queries = require('./queries');
 const mutations = require('./mutations');
