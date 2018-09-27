@@ -6,18 +6,19 @@ module.exports = {
   kind: 'mutation',
   name: 'subscribe',
   description: 'subscribe from newsletter',
-  args: { address: 'String!' },
+  args: { address: 'String!', name: 'String!' },
   type: NewsletterSubscriberTC,
   resolve: async ({ args }) => {
-    const { address } = args;
+    const { address, name } = args;
     const user = {
       subscribed: true,
       address,
+      name,
       // name: 'Bob Bar',
       // vars: {age: 26}
     };
 
-    const list = mailgun.lists('subscribers@bluemountainexecutives.com');
+    const list = mailgun.lists('subscribers@mail.bluemountainexecutives.com');
     return new Promise(((resolve, reject) => {
       list.members().create(user, (e, data) => {
         if (e) {

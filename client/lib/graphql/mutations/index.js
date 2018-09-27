@@ -141,8 +141,8 @@ export const CREATE_ENQUIRY = gql`
 `;
 
 export const NEWSLETTER_SUBSCRIPTION_MUTATION = gql `
-  mutation ($address: String!) {
-    subscribeToNewsletter ( address: $address ) {
+  mutation ($address: String!, $name: String!) {
+    subscribeToNewsletter ( address: $address, name: $name ) {
       address
     }
   }
