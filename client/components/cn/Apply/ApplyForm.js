@@ -75,7 +75,7 @@ export default class ApplyForm extends Component {
 
                       const { cv, name, phone, email, message } = this.state;
 
-                      const uploadPreset = 'zuk2fkkh'; //process.env.REACT_APP_UPLOAD_PRESET;
+                      const uploadPreset = 'wphr6cph'; //process.env.REACT_APP_UPLOAD_PRESET;
                       const cloudName = 'hxbgo7vbm'; //process.env.REACT_APP_CLOUD_NAME;
 
                       const formData = new FormData();
