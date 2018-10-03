@@ -86,7 +86,7 @@ export default class FullText extends Component {
             color: #fff;
           }
           .red {
-            background-color: #D80027;
+            background-color: #d80027;
           }
           .statContent h2 {
             margin-top: 20px;
