@@ -9,7 +9,7 @@ import {
   Input,
 } from "reactstrap";
 
-import { COUNTRIES, SERVICES, COMPANY_SIZES } from '../../../constants'
+import { COUNTRIES, SERVICES, COMPANY_SIZES } from '../../constants'
 import { REGISTER_ORGANIZATION } from "../../lib/graphql/mutations";
 import Loading from "../Loading";
 
