@@ -1,7 +1,7 @@
 // const cors = require('cors');
 const { ApolloServer } = require('apollo-server-express');
 
-const serveStatic = require('serve-static');
+// const serveStatic = require('serve-static');
 
 const schema = require('../graphql/schema');
 // const getContext = require('../graphql/lib/getContext');
@@ -13,7 +13,7 @@ module.exports = (app) => {
   server.applyMiddleware({ app });
 
   // Views
-  app.get('/admin', (req, res) => { res.redirect('/keystone'); });
+  app.get('/', (req, res) => { res.redirect('/keystone'); });
   // Client App
-  app.use(serveStatic(`${__dirname}/client`));
+  // app.use(serveStatic(`${__dirname}/client`));
 };
