@@ -4,7 +4,7 @@ const beautifyUnique = require('mongoose-beautiful-unique-validation');
 
 const { Types } = keystone.Field;
 
-const { COUNTRIES, SERVICES, COMPANY_SIZES } = require('../../constants');
+const { COUNTRIES, SERVICES, COMPANY_SIZES } = require('../constants');
 
 /**
  * Organization Model
