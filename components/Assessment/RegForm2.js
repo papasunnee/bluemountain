@@ -2,7 +2,7 @@ import React from "react";
 import { Mutation } from "react-apollo";
 import { Col, Row, Button, Form, FormGroup, Input, FormText } from "reactstrap";
 
-import { REGISTER_CANDIDATE  } from "../../lib/graphql/mutations";
+import { REGISTER_CANDIDATE } from "../../lib/graphql/mutations";
 import Loading from "../Loading";
 
 const initState = {
@@ -31,19 +31,19 @@ export default class Example extends React.Component {
 
   onError = error => {
     console.log(error);
-    if (error.graphQLErrors.length==0)
+    if (error.graphQLErrors.length == 0)
       this.displayError("There was an issue submitting your request try again later.")
 
-    error.graphQLErrors.forEach(error=>{
-      switch(error.message) {
+    error.graphQLErrors.forEach(error => {
+      switch (error.message) {
         case `Validation failed`:
-        console.log(error);
+          console.log(error);
           if (error.extensions.exception.errors.email) {
             this.displayError("This email is already registered")
           }
-        break;
+          break;
         default:
-        this.props.showLoginError("Please Try Again Later")
+          this.props.showLoginError("Please Try Again Later")
       }
     })
   }
@@ -79,31 +79,33 @@ export default class Example extends React.Component {
               formData.append('upload_preset', uploadPreset);
 
               try {
-                this.setState({isBusy: true})
+                this.setState({ isBusy: true })
                 const response = await fetch(
-                  `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,{
+                  `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
                     method: 'POST',
                     body: formData
                   }
                 );
 
                 const cvFile = await response.json();
-                this.setState({isBusy: false})
+                this.setState({ isBusy: false })
 
-                registerCandidate({ variables: {
-                  firstName,
-                  lastName,
-                  email,
-                  message,
-                  ...cvFile
-                }})
+                registerCandidate({
+                  variables: {
+                    firstName,
+                    lastName,
+                    email,
+                    message,
+                    ...cvFile
+                  }
+                })
               } catch (e) {
-                this.setState({isBusy: false})
+                this.setState({ isBusy: false })
                 console.log(e);
                 this.displayError("Something went wrong while uploading document");
               }
             }}
-            >
+          >
             <Row>
               <Col xs={12} md={6}>
                 <FormGroup>
@@ -113,7 +115,7 @@ export default class Example extends React.Component {
                     name="fname"
                     placeholder="Firstname"
                     value={this.state.firstName}
-                    onChange={e=>this.handleChange("firstName", e.target.value)}
+                    onChange={e => this.handleChange("firstName", e.target.value)}
                     required
                   />
                 </FormGroup>
@@ -126,7 +128,7 @@ export default class Example extends React.Component {
                     name="lname"
                     placeholder="Last Name"
                     value={this.state.lastName}
-                    onChange={e=>this.handleChange("lastName", e.target.value)}
+                    onChange={e => this.handleChange("lastName", e.target.value)}
                     required
                   />
                 </FormGroup>
@@ -142,7 +144,7 @@ export default class Example extends React.Component {
                     name="email"
                     placeholder="Email"
                     value={this.state.email}
-                    onChange={e=>this.handleChange("email", e.target.value)}
+                    onChange={e => this.handleChange("email", e.target.value)}
                     required
                   />
                 </FormGroup>
@@ -155,7 +157,7 @@ export default class Example extends React.Component {
                     type="file"
                     name="file"
                     files={[this.state.cv]}
-                    onChange={e=>this.handleChange("cv", e.target.files[0])}
+                    onChange={e => this.handleChange("cv", e.target.files[0])}
                     required
                   />
                 </FormGroup>
@@ -175,7 +177,7 @@ export default class Example extends React.Component {
                     name="text"
                     placeholder="Your Message Here"
                     value={this.state.message}
-                    onChange={e=>this.handleChange("message", e.target.value)}
+                    onChange={e => this.handleChange("message", e.target.value)}
                     required
                   />
                 </FormGroup>
@@ -188,8 +190,8 @@ export default class Example extends React.Component {
             {errorMessage ? null : successMessage ? (
               <p>{successMessage}</p>
             ) : (
-              <br />
-            )}
+                <br />
+              )}
             {loading || isBusy ?
               <Loading />
               :
