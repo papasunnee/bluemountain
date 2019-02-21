@@ -45,16 +45,16 @@ Candidate.schema.pre('save', function (next) {
   next();
 });
 
-// Candidate.schema.post('save', function () {
-//   if (this.wasNew) {
-//     try {
-//       // this.sendNotificationEmail();
-//       // this.sendConfirmationEmail();
-//     } catch (e) {
-//       console.log(e);
-//     }
-//   }
-// });
+Candidate.schema.post('save', function () {
+  if (this.wasNew) {
+    try {
+      // this.sendNotificationEmail();
+      this.sendConfirmationEmail();
+    } catch (e) {
+      console.log(e);
+    }
+  }
+});
 
 // Methods
 Candidate.schema.methods.sendConfirmationEmail = sendConfirmationEmail;
