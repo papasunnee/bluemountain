@@ -2,7 +2,7 @@ import React from "react";
 import { Mutation } from "react-apollo";
 import { Col, Row, Button, Form, FormGroup, Input, FormText } from "reactstrap";
 
-import { REGISTER_CANDIDATE } from "../../lib/graphql/mutations";
+import { REGISTER_CANDIDATE  } from "../../lib/graphql/mutations";
 import Loading from "../Loading";
 
 const initState = {
