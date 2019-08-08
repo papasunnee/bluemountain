@@ -8,72 +8,74 @@ export default class ServiceRow extends Component {
       <Fragment>
         <Container fluid style={{ marginTop: "30px" }}>
           <Row>
-            <Col xs="12" md="4">
-              <div
-                style={{
-                  backgroundColor: "#0084B4",
-                  height: "300px"
-                }}
+            <Col xs="12" md="12">
+              <h3
+                className="text-center mb-4"
+                style={{ fontWeight: "bold", color: "#0069D1" }}
               >
-                <p
-                  className="text-center"
-                  style={{
-                    color: "#fff",
-                    lineHeight: "300px",
-                    textTransform: "uppercase",
-                    fontSize: "25px",
-                    fontWeight: "bold"
-                  }}
-                >
-                  EMERGING CEO
-                </p>
-              </div>
+                LEADERSHIP SOLUTIONS
+              </h3>
             </Col>
-            <Col xs="12" md="4">
-              <div
-                style={{
-                  backgroundColor: "#E5E5E5",
-                  height: "300px"
-                }}
-              >
-                <p
-                  className="text-center"
-                  style={{
-                    color: "#0069D1",
-                    lineHeight: "300px",
-                    textTransform: "uppercase",
-                    fontSize: "25px",
-                    fontWeight: "bold"
-                  }}
-                >
-                  Lorem Ipsum Dolor
-                </p>
-              </div>
-            </Col>
-            <Col xs="12" md="4">
-              <div
-                style={{
-                  backgroundColor: "#0084B4",
-                  height: "300px"
-                }}
-              >
-                <p
-                  className="text-center"
-                  style={{
-                    color: "#fff",
-                    lineHeight: "300px",
-                    textTransform: "uppercase",
-                    fontSize: "25px",
-                    fontWeight: "bold"
-                  }}
-                >
-                  BEST PRACTICE FOR DATA PROTECTION
-                </p>
-              </div>
-            </Col>
+            {LSA.map((lsac, key) => (
+              <Col xs="12" md="3" key={key}>
+                <LeadershipSolution option={lsac} />
+              </Col>
+            ))}
           </Row>
         </Container>
       </Fragment>
     );
   }
 }
+
+const LeadershipSolution = props => {
+  const { option = {} } = props;
+  return (
+    <Fragment>
+      <div className="leaderWrapper">
+        <img
+          src={`/static/images/home/${option.image}.jpg`}
+          className="img-fluid"
+        />
+        <div className=" leader-title">
+          <p>{option.title}</p>
+        </div>
+      </div>
+      <style jsx>{`
+        .leaderWrapper {
+          positon: relative;
+          background-color: #e5e5e5;
+        }
+        img {
+          width: 100%;
+        }
+        .leaderWrapper:hover .leader-title {
+          background-image: linear-gradient(
+            180deg,
+            rgba(66, 133, 244, 0) 0%,
+            #0069d1 100%
+          );
+          color: #fff;
+        }
+        .leader-title {
+          position: absolute;
+          font-size: 12px;
+          color: #000;
+          font-weight: bold;
+          text-transform: uppercase;
+          bottom: 1px;
+          width: 92%;
+          padding-left: 20px;
+          padding-top: 20px;
+        }
+      `}</style>
+    </Fragment>
+  );
+};
+
+const LSA = [
+  { title: "Executive Search", image: "1" },
+  { title: "Executive Assessment", image: "2" },
+  { title: "Executive Coaching", image: "3" },
+  { title: "Strategic Consulting", image: "4" }
+];

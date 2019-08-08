@@ -40,12 +40,7 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
-        <Navbar
-          expand="md"
-          style={{
-            backgroundColor: "rgba(0,0,0,0.2)"
-          }}
-        >
+        <Navbar expand="md">
           <NavbarBrand>
             <Link href="/">
               <a>
@@ -56,7 +51,7 @@ export default class Example extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-            <NavItem>
+              <NavItem>
                 <NavLink href="/">
                   <FontAwesomeIcon icon={faHome} size="md" color="#fff" />
                 </NavLink>

@@ -19,7 +19,7 @@ export default class Global extends Component {
               className="text-primary text-center"
               style={{ fontweight: "bolder" }}
             >
-              <h1 className="globalTitle">GLOBAL INSIGHT</h1>
+              <h3 className="globalTitle">GLOBAL INSIGHT</h3>
             </Col>
           </Row>
           <Row className="mt-3 mb-3">

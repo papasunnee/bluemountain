@@ -10,25 +10,17 @@ export default class extends Component {
       <Fragment>
         <Container style={{ margin: "80px auto" }}>
           <Row>
-            <Col xs="12">
-              <h3 className="text-primary text-center mb-4">
+            <Col md="6" sm="12">
+              <h6 className="text-primary mb-4">
                 <span style={{ fontWeight: "bold", display: "block" }}>
                   Top Executive Retained Search Firm
                 </span>
                 Learn how our trusted executive search consultants can help you
-              </h3>
+              </h6>
+              <DoubleParagraph />
             </Col>
             <Col md="6" sm="12">
               <div className="darker" />
-            </Col>
-            <Col md="6" sm="12">
-              <DoubleParagraph />
-            </Col>
-            <Col md="6" sm="12">
-              <DoubleParagraph />
-            </Col>
-            <Col md="6" sm="12">
-              <Video />
             </Col>
           </Row>
         </Container>
@@ -38,10 +30,21 @@ export default class extends Component {
               height: 386px;
               background-color: #b2b2b2;
               background-image: url(/static/svgs/images/topexecutive.svg);
-              background-position: 0 0;
+              background-position: center center;
               background-size: 100% 100%;
               background-repeat: no-repeat;
               transition: all linear 200ms;
+              position: relative;
+            }
+            .darker::before {
+              content: "";
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              border-radius: 50%;
+              background-colot: transparent;
+              box-shadow: 0px 0px 55px -9px rgba(0, 0, 0, 0.75);
+              z-index: -1;
             }
             .darker:hover {
               background-color: #8e8e8e;
