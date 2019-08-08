@@ -51,6 +51,12 @@ footer {
     font-size: 12px;
   }
 
+  .bmcn {
+    a {
+      margin-right: 10px;
+    }
+  }
+
   @media (max-width: 767px) {
     padding: 30px;
     .footerLogo {

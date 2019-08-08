@@ -20,7 +20,7 @@ export default class extends Component {
             <CardImg
               top
               width="100%"
-              src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97150&w=256&h=150"
+              src="/static/images/home/insight.jpg"
               alt="Card image cap"
             />
             <CardBody>
@@ -38,7 +38,7 @@ export default class extends Component {
             <CardImg
               top
               width="100%"
-              src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97150&w=256&h=150"
+              src="/static/images/home/insight.jpg"
               alt="Card image cap"
             />
             <CardBody>
@@ -55,7 +55,7 @@ export default class extends Component {
             <CardImg
               top
               width="100%"
-              src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97150&w=256&h=150"
+              src="/static/images/home/insight.jpg"
               alt="Card image cap"
             />
             <CardBody>

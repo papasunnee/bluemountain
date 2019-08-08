@@ -27,7 +27,7 @@ export default class Global extends Component {
               <Insight />
             </Col>
           </Row>
-          <Row className="mt-3 mb-3">
+          {/* <Row className="mt-3 mb-3">
             <Col xs={12}>
               <div className="text-justify bg-primary text-center p-4 readyText">
                 <h2>
@@ -38,7 +38,7 @@ export default class Global extends Component {
                 </h2>
               </div>
             </Col>
-          </Row>
+          </Row> */}
         </Container>
       </div>
     );
