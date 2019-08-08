@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Button, Form, FormGroup, FormText } from "reactstrap";
-import InputComponent from "../InputComponent";
+import InputComponent from "../cn/InputComponent";
 
 export default class EventForm extends Component {
   render() {

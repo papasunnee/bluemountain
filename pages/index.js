@@ -8,6 +8,7 @@ import TopExecutive from "../components/Row/TopExecutive";
 import Global from "../components/Global/Global";
 import Layout from "../components/Layout";
 import Video from "../components/Row/Video";
+import EventTop from "../components/Event/EventTop";
 
 export default class extends Component {
   state = {};
@@ -21,11 +22,10 @@ export default class extends Component {
           title1="The Path to Leadership Starts Here"
           subtitle="More about Blue Mountain >"
         />
-        {/* <FindUs /> */}
-        {/* <TextComponent /> */}
         <TopExecutive />
         <ServiceRow />
         <Video />
+        <EventTop />
         <Global />
       </Layout>
     );
