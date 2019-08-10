@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Banner from "../components/Header/Banner";
 import Layout from "../components/Layout";
-import AboutText from "../components/About/AboutText";
 import Global from "../components/Global/Global";
+import ContactText from "../components/Contact/ContactText";
 
 export default class extends Component {
   state = {};
@@ -10,7 +10,7 @@ export default class extends Component {
     return (
       <Layout>
         <Banner bgImage="about" min />
-        <AboutText />
+        <ContactText />
         <Global title="News Update" />
       </Layout>
     );
