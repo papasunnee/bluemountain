@@ -26,7 +26,7 @@ export default class extends Component {
         <ServiceRow />
         <Video />
         <EventTop />
-        <Global />
+        <Global title="GLOBAL INSIGHT" />
       </Layout>
     );
   }

@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from "react";
+import Link from "next/link";
 import {
   Card,
-  Button,
   CardImg,
   CardTitle,
   CardText,
   CardDeck,
-  CardSubtitle,
+  CardFooter,
   CardBody
 } from "reactstrap";
 
@@ -16,61 +16,59 @@ export default class extends Component {
     return (
       <Fragment>
         <CardDeck>
-          <Card>
-            <CardImg
-              top
-              width="100%"
-              src="/static/images/home/insight.jpg"
-              alt="Card image cap"
-            />
-            <CardBody>
-              <CardTitle className="text-primary">Lorem Ipsum</CardTitle>
-              {/* <CardSubtitle>Card subtitle</CardSubtitle> */}
-              <CardText>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </CardText>
-              {/* <Button>Button</Button> */}
-            </CardBody>
-          </Card>
-          <Card>
-            <CardImg
-              top
-              width="100%"
-              src="/static/images/home/insight.jpg"
-              alt="Card image cap"
-            />
-            <CardBody>
-              <CardTitle className="text-primary">Lorem Ipsum</CardTitle>
-              {/* <CardSubtitle>Card subtitle</CardSubtitle> */}
-              <CardText>
-                This card has supporting text below as a natural lead-in to
-                additional content.
-              </CardText>
-              {/* <Button>Button</Button> */}
-            </CardBody>
-          </Card>
-          <Card>
-            <CardImg
-              top
-              width="100%"
-              src="/static/images/home/insight.jpg"
-              alt="Card image cap"
-            />
-            <CardBody>
-              <CardTitle className="text-primary">Lorem Ipsum</CardTitle>
-              {/* <CardSubtitle>Card subtitle</CardSubtitle> */}
-              <CardText>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This card has even longer content
-                than the first to show that equal height action.
-              </CardText>
-              {/* <Button>Button</Button> */}
-            </CardBody>
-          </Card>
+          {InsightCardArray.map((ica, key) => {
+            return <InsightCard option={ica} key={key} />;
+          })}
         </CardDeck>
       </Fragment>
     );
   }
 }
+
+const InsightCard = props => {
+  const { option = {} } = props;
+  return (
+    <Fragment>
+      <Card>
+        <CardImg
+          top
+          width="100%"
+          src="/static/images/home/insight.jpg"
+          alt="Card image cap"
+        />
+        <CardBody>
+          <CardTitle className="text-primary">Lorem Ipsum</CardTitle>
+          <CardText>
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This card has even longer content than the
+            first to show that equal height action.
+          </CardText>
+        </CardBody>
+        <CardFooter className="text-muted">
+          <div className="cardFooter">
+            <div>27th April, 2019</div>
+            <div>
+              <Link href={option.link}>
+                <a>Read More</a>
+              </Link>
+            </div>
+          </div>
+        </CardFooter>
+      </Card>
+      <style jsx>{`
+        .cardFooter {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 12px;
+        }
+      `}</style>
+    </Fragment>
+  );
+};
+
+const InsightCardArray = [
+  { title: "", content: "", date: "", link: "" },
+  { title: "", content: "", date: "", link: "" },
+  { title: "", content: "", date: "", link: "" }
+];

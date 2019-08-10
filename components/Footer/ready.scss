@@ -17,13 +17,25 @@
 }
 .readyText {
   color: #fff;
+  border-radius: 60px;
+  width: 60%;
+  margin: auto;
+  padding: 10px 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 
   a {
     background-color: #e5ce00;
+    border-radius: 60px !important;
     color: #fff;
+    margin: 0 !important;
+    margin-left: 10px !important;
+    font-size: 12px;
     text-decoration: none;
-    border-radius: 3px;
     transition: all 1000ms;
+    font-weight: normal;
   }
   a:hover {
     text-decoration: none;
