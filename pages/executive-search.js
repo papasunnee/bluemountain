@@ -14,7 +14,7 @@ export default class extends Component {
         <Head>
           <title>Executive Search</title>
         </Head>
-        <Banner bgImage="executivesearch" />
+        <Banner bgImage="executiveSearch" min />
         <ServiceBody serviceImage="executivesearch" />
         <Ready />
       </Layout>

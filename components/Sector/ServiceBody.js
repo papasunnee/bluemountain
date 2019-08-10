@@ -34,10 +34,10 @@ export default class ServiceBody extends Component {
 
           <Row>
             <Col xs={12} md={6}>
-              {/* <SvgLoader
+              <SvgLoader
                 src={`/static/svgs/images/service/${this.props.serviceImage ||
                   null}.svg`}
-              /> */}
+              />
             </Col>
             <Col xs={12} md={6}>
               <TextComponentNoHeader />
