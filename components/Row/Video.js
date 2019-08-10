@@ -9,10 +9,7 @@ export default class Video extends Component {
         <Row>
           <Col md={{ size: 6, offset: 3 }}>
             <div className="my-5">
-              <ReactPlayer
-                width="inherit"
-                url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-              />
+              <VideoPlayer />
             </div>
           </Col>
         </Row>
@@ -20,3 +17,10 @@ export default class Video extends Component {
     );
   }
 }
+
+export const VideoPlayer = () => (
+  <ReactPlayer
+    width="inherit"
+    url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+  />
+);

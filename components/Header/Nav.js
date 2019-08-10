@@ -54,26 +54,35 @@ export default class Example extends React.Component {
               <NavItem>
                 <NavLink href="/">
                   <FontAwesomeIcon icon={faHome} size="md" color="#fff" />
+                  <div style={{ width: "20px" }} />
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="">
                   <FontAwesomeIcon icon={faSearch} size="md" color="#fff" />
+                  <div style={{ width: "20px" }} />
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="">
                   <FontAwesomeIcon icon={faEnvelope} size="md" color="#fff" />
+                  <div style={{ width: "20px" }} />
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="">
                   <FontAwesomeIcon icon={faPhone} size="md" color="#fff" />
+                  <div style={{ width: "20px" }} />
                 </NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav>
-                  <FontAwesomeIcon icon={faBars} size="lg" />
+                  <FontAwesomeIcon
+                    icon={faBars}
+                    size="lg"
+                    style={{ fontSize: "20px" }}
+                  />
+                  <div style={{ width: "20px" }} />
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>

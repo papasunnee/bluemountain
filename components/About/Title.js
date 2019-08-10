@@ -6,7 +6,6 @@ export default class Title extends Component {
   constructor(props) {
     super(props);
   }
-  // state = {};
   render() {
     return (
       <Fragment>

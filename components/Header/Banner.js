@@ -14,13 +14,17 @@ const Banner = props => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundImage: `linear-gradient(180deg, #282828 0%, rgba(40, 40, 40, 0) 100%), url(/static/svgs/images/${banner}.svg)`,
+          backgroundImage: `linear-gradient(180deg, #282828 0%, rgba(40, 40, 40, 0) 100%), ${
+            props.min
+              ? `url(/static/images/about/${banner}.jpg)`
+              : `url(/static/svgs/images/${banner}.svg)`
+          }`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           borderRadius: "0px",
           paddingBottom: "0.5rem",
           paddingTop: "0px",
-          minHeight: "80vh",
+          minHeight: `${props.min ? "50vh" : "80vh"}`,
           padding: "0px"
         }}
       >
