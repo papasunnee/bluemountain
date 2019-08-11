@@ -10,7 +10,7 @@ export default class extends Component {
     return (
       <Layout>
         <Banner bgImage="about" min />
-        <AboutText />
+        <AboutText title="ABOUT US" />
         <Global title="News Update" />
       </Layout>
     );

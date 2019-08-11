@@ -3,12 +3,12 @@ import Link from "next/link";
 import { Container, Col, Row } from "reactstrap";
 import { VideoPlayer } from "../Row/Video";
 
-export default () => {
+export default props => {
   return (
     <Fragment>
       <Container fluid>
         <div className="aboutTitle">
-          <h2>ABOUT US</h2>
+          <h2>{props.title}</h2>
           <div>
             <Row>
               <Col md={6}>

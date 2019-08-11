@@ -21,7 +21,6 @@ export default class extends Component {
           subtitle="Bringing together experience from across multiple sectors and regions"
         />
         <AboutTop />
-        <PersonArray />
         <FooterTop2 />
       </Layout>
     );

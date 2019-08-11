@@ -74,6 +74,7 @@ export default class FooterTop2 extends Component {
             position: relative;
             height: 400px;
             background: #0052b4;
+            overflow: hidden;
           }
           .imageBg1,
           .imageBg2 {

@@ -24,10 +24,9 @@ const Banner = props => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           borderRadius: "0px",
-          paddingBottom: "0.5rem",
-          paddingTop: "0px",
           minHeight: `${props.min ? "50vh" : "80vh"}`,
-          padding: "0px"
+          padding: "0px",
+          margin: "0px"
         }}
       >
         <Nav />
@@ -44,7 +43,7 @@ const Banner = props => {
             {props.title1}
           </h2>
         </div>
-
+        {props.children}
         <p className="ml-4">
           <Link href="/about" prefetch>
             <a

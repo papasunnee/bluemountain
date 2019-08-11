@@ -82,25 +82,30 @@ export default class Example extends React.Component {
                   <FontAwesomeIcon icon={faBars} size="lg" />
                   <div style={{ width: "20px" }} />
                 </DropdownToggle>
-                <DropdownMenu right>
+                <DropdownMenu
+                  right
+                  style={{
+                    backgroundColor: "rgba(0, 105, 209, 0.9)"
+                  }}
+                >
                   <DropdownItem>
                     <Link href={`${baseUrl}`}>
                       <a>Home</a>
                     </Link>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link href={`${baseUrl}/what-we-do`}>
-                      <a>What We Do</a>
-                    </Link>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <Link href={`${baseUrl}/what-we-think`}>
-                      <a>What We Think</a>
-                    </Link>
-                  </DropdownItem>
-                  <DropdownItem>
                     <Link href={`${baseUrl}/about-us`}>
                       <a>About Us</a>
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link href={`${baseUrl}/events`}>
+                      <a>Events, Seminars & Lectures</a>
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link href={`${baseUrl}/insights`}>
+                      <a>Insights</a>
                     </Link>
                   </DropdownItem>
                   <DropdownItem>
@@ -116,10 +121,12 @@ export default class Example extends React.Component {
         <style jsx>
           {`
             a,
-            a:hover,
             a:active,
             a:visited {
               text-decoration: none;
+              color: #fff;
+            }
+            a:hover {
               color: #000;
             }
           `}
