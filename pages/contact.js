@@ -9,7 +9,7 @@ export default class extends Component {
   render() {
     return (
       <Layout>
-        <Banner bgImage="about" min />
+        <Banner bgImage="contact" min />
         <ContactText />
         <Global title="News Update" />
       </Layout>

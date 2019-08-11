@@ -1,8 +1,14 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Container, Col, Row } from "reactstrap";
 import { Flags } from "../Footer/Ready";
 
+const initialState = "canada";
 export default () => {
+  const [state, setState] = useState(initialState);
+  const handleClick = (e, flag) => {
+    e.preventDefault();
+    setState(flag);
+  };
   return (
     <Fragment>
       <Container fluid>
@@ -10,7 +16,7 @@ export default () => {
           <h2>CONTACT</h2>
           <Row>
             <Col md={{ size: 6, offset: 3 }}>
-              <Flags />
+              <Flags handleClick={handleClick} />
             </Col>
           </Row>
           <div>
@@ -57,8 +63,8 @@ export default () => {
                     </Col>
                   </Row>
                   <Row>
-                    <Col md={12}>
-                      <img />
+                    <Col md={12} className="my-4">
+                      <img src={`/static/svgs/country/${state}.svg`} />
                     </Col>
                   </Row>
                 </div>
