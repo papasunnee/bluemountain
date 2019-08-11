@@ -56,9 +56,9 @@ export default () => {
                     </Col>
                     <Col md={8}>
                       <div className="contactList">
-                        <div>Contact Number</div>
-                        <div>Email Address</div>
-                        <div>Address</div>
+                        <div>{state.toUpperCase()} Number</div>
+                        <div>{state.toUpperCase()} Email Address</div>
+                        <div>{state.toUpperCase()} Address</div>
                       </div>
                     </Col>
                   </Row>
