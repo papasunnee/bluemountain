@@ -16,7 +16,7 @@ export default class Footer extends Component {
       <Fragment>
         <div>
           <footer>
-            <Container fluid>
+            <Container fluid className="m-0">
               <Row>
                 <Col md="4" xs="12" className="footerLogo">
                   <SvgLoader src="/static/svgs/images/logo.svg" />
@@ -45,7 +45,7 @@ export default class Footer extends Component {
                   </div>
                 </Col>
                 <Col md="4" xs="12" className="bmcn">
-                  <Link href="/consulting-network">
+                  <Link href="/university">
                     <a>
                       <img
                         className="img-fluid"

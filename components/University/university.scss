@@ -1,0 +1,17 @@
+.university__student {
+  min-height: 100vh;
+  background: url("/static/images/university/university.png") no-repeat -50px 0;
+}
+
+.university__main {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #282828 0%, rgba(40, 40, 40, 0) 100%),
+    url("/static/images/university/main.png") no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  h2 {
+    font-weight: bold;
+  }
+}
