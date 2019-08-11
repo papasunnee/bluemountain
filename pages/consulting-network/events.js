@@ -19,7 +19,8 @@ export default class extends Component {
           </title>
         </Head>
         <Banner2
-          bgImage="cn/cnbg2"
+          jpg
+          bgImage="about"
           title1="Events, Seminars & Lectures"
           subtitle="Pursue your ambitions through continuous development"
         />

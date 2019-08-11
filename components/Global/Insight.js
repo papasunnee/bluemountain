@@ -25,7 +25,7 @@ export default class extends Component {
   }
 }
 
-const InsightCard = props => {
+export const InsightCard = props => {
   const { option = {} } = props;
   return (
     <Fragment>

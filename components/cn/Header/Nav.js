@@ -104,7 +104,7 @@ export default class Example extends React.Component {
                     </Link>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link href={`${baseUrl}/insights`}>
+                    <Link href={`${baseUrl}/insight`}>
                       <a>Insights</a>
                     </Link>
                   </DropdownItem>
