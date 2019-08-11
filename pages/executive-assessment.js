@@ -13,7 +13,11 @@ export default class extends Component {
         <Head>
           <title>Executive Assessment</title>
         </Head>
-        <Banner bgImage="executiveAssessment" min />
+        <Banner
+          bgImage="executiveAssessment"
+          min
+          title="EXECUTIVE ASSESSMENT"
+        />
         <ServiceBody serviceImage="executiveassessment" />
         <Ready />
       </Layout>

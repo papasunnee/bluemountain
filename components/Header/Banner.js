@@ -2,6 +2,7 @@ import React from "react";
 import { Jumbotron } from "reactstrap";
 import Link from "next/link";
 import Nav from "./Nav";
+import Title from "../About/Title";
 
 const Banner = props => {
   const banner = props.bgImage || "headerbg";
@@ -57,6 +58,7 @@ const Banner = props => {
             </a>
           </Link>
         </p>
+        {props.title && <Title title={props.title}>{props.title}</Title>}
       </Jumbotron>
     </div>
   );

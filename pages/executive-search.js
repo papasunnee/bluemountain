@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Head from "next/head";
 import Banner from "../components/Header/Banner";
 import Layout from "../components/Layout";
-import Title from "../components/About/Title";
 import Ready from "../components/Footer/Ready";
 import ServiceBody from "../components/Sector/ServiceBody";
 
@@ -14,7 +13,7 @@ export default class extends Component {
         <Head>
           <title>Executive Search</title>
         </Head>
-        <Banner bgImage="executiveSearch" min />
+        <Banner bgImage="executiveSearch" min title="EXECUTIVE SEARCH" />
         <ServiceBody serviceImage="executivesearch" />
         <Ready />
       </Layout>
