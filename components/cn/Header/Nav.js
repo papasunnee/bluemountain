@@ -41,7 +41,7 @@ export default class Example extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div style={{ backgroundColor: "rgba(0,0,0,0.75)" }}>
         <Navbar expand="md">
           <NavbarBrand>
             <Link href="/consulting-network">

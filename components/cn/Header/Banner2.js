@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col, Jumbotron } from "reactstrap";
-import Link from "next/link";
 import Nav from "./Nav";
 
 const Banner = props => {
@@ -13,31 +12,41 @@ const Banner = props => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundImage: `url(/static/svgs/images/${banner}.svg)`,
+          backgroundImage: `${
+            props.jpg
+              ? `url(/static/images/cn/${banner}.jpg`
+              : `url(/static/svgs/images/${banner}.svg)`
+          }`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           borderRadius: "0px",
           paddingBottom: "0.5rem",
           paddingTop: "0px",
-          minHeight: "30vh",
+          minHeight: "40vh",
           padding: "0px"
         }}
       >
         <Nav />
         <div>
-          <Container>
-            <Row>
-              <Col>
-                <h1
+          <Row>
+            <Col md={6}>
+              <div
+                style={{
+                  backgroundColor: "rgba(229, 206, 0, 0.95)",
+                  padding: "10px 20px",
+                  marginBottom: "20px"
+                }}
+              >
+                <h3
                   className="display-5"
                   style={{
-                    color: "#0069D1",
+                    color: "#0052B4",
                     textTransform: "uppercase",
                     fontWeight: "bold"
                   }}
                 >
                   {props.title1}
-                </h1>
+                </h3>
                 <p
                   style={{
                     color: "#000",
@@ -48,9 +57,9 @@ const Banner = props => {
                 >
                   {props.subtitle}
                 </p>
-              </Col>
-            </Row>
-          </Container>
+              </div>
+            </Col>
+          </Row>
         </div>
       </Jumbotron>
     </div>

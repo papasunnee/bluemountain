@@ -15,7 +15,8 @@ export default class extends Component {
           <title>Blue Mountain Consulting Network - About Us </title>
         </Head>
         <Banner2
-          bgImage="cn/cnbg2"
+          jpg
+          bgImage="about"
           title1="OUR TEAM"
           subtitle="Bringing together experience from across multiple sectors and regions"
         />
