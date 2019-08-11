@@ -42,12 +42,7 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
-        <Navbar
-          expand="md"
-          style={{
-            backgroundColor: "rgba(0,0,0,0.2)"
-          }}
-        >
+        <Navbar expand="md">
           <NavbarBrand>
             <Link href="/consulting-network">
               <a>
@@ -61,26 +56,31 @@ export default class Example extends React.Component {
               <NavItem>
                 <NavLink href="/">
                   <FontAwesomeIcon icon={faHome} size="md" color="#fff" />
+                  <div style={{ width: "20px" }} />
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="">
                   <FontAwesomeIcon icon={faSearch} size="md" color="#fff" />
+                  <div style={{ width: "20px" }} />
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="">
                   <FontAwesomeIcon icon={faEnvelope} size="md" color="#fff" />
+                  <div style={{ width: "20px" }} />
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="">
                   <FontAwesomeIcon icon={faPhone} size="md" color="#fff" />
+                  <div style={{ width: "20px" }} />
                 </NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav>
                   <FontAwesomeIcon icon={faBars} size="lg" />
+                  <div style={{ width: "20px" }} />
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>

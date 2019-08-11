@@ -37,7 +37,6 @@ export default class extends Component {
             paddingRight: "0px"
           }}
         >
-          {/* <Nav/> */}
           {this.props.children}
           <Footer />
         </Container>

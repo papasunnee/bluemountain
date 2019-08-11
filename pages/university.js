@@ -3,7 +3,7 @@ import University from "../components/University";
 
 export default () => {
   return (
-    <Layout>
+    <Layout noUniversity="true">
       <University />
     </Layout>
   );

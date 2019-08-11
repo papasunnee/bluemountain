@@ -15,7 +15,7 @@ export default class FindUs extends Component {
               xs="12"
               md="6"
               style={{
-                backgroundColor: "#F0F0F0",
+                backgroundColor: "rgba(229, 206, 0, 0.95)",
                 padding: "0px"
               }}
             >
@@ -47,7 +47,12 @@ export default class FindUs extends Component {
                     Vestibulum interdum suspendisse
                   </p>
                 </div>
-                <div style={{ padding: "20px" }}>
+                <div
+                  style={{
+                    padding: "20px",
+                    backgroundColor: "rgba(229, 206, 0, 0.95)"
+                  }}
+                >
                   <h3 className="display-6">Clients</h3>
                   <p>
                     Lorem ipsum dolor sit amet, sollicitudin mattis id habitasse
@@ -81,7 +86,7 @@ export default class FindUs extends Component {
               xs="12"
               md="6"
               style={{
-                backgroundColor: "#DADADA",
+                backgroundColor: "#031928",
                 padding: "0px"
               }}
             >
@@ -114,7 +119,7 @@ export default class FindUs extends Component {
                     interdum suspendisse
                   </p>
                 </div>
-                <div style={{ padding: "20px" }}>
+                <div style={{ padding: "20px", backgroundColor : "#031928", color : "#fff" }}>
                   <h3 className="display-6">Consultants</h3>
                   <p>
                     Lorem ipsum dolor sit amet, sollicitudin mattis id habitasse

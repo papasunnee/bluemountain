@@ -13,11 +13,15 @@ const Banner = props => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundImage: `url(/static/svgs/images/${banner}.svg)`,
+          // backgroundImage: `url(/static/svgs/images/${banner}.svg)`,
+          backgroundImage: `linear-gradient(180deg, #282828 0%, rgba(40, 40, 40, 0) 100%), ${
+            props.min
+              ? `url(/static/images/banner/${banner}.jpg)`
+              : `url(/static/svgs/images/${banner}.svg)`
+          }`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           borderRadius: "0px",
-          paddingTop: "10rem",
           paddingBottom: "0.5rem",
           paddingTop: "0px",
           minHeight: "80vh",

@@ -19,7 +19,11 @@ export default class Footer extends Component {
             <Container fluid className="m-0">
               <Row>
                 <Col md="4" xs="12" className="footerLogo">
-                  <SvgLoader src="/static/svgs/images/logo.svg" />
+                  <Link href="/">
+                    <a>
+                      <SvgLoader src="/static/svgs/images/logo.svg" />
+                    </a>
+                  </Link>
                   <div style={{ marginTop: "20px" }}>
                     <p>
                       <a href="" style={{ fontWeight: "bold" }}>
@@ -45,14 +49,16 @@ export default class Footer extends Component {
                   </div>
                 </Col>
                 <Col md="4" xs="12" className="bmcn">
-                  <Link href="/university">
-                    <a>
-                      <img
-                        className="img-fluid"
-                        src="/static/images/footer/bmu.png"
-                      />
-                    </a>
-                  </Link>
+                  {!this.props.university && (
+                    <Link href="/university">
+                      <a>
+                        <img
+                          className="img-fluid"
+                          src="/static/images/footer/bmu.png"
+                        />
+                      </a>
+                    </Link>
+                  )}
                   <Link href="/consulting-network">
                     <a>
                       <SvgLoader src="/static/svgs/images/yellowmount.svg" />

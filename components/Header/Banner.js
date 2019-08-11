@@ -6,7 +6,6 @@ import Title from "../About/Title";
 
 const Banner = props => {
   const banner = props.bgImage || "headerbg";
-  // boxShadow: "inset 0px 155px 89px 0px rgba(0,0,0,0.93)",
   return (
     <div>
       <Jumbotron
