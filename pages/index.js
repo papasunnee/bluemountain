@@ -17,6 +17,8 @@ export default class extends Component {
           <title>Blue Mountain - Home </title>
         </Head>
         <Banner
+          home
+          bgImage="home"
           title1="The Path to Leadership Starts Here"
           subtitle="More about Blue Mountain >"
         />

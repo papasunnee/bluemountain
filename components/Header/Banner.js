@@ -17,6 +17,8 @@ const Banner = props => {
           backgroundImage: `linear-gradient(180deg, #282828 0%, rgba(40, 40, 40, 0) 100%), ${
             props.min
               ? `url(/static/images/banner/${banner}.jpg)`
+              : props.home
+              ? `url(/static/images/home/${banner}.jpg)`
               : `url(/static/svgs/images/${banner}.svg)`
           }`,
           backgroundRepeat: "no-repeat",
