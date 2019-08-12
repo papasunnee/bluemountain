@@ -6,7 +6,6 @@ import Banner2 from "../../components/cn/Header/Banner2";
 import SvgLoader from "bv-react-svgloader";
 import FooterTop from "../../components/cn/Row/FooterTop";
 import Layout from "../../components/cn/Layout";
-import InsightArray from "../../components/cn/About/InsightArray";
 
 export default class extends Component {
   state = {};

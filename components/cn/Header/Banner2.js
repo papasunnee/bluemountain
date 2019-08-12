@@ -7,7 +7,6 @@ const Banner = props => {
   return (
     <div>
       <Jumbotron
-        className="jumboDemo"
         style={{
           display: "flex",
           flexDirection: "column",
@@ -23,7 +22,7 @@ const Banner = props => {
           paddingBottom: "0.5rem",
           paddingTop: "0px",
           minHeight: "40vh",
-          padding: "0px"
+          padding: "0px !important"
         }}
       >
         <Nav />
