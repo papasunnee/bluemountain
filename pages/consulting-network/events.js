@@ -25,7 +25,6 @@ export default class extends Component {
           subtitle="Pursue your ambitions through continuous development"
         />
         <EventTop />
-        <InsightArray />
         <FooterTop>
           <div style={{ display: "flex", marginTop: "40px" }}>
             <SvgLoader src="/static/svgs/images/cn/emailBlue.svg" />

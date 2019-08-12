@@ -1,27 +1,24 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
+import Calendar from "react-calendar/dist/entry.nostyle";
+import "./Calendar.css";
 
 export default class EventTop extends Component {
   render() {
     return (
       <Fragment>
-        <div style={{ backgroundColor: "#E5E5E5" }}>
-          <Container>
+        <div style={{}}>
+          <Container fluid className="px-5">
             <Row>
-              <Col md={12}>
-                <h4
-                  className="my-4 text-center"
-                  style={{ color: "#0069D1", fontWeight: "bold" }}
-                >
-                  UPCOMING EVENTS
-                </h4>
+              <Col md={4}>
+                <MyCalendar />
               </Col>
-              <Col md={6}>
+              <Col md={4}>
                 {EventArray.map((ea, key) => {
                   return <Event option={ea} key={key} />;
                 })}
               </Col>
-              <Col md={6}>
+              <Col md={4}>
                 <div className="text-center p-2" style={{ width: "80%" }}>
                   <img
                     className="img-fluid"
@@ -131,3 +128,15 @@ const EventArray = [
     link: ""
   }
 ];
+
+const MyCalendar = () => {
+  const [state, setState] = useState({ date: new Date() });
+
+  const onChange = date => setState({ date: date });
+
+  return (
+    <div>
+      <Calendar onChange={onChange} value={state.date} />
+    </div>
+  );
+};
