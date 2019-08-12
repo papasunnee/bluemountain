@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Jumbotron } from "reactstrap";
+import { Row, Col, Jumbotron } from "reactstrap";
 import Nav from "./Nav";
 
 const Banner = props => {
@@ -19,14 +19,12 @@ const Banner = props => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           borderRadius: "0px",
-          paddingBottom: "0.5rem",
-          paddingTop: "0px",
-          minHeight: "40vh",
-          padding: "0px !important"
+          padding: "0px !important",
+          minHeight: "40vh"
         }}
       >
         <Nav />
-        <div>
+        <div style={{ border: "1px solid red" }}>
           <Row>
             <Col md={6}>
               <div
