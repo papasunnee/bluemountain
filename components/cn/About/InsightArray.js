@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { Container, Row, Col } from "reactstrap";
-import Insight from "./Insight";
 import { InsightCard } from "../../Global/Insight";
 
 export default class InsightArray extends Component {

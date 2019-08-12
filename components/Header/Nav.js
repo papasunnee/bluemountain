@@ -116,11 +116,11 @@ export default class Example extends React.Component {
                       <a>Insight</a>
                     </Link>
                   </DropdownItem>
-                  {/* <DropdownItem>
-                    <Link href="/locations">
-                      <a>Locations</a>
+                  <DropdownItem>
+                    <Link href="/featured-vacancies">
+                      <a>Featured Vacancies</a>
                     </Link>
-                  </DropdownItem> */}
+                  </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>

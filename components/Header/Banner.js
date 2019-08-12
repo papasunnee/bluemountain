@@ -22,6 +22,7 @@ const Banner = props => {
               : `url(/static/svgs/images/${banner}.svg)`
           }`,
           backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
           backgroundSize: "cover",
           borderRadius: "0px",
           minHeight: `${props.min ? "50vh" : "80vh"}`,
