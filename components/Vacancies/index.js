@@ -24,10 +24,10 @@ export default class InsightRow extends Component {
                 List of Vacancies
               </h5>
               <Row>
-                {[1, 2, 3, 4].map((_, key) => {
+                {JobArray.map((option, key) => {
                   return (
                     <Col md={6} key={key}>
-                      <Job />
+                      <Job option={option} />
                     </Col>
                   );
                 })}
@@ -86,6 +86,9 @@ export default class InsightRow extends Component {
                     <strong>Remuneration</strong> <br />
                     Very attractive.
                   </p>
+                  <p className="job__apply">
+                    <button>Apply</button>
+                  </p>
                 </div>
               </div>
             </Col>
@@ -96,7 +99,43 @@ export default class InsightRow extends Component {
   }
 }
 
-const Job = () => {
+const JobArray = [
+  {
+    title: "Senior Back-end Developer",
+    company: "Altitude Technology Worldwide",
+    location: "Abuja, Nigeria",
+    date: "27th April, 2019",
+    type: "Fulltime",
+    link: ""
+  },
+  {
+    title: "Executive Direction",
+    company: "Altitude Technology Worldwide",
+    location: "Abuja, Nigeria",
+    date: "27th April, 2019",
+    type: "Fulltime",
+    link: ""
+  },
+  {
+    title: "Data Analyst",
+    company: "Altitude Technology Worldwide",
+    location: "Abuja, Nigeria",
+    date: "27th April, 2019",
+    type: "Fulltime",
+    link: ""
+  },
+  {
+    title: "Career Coach",
+    company: "Altitude Technology Worldwide",
+    location: "Abuja, Nigeria",
+    date: "27th April, 2019",
+    type: "Fulltime",
+    link: ""
+  }
+];
+
+const Job = props => {
+  const { option = {} } = props;
   return (
     <Fragment>
       <div className="job mb-5">
@@ -105,19 +144,31 @@ const Job = () => {
         </div>
         <div className="job__body">
           <div className="body__content">
-            <h5>Senior Back-end Developer</h5>
-            <p className="conpany">Altitude Technology Worldwide</p>
+            <h5>{option.title}</h5>
+            <p className="conpany">{option.company}</p>
             <p className="location">
-              Altitude Technology <span>Worldwide</span>
+              {option.location} <span>{option.type}</span>
             </p>
           </div>
         </div>
         <div className="job__footer">
-          <div>Date</div>
+          <div>{option.date}</div>
           <div>View Details</div>
         </div>
       </div>
       <style>{`
+      .job__apply{
+          border-top : 1px solid #B2B2B2 ;
+          text-align : right ;
+      }
+      .job__apply button{
+          margin-top : 30px ;
+          border : none ;
+          padding : 5px 30px ;
+          background-color : rgba(229, 206, 0, 0.95); 
+          border-radius : 30px ;
+          cursor : pointer ;
+      }
       .job{
           max-width : 300px ;
           margin : auto ;
@@ -152,12 +203,17 @@ const Job = () => {
             display : block ;
         }
         .job__footer{
+            font-weight : 500 ;
             padding : 20px 10px ;
             display : flex;
             justify-content : space-between ;
             align-items : center ;
             border : 1px solid #DADADA ;
             font-size : 12px ;
+        }
+        .job:hover .job__footer{
+            background-color : #F8E600 ;
+            cursor : pointer ;
         }
         .job__description{
             font-size : 12px ;

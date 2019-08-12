@@ -16,9 +16,15 @@ export default class FullText extends Component {
         <Container>
           <Row>
             <Col>
-              <h3 style={{ fontWeight: "bold", color: "#0069D1" }}>
+              <h2 className="my-5" style={{ fontWeight: "bold" }}>
+                REGISTRATION
+              </h2>
+              <h5
+                className="my-5"
+                style={{ fontWeight: "bold", color: "#0069D1" }}
+              >
                 For Executive Candidates
-              </h3>
+              </h5>
             </Col>
           </Row>
           <Row>

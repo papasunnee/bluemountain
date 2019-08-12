@@ -32,13 +32,7 @@ export default class Registration extends Component {
             rel="stylesheet"
           />
         </Head>
-        <Container
-          fluid
-          style={{
-            paddingLeft: "0px",
-            paddingRight: "0px"
-          }}
-        >
+        <Container fluid className="p-0">
           <Banner subtitle="More about Blue Mountain >" />
         </Container>
       </Fragment>
@@ -62,16 +56,12 @@ const Banner = props => {
           borderRadius: "0px",
           paddingTop: "10rem",
           paddingBottom: "0.5rem",
-          paddingTop: "0px",
           height: "100vh",
           padding: "0px"
         }}
       >
         <div>
           <Nav />
-          <div className="hr-sect" style={{ color: "#fff" }}>
-            REGISTRATION
-          </div>
         </div>
         <div className="container">
           <div style={{ display: "flex", justifyContent: "space-between" }}>
