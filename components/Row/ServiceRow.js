@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import Link from "next/link";
 import { Container, Row, Col } from "reactstrap";
 
 export default class ServiceRow extends Component {
@@ -37,17 +38,26 @@ const LeadershipSolution = props => {
           src={`/static/images/home/${option.image}.jpg`}
           className="img-fluid"
         />
-        <div className=" leader-title">
-          <p>{option.title}</p>
-        </div>
+        <Link href={option.href}>
+          <a>
+            <div className="leader-title">
+              <p>{option.title}</p>
+            </div>
+          </a>
+        </Link>
       </div>
       <style jsx>{`
         .leaderWrapper {
           positon: relative;
           background-color: #e5e5e5;
         }
-        img {
+        .leaderWrapper:hover img {
+          filter: grayscale(70%);
+        }
+        .leaderWrapper img {
           width: 100%;
+          transition: all 1s;
+          filter: grayscale(0%);
         }
         .leaderWrapper:hover .leader-title {
           background-image: linear-gradient(
@@ -74,8 +84,8 @@ const LeadershipSolution = props => {
 };
 
 const LSA = [
-  { title: "Executive Search", image: "1" },
-  { title: "Executive Assessment", image: "2" },
-  { title: "Executive Coaching", image: "3" },
-  { title: "Strategic Consulting", image: "4" }
+  { title: "Executive Search", image: "1", href: "/executive-search" },
+  { title: "Executive Assessment", image: "2", href: "/executive-assessment" },
+  { title: "Executive Coaching", image: "3", href: "/executive-coaching" },
+  { title: "Strategic Consulting", image: "4", href: "/strategic-consulting" }
 ];

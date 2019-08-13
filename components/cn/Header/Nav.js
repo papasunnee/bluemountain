@@ -64,19 +64,19 @@ export default class Example extends React.Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="">
+                <NavLink href="/contact">
                   <FontAwesomeIcon icon={faSearch} size="md" color="#fff" />
                   <div style={{ width: "20px" }} />
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="">
+                <NavLink href="/contact">
                   <FontAwesomeIcon icon={faEnvelope} size="md" color="#fff" />
                   <div style={{ width: "20px" }} />
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="">
+                <NavLink href="/contact">
                   <FontAwesomeIcon icon={faPhone} size="md" color="#fff" />
                   <div style={{ width: "20px" }} />
                 </NavLink>

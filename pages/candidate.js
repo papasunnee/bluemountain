@@ -11,7 +11,10 @@ export default class extends Component {
       <Layout>
         <Banner bgImage="about" min />
         <FullText3 />
-        <Ready />
+        <Ready
+          text="Hoping to view our list of featured vacancies?"
+          href="/featured-vacancies"
+        />
       </Layout>
     );
   }
