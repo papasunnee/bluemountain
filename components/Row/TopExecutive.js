@@ -1,7 +1,9 @@
 import React, { Component, Fragment } from "react";
 import { Container, Row, Col } from "reactstrap";
-import Video from "./Video";
+import { Slide } from "react-slideshow-image";
+// import { Slide } from "react-slideshow-image/lib/components/slideshow//slide";
 import DoubleParagraph from "./DoubleParagaph";
+import "./Slider.css";
 
 export default class extends Component {
   state = {};
@@ -20,7 +22,8 @@ export default class extends Component {
               <DoubleParagraph />
             </Col>
             <Col md="6" sm="12">
-              <div className="darker" />
+              {/* <div className="darker" /> */}
+              <Slideshow />
             </Col>
           </Row>
         </Container>
@@ -55,3 +58,39 @@ export default class extends Component {
     );
   }
 }
+
+const slideImages = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"];
+
+const properties = {
+  duration: 5000,
+  transitionDuration: 500,
+  infinite: true,
+  indicators: true,
+  arrows: true,
+  onChange: (oldIndex, newIndex) => {
+    console.log(`slide transition from ${oldIndex} to ${newIndex}`);
+  }
+};
+
+const Slideshow = () => {
+  return (
+    <div className="slide-container">
+      <Slide {...properties}>
+        {slideImages.map((slideImage, key) => {
+          return (
+            <div className="each-slide" key={key}>
+              <div
+                style={{
+                  backgroundImage: `url(/static/images/slider/${slideImage})`,
+                  backgroundRepeat: "no-repeat"
+                }}
+              >
+                {/* <span>Slide 1</span> */}
+              </div>
+            </div>
+          );
+        })}
+      </Slide>
+    </div>
+  );
+};
