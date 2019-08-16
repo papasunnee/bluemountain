@@ -5664,6 +5664,13 @@ react-apollo@^2.1.11:
     ts-invariant "^0.4.2"
     tslib "^1.9.3"
 
+react-awesome-slider@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-awesome-slider/-/react-awesome-slider-1.0.1.tgz#9d6b28d44b82f67eff33032a0ed457bb2b075d6c"
+  integrity sha512-PXFoIfcntLy/OlfOba+wD8VkR8xn5HBIfpI9ZQFd+zH86sYRAJ9be6w9aiyrl6wyGtWwfLDQtpKKS+hVBkFKXQ==
+  dependencies:
+    web-animation-club "^0.2.2"
+
 react-calendar@^2.19.0:
   version "2.19.0"
   resolved "https://registry.yarnpkg.com/react-calendar/-/react-calendar-2.19.0.tgz#5451927c4a8f2136b9732c348bb27f3b91c032b0"
@@ -7080,6 +7087,11 @@ watchpack@^1.5.0:
     chokidar "^2.0.2"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
+
+web-animation-club@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/web-animation-club/-/web-animation-club-0.2.2.tgz#469c7997751a1ac38a8b03333172c9d61453e8e0"
+  integrity sha512-VjsO7CdfrzO9LGGiHxEr5x5nU7052a3RwuHZjXEh8be49T5ABQ/LRqfB3Wrai2yWcUwr4K6MNBtqjSVmFHafRg==
 
 webpack-dev-middleware@3.7.0:
   version "3.7.0"
