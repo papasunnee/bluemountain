@@ -53,6 +53,15 @@ footer {
   p {
     font-size: 12px;
   }
+  .bmcn {
+    a {
+      margin-right: 10px;
+      svg,
+      img {
+        max-width: 130px;
+      }
+    }
+  }
 
   @media (max-width: 767px) {
     padding: 30px;

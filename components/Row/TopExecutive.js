@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import dynamic from "next/dynamic";
 import { Container, Row, Col } from "reactstrap";
 // import AwesomeSlider from "react-awesome-slider";
-import "react-awesome-slider/dist/styles.css";
 // import { Slide } from "react-slideshow-image";
 import DoubleParagraph from "./DoubleParagaph";
 import "./Slider.css";
@@ -67,12 +66,15 @@ export default class extends Component {
               height: 100%;
               position: absolute;
               border-radius: 50%;
-              background-colot: transparent;
+              background-color: transparent;
               box-shadow: 0px 0px 55px -9px rgba(0, 0, 0, 0.75);
               z-index: -1;
             }
             .darker:hover {
               background-color: #8e8e8e;
+            }
+            .aws-sld__content > img {
+              height: auto !important ;
             }
           `}
         </style>

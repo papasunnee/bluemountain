@@ -2,12 +2,6 @@ import React, { Component, Fragment } from "react";
 import Link from "next/link";
 import { Container, Row, Col } from "reactstrap";
 import "./footer.scss";
-import {
-  faEnvelope,
-  faSearch,
-  faPhone,
-  faBars
-} from "@fortawesome/fontawesome-free-solid";
 import SvgLoader from "bv-react-svgloader";
 export default class Footer extends Component {
   state = {};
