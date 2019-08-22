@@ -17,7 +17,7 @@ export default class extends Component {
         </Head>
         <Banner2
           jpg
-          bgImage="about"
+          bgImage="insight"
           title1="INSIGHT"
           subtitle="Reshaping business. Rethinking consultancy."
         />

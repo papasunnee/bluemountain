@@ -6,11 +6,9 @@ const Banner = props => {
   const banner = props.bgImage || "headerbg";
   return (
     <div>
+      <Nav />
       <Jumbotron
         style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
           backgroundImage: `${
             props.jpg
               ? `url(/static/images/cn/${banner}.jpg`
@@ -19,12 +17,10 @@ const Banner = props => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           borderRadius: "0px",
-          padding: "0px !important",
           minHeight: "40vh"
         }}
       >
-        <Nav />
-        <div style={{ border: "1px solid red" }}>
+        <div>
           <Row>
             <Col md={6}>
               <div
@@ -39,7 +35,8 @@ const Banner = props => {
                   style={{
                     color: "#0052B4",
                     textTransform: "uppercase",
-                    fontWeight: "bold"
+                    fontWeight: "bold",
+                    textAlign: "left"
                   }}
                 >
                   {props.title1}

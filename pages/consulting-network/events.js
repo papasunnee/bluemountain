@@ -19,7 +19,7 @@ export default class extends Component {
         </Head>
         <Banner2
           jpg
-          bgImage="about"
+          bgImage="newevent"
           title1="Events, Seminars & Lectures"
           subtitle="Pursue your ambitions through continuous development"
         />

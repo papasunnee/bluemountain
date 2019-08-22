@@ -17,7 +17,7 @@ export default class extends Component {
         </Head>
         <Banner2
           jpg
-          bgImage="about"
+          bgImage="talktous"
           title1="TALK TO US"
           subtitle="Take advantage of the expertise and flexibility provided by independent consultants."
         />
