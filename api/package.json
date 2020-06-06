@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "apollo-server": "^2.1.0",
-    "apollo-server-express": "^2.1.0",
+    "apollo-server-express": "^2.14.2",
     "async": "2.1.4",
     "cors": "^2.8.4",
     "dotenv": "4.0.0",
