@@ -25,7 +25,7 @@ export default class Footer extends Component {
                       </a>{" "}
                       | <a href="">Terms and Condition</a>
                     </p>
-                    <p>Blue Mountain 2018. All Rights Reserved.</p>
+                    <p>Blue Mountain 2020. All Rights Reserved.</p>
                   </div>
                 </Col>
                 <Col md="4" xs="12" className="follow">
