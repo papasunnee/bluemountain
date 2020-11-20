@@ -5,12 +5,65 @@ import { Container, Row, Col } from "reactstrap";
 // import { Slide } from "react-slideshow-image";
 import DoubleParagraph from "./DoubleParagaph";
 import "./Slider.css";
+import "./CustomSlider.css";
 
 const AwesomeSlider = dynamic(() => import("react-awesome-slider/dist"), {
-  ssr: false
+  ssr: false,
 });
 
-const slideImages = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg"];
+const slideImages = [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "5.jpg",
+  "6.jpg",
+  "7.jpg",
+  "8.jpg",
+];
+
+const CustomSlider = () => {
+  return (
+    <div className="slider">
+      <div className="slides">
+        <div id="slide-1">
+          <div className="overLay">1</div>
+          Access difficuly-to-reach candidates at the top of their game
+        </div>
+        <div id="slide-2">
+          <div className="overLay">2</div>
+          Gain the profssionalism, trust and confidentiality only outside
+          trusted advisor can provide
+        </div>
+        <div id="slide-3">
+          <div className="overLay">3</div>
+          Ensure objectivity, based on the experience of many searches across
+          industries, markets and roles
+        </div>
+        <div id="slide-4">
+          <div className="overLay">4</div>
+          Find and attract diverse candidates with highly marketable skills
+        </div>
+        <div id="slide-5">
+          <div className="overLay">5</div>
+          Leverage deep industry, market and functional expertise
+        </div>
+        <div id="slide-6">
+          <div className="overLay">6</div>Assess candidates to identify the
+          right talent
+        </div>
+        <div id="slide-7">
+          <div className="overLay">7</div>
+          Plan for succession, assessing internal talent and mapping the
+          external marketplace
+        </div>
+        <div id="slide-8">
+          <div className="overLay">8</div>Reduce the risk of the wrong hire
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default class extends Component {
   state = { Slideshow: null };
@@ -25,7 +78,7 @@ export default class extends Component {
             );
           })}
         </AwesomeSlider>
-      )
+      ),
     });
   }
   render() {
@@ -34,17 +87,16 @@ export default class extends Component {
         <Container style={{ margin: "80px auto" }}>
           <Row>
             <Col md="6" sm="12">
-              <h6 className="text-primary mb-4">
-                <span style={{ fontWeight: "bold", display: "block" }}>
-                  Top Executive Retained Search Firm
-                </span>
-                Learn how our trusted executive search consultants can help you
-              </h6>
+              <h4 className="text-primary mb-4 font-weight-bold">
+                Our core mission is to identify, develop and deploy exceptional
+                leadership talents across the globe.
+              </h4>
               <DoubleParagraph />
             </Col>
             <Col md="6" sm="12">
               {/* <div className="darker" /> */}
-              {this.state.Slideshow}
+              {/* {this.state.Slideshow} */}
+              <CustomSlider />
             </Col>
           </Row>
         </Container>

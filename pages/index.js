@@ -24,7 +24,7 @@ export default class extends Component {
         />
         <TopExecutive />
         <ServiceRow />
-        <Video />
+        {/* <Video /> */}
         <EventTop />
         <Global title="GLOBAL INSIGHT" />
       </Layout>

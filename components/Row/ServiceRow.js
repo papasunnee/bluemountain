@@ -7,18 +7,18 @@ export default class ServiceRow extends Component {
   render() {
     return (
       <Fragment>
-        <Container fluid style={{ marginTop: "30px" }}>
+        <Container style={{ marginTop: "30px" }}>
           <Row>
             <Col xs="12" md="12">
               <h3
-                className="text-center mb-4"
+                className="text-center mb-5"
                 style={{ fontWeight: "bold", color: "#0069D1" }}
               >
                 LEADERSHIP SOLUTIONS
               </h3>
             </Col>
             {LSA.map((lsac, key) => (
-              <Col xs="12" md="3" key={key}>
+              <Col className="mb-5" xs="12" md="4" key={key}>
                 <LeadershipSolution option={lsac} />
               </Col>
             ))}
@@ -29,7 +29,7 @@ export default class ServiceRow extends Component {
   }
 }
 
-const LeadershipSolution = props => {
+const LeadershipSolution = (props) => {
   const { option = {} } = props;
   return (
     <Fragment>
@@ -86,6 +86,17 @@ const LeadershipSolution = props => {
 const LSA = [
   { title: "Executive Search", image: "1", href: "/executive-search" },
   { title: "Executive Assessment", image: "2", href: "/executive-assessment" },
+  { title: "Board Services", image: "2", href: "/executive-assessment" },
+  {
+    title: "Leadership Development",
+    image: "2",
+    href: "/executive-assessment",
+  },
+  {
+    title: "Global Talent Exchange",
+    image: "2",
+    href: "/executive-assessment",
+  },
   { title: "Executive Coaching", image: "3", href: "/executive-coaching" },
-  { title: "Strategic Consulting", image: "4", href: "/strategic-consulting" }
+  // { title: "Strategic Consulting", image: "4", href: "/strategic-consulting" },
 ];
