@@ -40,7 +40,7 @@ export default class EventTop extends Component {
                 <div className="text-center p-2" style={{ width: "80%" }}>
                   <img
                     className="img-fluid"
-                    src={`/static/images/home/${this.state.eventImage}.jpg`}
+                    src={`/static/images/home/event${this.state.eventImage}.jpg`}
                   />
                   {/* <SvgLoader src="/static/svgs/images/cn/event.svg" /> */}
                 </div>
