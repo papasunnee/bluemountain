@@ -7,7 +7,7 @@ import {
   faSearch,
   faPhone,
   faHome,
-  faBars
+  faBars,
 } from "@fortawesome/fontawesome-free-solid";
 import {
   Collapse,
@@ -20,7 +20,7 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
 } from "reactstrap";
 
 export default class Example extends React.Component {
@@ -29,12 +29,12 @@ export default class Example extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
   }
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
   }
   render() {
@@ -57,21 +57,15 @@ export default class Example extends React.Component {
                   <div style={{ width: "20px" }} />
                 </NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href="">
-                  <FontAwesomeIcon icon={faSearch} size="md" color="#fff" />
-                  <div style={{ width: "20px" }} />
-                </NavLink>
-              </NavItem>
+
               <NavItem>
                 <NavLink href="/contact">
-                  <FontAwesomeIcon icon={faEnvelope} size="md" color="#fff" />
-                  <div style={{ width: "20px" }} />
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/contact">
-                  <FontAwesomeIcon icon={faPhone} size="md" color="#fff" />
+                  <button
+                    className="btn btn-primary m-0 py-1"
+                    style={{ fontSize: "12px" }}
+                  >
+                    CONTACT US
+                  </button>
                   <div style={{ width: "20px" }} />
                 </NavLink>
               </NavItem>
@@ -86,34 +80,49 @@ export default class Example extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    <Link href="/executive-search">
-                      <a>Executive Search</a>
+                    <Link href="/">
+                      <a>Home</a>
                     </Link>
                   </DropdownItem>
-                  <DropdownItem>
-                    <Link href="/executive-assessment">
-                      <a>Executive Assessment</a>
-                    </Link>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <Link href="/executive-coaching">
-                      <a>Executive Coaching</a>
-                    </Link>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <Link href="/strategic-consulting">
-                      <a>Strategic Consulting</a>
-                    </Link>
-                  </DropdownItem>
-                  <DropdownItem divider />
                   <DropdownItem>
                     <Link href="/about">
                       <a>About Us</a>
                     </Link>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link href="/insights">
+                    <Link href="/solutions">
+                      <a>Solutions</a>
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link href="/functions">
+                      <a>Functions</a>
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link href="/sectors">
+                      <a>Sectors</a>
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    <Link href="/partners">
+                      <a>Partners</a>
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link href="/insight">
                       <a>Insight</a>
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link href="/events">
+                      <a>Events</a>
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link href="/contact">
+                      <a>Contact Us</a>
                     </Link>
                   </DropdownItem>
                   <DropdownItem>

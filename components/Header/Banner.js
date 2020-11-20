@@ -4,7 +4,7 @@ import Link from "next/link";
 import Nav from "./Nav";
 import Title from "../About/Title";
 
-const Banner = props => {
+const Banner = (props) => {
   const banner = props.bgImage || "headerbg";
   return (
     <div>
@@ -27,18 +27,18 @@ const Banner = props => {
           borderRadius: "0px",
           minHeight: `${props.min ? "50vh" : "80vh"}`,
           padding: "0px",
-          margin: "0px"
+          margin: "0px",
         }}
       >
         <Nav />
         <div>
           <h2
-            className="display-5"
+            className="display-4"
             style={{
               color: "#fff",
               textAlign: "center",
               textTransform: "uppercase",
-              fontWeight: "bold"
+              fontWeight: "bold",
             }}
           >
             {props.title1}
@@ -52,7 +52,7 @@ const Banner = props => {
                 color: "yellow",
                 fontWeight: "bold",
                 textTransform: "uppercase",
-                textDecoration: "none"
+                textDecoration: "none",
               }}
             >
               {props.subtitle}

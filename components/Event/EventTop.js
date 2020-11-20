@@ -2,6 +2,15 @@ import React, { Component, Fragment } from "react";
 import { Container, Row, Col } from "reactstrap";
 
 export default class EventTop extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      eventImage: 1,
+    };
+  }
+  handleMouseOver = (event, id = 1) => {
+    this.setState({ eventImage: id });
+  };
   render() {
     return (
       <Fragment>
@@ -18,14 +27,20 @@ export default class EventTop extends Component {
               </Col>
               <Col md={6}>
                 {EventArray.map((ea, key) => {
-                  return <Event option={ea} key={key} />;
+                  return (
+                    <Event
+                      onMouseOver={this.handleMouseOver}
+                      option={ea}
+                      key={key}
+                    />
+                  );
                 })}
               </Col>
               <Col md={6}>
                 <div className="text-center p-2" style={{ width: "80%" }}>
                   <img
                     className="img-fluid"
-                    src="/static/images/home/event.jpg"
+                    src={`/static/images/home/${this.state.eventImage}.jpg`}
                   />
                   {/* <SvgLoader src="/static/svgs/images/cn/event.svg" /> */}
                 </div>
@@ -38,11 +53,14 @@ export default class EventTop extends Component {
   }
 }
 
-const Event = props => {
+const Event = (props) => {
   const { option = {} } = props;
   return (
     <Fragment>
-      <div className="events">
+      <div
+        className="events"
+        onMouseOver={(event) => props.onMouseOver(event, option.id)}
+      >
         <div className="details">
           <div className="date">{option.date}</div>
           <h4 className="title">{option.title}</h4>
@@ -84,6 +102,7 @@ const Event = props => {
             color: #333333;
           }
           .events .links {
+            cursor: pointer;
             border: 1px solid #d4d4d4;
             border-top: none;
             padding-left: 20px;
@@ -113,21 +132,27 @@ const Event = props => {
 
 const EventArray = [
   {
+    id: 1,
     title: "A Happy Business Event 2019",
     date: "27th April, 2019",
     location: "Abuja International Trade & Convention Center Abuja",
-    link: ""
+    link: "",
+    img: "",
   },
   {
+    id: 2,
     title: "Independence Day Sierra Leone",
     date: "27th April, 2019",
     location: "Abuja International Trade & Convention Center Abuja",
-    link: ""
+    link: "",
+    img: "",
   },
   {
+    id: 3,
     title: "A Happy Business Event 2019",
     date: "27th April, 2019",
     location: "Abuja International Trade & Convention Center Abuja",
-    link: ""
-  }
+    link: "",
+    img: "",
+  },
 ];
