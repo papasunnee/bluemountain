@@ -5,7 +5,6 @@ import ServiceRow from "../components/Row/ServiceRow";
 import TopExecutive from "../components/Row/TopExecutive";
 import Global from "../components/Global/Global";
 import Layout from "../components/Layout";
-import Video from "../components/Row/Video";
 import EventTop from "../components/Event/EventTop";
 
 export default class extends Component {
@@ -24,7 +23,6 @@ export default class extends Component {
         />
         <TopExecutive />
         <ServiceRow />
-        {/* <Video /> */}
         <EventTop />
         <Global title="GLOBAL INSIGHT" />
       </Layout>

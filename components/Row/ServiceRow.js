@@ -3,8 +3,12 @@ import Link from "next/link";
 import { Container, Row, Col } from "reactstrap";
 
 export default class ServiceRow extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
   render() {
+    const { title = "LEADERSHIP SOLUTIONS" } = this.props;
     return (
       <Fragment>
         <Container style={{ marginTop: "30px" }}>
@@ -14,7 +18,7 @@ export default class ServiceRow extends Component {
                 className="text-center mb-5"
                 style={{ fontWeight: "bold", color: "#0069D1" }}
               >
-                LEADERSHIP SOLUTIONS
+                {title}
               </h3>
             </Col>
             {LSA.map((lsac, key) => (
@@ -35,7 +39,7 @@ const LeadershipSolution = (props) => {
     <Fragment>
       <div className="leaderWrapper">
         <img
-          src={`/static/images/home/${option.image}.jpg`}
+          src={`/static/images/home/${option.image}.png`}
           className="img-fluid"
         />
         <Link href={option.href}>
@@ -84,19 +88,27 @@ const LeadershipSolution = (props) => {
 };
 
 const LSA = [
-  { title: "Executive Search", image: "1", href: "/executive-search" },
-  { title: "Executive Assessment", image: "2", href: "/executive-assessment" },
-  { title: "Board Services", image: "2", href: "/executive-assessment" },
+  { title: "Executive Search", image: "search", href: "/executive-search" },
+  {
+    title: "Executive Assessment",
+    image: "assessment",
+    href: "/executive-assessment",
+  },
+  { title: "Board Services", image: "services", href: "/executive-assessment" },
   {
     title: "Leadership Development",
-    image: "2",
+    image: "development",
     href: "/executive-assessment",
   },
   {
     title: "Global Talent Exchange",
-    image: "2",
+    image: "exchange",
     href: "/executive-assessment",
   },
-  { title: "Executive Coaching", image: "3", href: "/executive-coaching" },
+  {
+    title: "Executive Coaching",
+    image: "coaching",
+    href: "/executive-coaching",
+  },
   // { title: "Strategic Consulting", image: "4", href: "/strategic-consulting" },
 ];

@@ -11,7 +11,7 @@ export default class extends Component {
       <Layout>
         <Banner bgImage="contact" min />
         <ContactText />
-        <Global title="News Update" />
+        {/* <Global title="News Update" /> */}
       </Layout>
     );
   }
