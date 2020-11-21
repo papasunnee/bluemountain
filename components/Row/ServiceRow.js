@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import Link from "next/link";
 import { Container, Row, Col } from "reactstrap";
+import { Services } from "../Sector/ServiceForm";
 
 export default class ServiceRow extends Component {
   constructor(props) {
@@ -21,9 +22,9 @@ export default class ServiceRow extends Component {
                 {title}
               </h3>
             </Col>
-            {LSA.map((lsac, key) => (
+            {Services.map((service, key) => (
               <Col className="mb-5" xs="12" md="4" key={key}>
-                <LeadershipSolution option={lsac} />
+                <LeadershipSolution service={service} />
               </Col>
             ))}
           </Row>
@@ -34,18 +35,18 @@ export default class ServiceRow extends Component {
 }
 
 const LeadershipSolution = (props) => {
-  const { option = {} } = props;
+  const { service = {} } = props;
   return (
     <Fragment>
       <div className="leaderWrapper">
         <img
-          src={`/static/images/home/${option.image}.png`}
+          src={`/static/images/home/${service.imageSrc}`}
           className="img-fluid"
         />
-        <Link href={option.href}>
+        <Link href={service.href}>
           <a>
             <div className="leader-title">
-              <p>{option.title}</p>
+              <p>{service.name}</p>
             </div>
           </a>
         </Link>
@@ -86,29 +87,3 @@ const LeadershipSolution = (props) => {
     </Fragment>
   );
 };
-
-const LSA = [
-  { title: "Executive Search", image: "search", href: "/executive-search" },
-  {
-    title: "Executive Assessment",
-    image: "assessment",
-    href: "/executive-assessment",
-  },
-  { title: "Board Services", image: "services", href: "/executive-assessment" },
-  {
-    title: "Leadership Development",
-    image: "development",
-    href: "/executive-assessment",
-  },
-  {
-    title: "Global Talent Exchange",
-    image: "exchange",
-    href: "/executive-assessment",
-  },
-  {
-    title: "Executive Coaching",
-    image: "coaching",
-    href: "/executive-coaching",
-  },
-  // { title: "Strategic Consulting", image: "4", href: "/strategic-consulting" },
-];
