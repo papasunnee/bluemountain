@@ -44,7 +44,8 @@
   padding: 10px;
   margin-right: 50px;
   border-radius: 10px;
-  background: #eee;
+  background: #031928;
+  color: #fff;
   transform-origin: center center;
   transform: scale(1);
   transition: transform 0.5s;
@@ -61,7 +62,7 @@
   justify-content: center;
   align-items: center;
   font-size: 150px;
-  color: #fff;
+  color: #031928;
   width: 100%;
   height: 100%;
   background-color: #d9c402;

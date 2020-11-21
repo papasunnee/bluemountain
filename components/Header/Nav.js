@@ -126,13 +126,13 @@ export default class Example extends React.Component {
                     </Link>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link href="/contact">
-                      <a>Contact Us</a>
+                    <Link href="/featured-vacancies">
+                      <a>Featured Vacancies</a>
                     </Link>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link href="/featured-vacancies">
-                      <a>Featured Vacancies</a>
+                    <Link href="/contact">
+                      <a>Contact Us</a>
                     </Link>
                   </DropdownItem>
                 </DropdownMenu>

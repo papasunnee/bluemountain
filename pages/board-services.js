@@ -12,13 +12,9 @@ export default class extends Component {
     return (
       <Layout>
         <Head>
-          <title>Executive Assessment</title>
+          <title>Board Services</title>
         </Head>
-        <Banner
-          bgImage="executiveAssessment"
-          min
-          title="EXECUTIVE ASSESSMENT"
-        />
+        <Banner bgImage="executiveAssessment" min title="BOARD SERVICES" />
         <ServiceBodyUpgrade serviceImage="executivesearch" />
         <Ready />
       </Layout>
