@@ -7,7 +7,7 @@ import {
   CardText,
   CardDeck,
   CardFooter,
-  CardBody
+  CardBody,
 } from "reactstrap";
 
 export default class extends Component {
@@ -25,7 +25,7 @@ export default class extends Component {
   }
 }
 
-export const InsightCard = props => {
+export const InsightCard = (props) => {
   const { option = {} } = props;
   return (
     <Fragment>
@@ -46,10 +46,10 @@ export const InsightCard = props => {
         </CardBody>
         <CardFooter className="text-muted">
           <div className="cardFooter">
-            <div>27th April, 2019</div>
+            <div>27th April, 2020</div>
             <div>
-              <Link href={option.link}>
-                <a>Read More</a>
+              <Link href="/insight-detail">
+                <a style={{ textDecoration: "none" }}>Read More</a>
               </Link>
             </div>
           </div>
@@ -68,7 +68,7 @@ export const InsightCard = props => {
 };
 
 const InsightCardArray = [
-  { title: "", content: "", date: "", link: "" },
-  { title: "", content: "", date: "", link: "" },
-  { title: "", content: "", date: "", link: "" }
+  { title: "", content: "", date: "", link: "/insight-detail" },
+  { title: "", content: "", date: "", link: "/insight-detail" },
+  { title: "", content: "", date: "", link: "/insight-detail" },
 ];

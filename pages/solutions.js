@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Global from "../components/Global/Global";
 import ServiceRow from "../components/Row/ServiceRow";
 import { Col, Container, Row } from "reactstrap";
+import ManagementRow from "../components/Management/managementRow";
 
 export default class extends Component {
   state = {};
@@ -37,7 +38,7 @@ export default class extends Component {
           </Row>
         </Container>
         <ServiceRow title="" />
-        <Global title="Global Management Team" />
+        <ManagementRow title="Management Team" />
       </Layout>
     );
   }
