@@ -100,3 +100,27 @@ footer {
     padding-left: 20px;
   }
 }
+.newsLetter {
+  .newsLetterButton {
+    font-size: 12px;
+    background-color: transparent;
+    border-color: #d9c402;
+    &:hover {
+      background-color: #d9c402;
+      color: #000;
+    }
+  }
+  .newsLetterInput {
+    max-width: 300px;
+    border-radius: 0;
+    font-size: 12px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    outline: none !important;
+    border-bottom: 1px solid #d9c402;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

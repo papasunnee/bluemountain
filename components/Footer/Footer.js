@@ -73,25 +73,19 @@ export default class Footer extends Component {
                   </ul>
                 </Col>
                 <Col md={4} xs={12}>
-                  <form action="">
+                  <form action="" className="newsLetter">
                     <div className="form-group">
                       <label htmlFor="newsLetter">NewsLetter</label>
                       <input
                         type="email"
-                        className="form-control"
-                        style={{
-                          maxWidth: "300px",
-                          borderRadius: 0,
-                          fontSize: "12px",
-                        }}
+                        className="form-control newsLetterInput"
                         placeholder="Email Address"
                         required
                       />
                     </div>
                     <div className="form-group">
                       <input
-                        style={{ fontSize: "12px" }}
-                        className="btn btn-success py-1"
+                        className="btn btn-success py-1 newsLetterButton"
                         type="submit"
                         value="SUMBIT"
                       />
