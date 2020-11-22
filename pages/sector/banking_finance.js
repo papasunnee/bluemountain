@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Head from 'next/head';
+import Head from "next/head";
 import Banner from "../../components/Header/Banner";
 import SectorBody from "../../components/Sector/SectorBody";
 import Layout from "../../components/Layout";
@@ -12,12 +12,12 @@ export default class extends Component {
     return (
       <Layout>
         <Head>
-        <title>Banking and Finance</title>
+          <title>Banking and Finance</title>
         </Head>
         <Banner bgImage="bf" />
         <Title title="BF" country="bflogo" />
         <SectorBody />
-        <Ready />
+        {/* <Ready /> */}
       </Layout>
     );
   }

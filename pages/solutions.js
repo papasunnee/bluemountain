@@ -20,10 +20,6 @@ export default class extends Component {
           </Row>
           <Row className="mb-5">
             <Col md={12}>
-            </Col>
-          </Row>
-          <Row className="mb-5">
-            <Col md={12}>
               <p>
                 Every organization that wants to grow, develop and be better
                 than others in their field face executive challenges, they

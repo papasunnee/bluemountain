@@ -12,10 +12,10 @@ export default class extends Component {
     return (
       <Layout>
         <Head>
-          <title>Health Care</title>
+          <title>Agriculture</title>
         </Head>
-        <Banner bgImage="health" />
-        <Title title=" " country="health" />
+        <Banner bgImage="bf" />
+        <Title title="BF" country="bflogo" />
         <SectorBody />
         {/* <Ready /> */}
       </Layout>
