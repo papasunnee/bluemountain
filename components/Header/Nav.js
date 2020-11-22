@@ -52,22 +52,26 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/">
-                  <FontAwesomeIcon icon={faHome} size="md" color="#fff" />
-                  <div style={{ width: "20px" }} />
-                </NavLink>
+                <Link href="/">
+                  <a className="nav-link">
+                    <FontAwesomeIcon icon={faHome} size="md" color="#fff" />
+                    <div style={{ width: "20px" }} />
+                  </a>
+                </Link>
               </NavItem>
 
               <NavItem>
-                <NavLink href="/contact">
-                  <button
-                    className="btn btn-primary m-0 py-1"
-                    style={{ fontSize: "12px" }}
-                  >
-                    CONTACT US
-                  </button>
-                  <div style={{ width: "20px" }} />
-                </NavLink>
+                <Link href="/contact">
+                  <a className="nav-link">
+                    <button
+                      className="btn btn-primary m-0 py-1"
+                      style={{ fontSize: "12px" }}
+                    >
+                      CONTACT US
+                    </button>
+                    <div style={{ width: "20px" }} />
+                  </a>
+                </Link>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav>
