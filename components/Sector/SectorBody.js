@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
-import TextComponent from "../TinyComponent/TextComponent.js"
-import ImageWithShareComponent from "../TinyComponent/ImageWithShareComponent.js"
+import TextComponent from "../TinyComponent/TextComponent.js";
+import ImageWithShareComponent from "../TinyComponent/ImageWithShareComponent.js";
 
 import { Container, Col, Row } from "reactstrap";
 
@@ -24,7 +24,10 @@ export default class SectorBody extends Component {
             </Col>
             <Col xs={12} md={6}>
               <div className="statContent">
-                <h2>TYPICAL<br /> EXECUTIVE POSTS</h2>
+                <h2>
+                  TYPICAL
+                  <br /> EXECUTIVE POSTS
+                </h2>
                 <ul>
                   <li>Lorem ipsum dolor sit amet,</li>
                   <li>Lorem ipsum dolor sit amet,</li>
@@ -36,12 +39,12 @@ export default class SectorBody extends Component {
               </div>
             </Col>
           </Row>
-          <br/>
-          <br/>
-          <Row>
+          <br />
+          <br />
+          <Row className="mb-4">
             <Col xs={12} md={6}>
               <ImageWithShareComponent />
-              <h4 className="text-center">SHARE LINK COMPONENT HERE</h4>
+              {/* <h4 className="text-center">SHARE LINK COMPONENT HERE</h4> */}
             </Col>
             <Col xs={12} md={6}>
               <TextComponent textColor="#000" />
