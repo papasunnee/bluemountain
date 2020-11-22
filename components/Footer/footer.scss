@@ -1,12 +1,27 @@
 footer {
-  text-align: center;
   background-color: #031928;
+  background-image: url(/static/svgs/images/world.svg);
+  background-blend-mode: multiply;
   padding: 60px;
   color: #fff;
-
+  ul {
+    text-align-last: left;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      a {
+        text-decoration: none !important;
+        font-size: 12px;
+        &:hover {
+          color: yellow;
+        }
+      }
+    }
+  }
   a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: none !important;
   }
   .socials {
     display: flex;
@@ -62,16 +77,25 @@ footer {
 
   @media (max-width: 767px) {
     padding: 30px;
-    .footerLogo {
-      text-align: center;
-      margin-top: 30px;
-      order: 3;
-    }
     .bmcn {
       display: none;
     }
     .follow {
       order: 1;
     }
+  }
+}
+
+.footerLogo {
+  border-top: 1px solid #fff;
+  background-color: #031928;
+  p {
+    font-size: 12px;
+  }
+  a {
+    color: #fff;
+    text-decoration: none !important;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }

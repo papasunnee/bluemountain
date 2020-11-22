@@ -12,37 +12,67 @@ export default class Footer extends Component {
           <footer>
             <Container fluid className="m-0">
               <Row>
-                <Col md="4" xs="12" className="footerLogo">
-                  <Link href="/">
-                    <a>
-                      <SvgLoader src="/static/svgs/images/logo.svg" />
-                    </a>
-                  </Link>
-                  <div style={{ marginTop: "20px" }}>
-                    <p>
-                      <a href="" style={{ fontWeight: "bold" }}>
-                        Privacy Policy
-                      </a>{" "}
-                      | <a href="">Terms and Condition</a>
-                    </p>
-                    <p>Blue Mountain 2020. All Rights Reserved.</p>
-                  </div>
+                <Col md={2} xs={12}>
+                  <p style={{ fontSize: "14px" }}>Quick Links</p>
+                  <ul>
+                    <li>
+                      <Link href="/">
+                        <a>Home</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/about">
+                        <a>About</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/solutions">
+                        <a>Solutions</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/functions">
+                        <a>Functions</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/sectors">
+                        <a>Sectors</a>
+                      </Link>
+                    </li>
+                  </ul>
                 </Col>
-                <Col md="4" xs="12" className="follow">
-                  <h4 style={{ fontWeight: "bold" }}>FOLLOW US</h4>
-                  <div className="socials">
-                    <div className="linkedIn">
-                      <img src="/static/social/linkedin.png" />
-                    </div>
-                    <div className="google">
-                      <img src="/static/social/google.png" />
-                    </div>
-                    <div className="twitter">
-                      <img src="/static/social/twitter.png" />
-                    </div>
-                  </div>
+                <Col md={2} xs={12}>
+                  <p style={{ fontSize: "14px" }}>Navigation Links</p>
+                  <ul>
+                    <li>
+                      <Link href="/partners">
+                        <a>Partner</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/insights">
+                        <a>Insight</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/events">
+                        <a>Events</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/organisational-consulting">
+                        <a>Organisational Consulting</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/featured-vacancies">
+                        <a>Featured Vacancies</a>
+                      </Link>
+                    </li>
+                  </ul>
                 </Col>
-                <Col md="4" xs="12" className="bmcn">
+                <Col md={3} xs={12} className="bmcn">
                   {!this.props.university && (
                     <Link href="/university">
                       <a>
@@ -62,6 +92,28 @@ export default class Footer extends Component {
               </Row>
             </Container>
           </footer>
+          <Container fluid className="py-3 footerLogo">
+            <Row>
+              <Col xs={12} className="">
+                <Link href="/">
+                  <a style={{ maxWidth: "200px", paddingRight: "20px" }}>
+                    <SvgLoader src="/static/svgs/images/logo.svg" />
+                  </a>
+                </Link>
+                <p
+                  style={{
+                    marginTop: "20px",
+                    display: "inline-block",
+                    color: "#fff",
+                  }}
+                >
+                  <a href="">Privacy Policy</a> |{" "}
+                  <a href="">Terms and Condition.</a>
+                  Blue Mountain 2020. All Rights Reserved.
+                </p>
+              </Col>
+            </Row>
+          </Container>
         </div>
       </Fragment>
     );
