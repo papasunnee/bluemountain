@@ -20,7 +20,6 @@ export default class extends Component {
           </Row>
           <Row className="mb-5">
             <Col md={12}>
-              <h3>THE PATH TO LEADERSHIP STARTS HERE</h3>
             </Col>
           </Row>
           <Row className="mb-5">

@@ -72,17 +72,55 @@ export default class Footer extends Component {
                     </li>
                   </ul>
                 </Col>
-                <Col md={3} xs={12} className="bmcn">
-                  {!this.props.university && (
-                    <Link href="/university">
-                      <a>
-                        <img
-                          className="img-fluid"
-                          src="/static/images/footer/bmu.png"
-                        />
-                      </a>
-                    </Link>
-                  )}
+                <Col md={4} xs={12}>
+                  <form action="">
+                    <div className="form-group">
+                      <label htmlFor="newsLetter">NewsLetter</label>
+                      <input
+                        type="email"
+                        className="form-control"
+                        style={{
+                          maxWidth: "300px",
+                          borderRadius: 0,
+                          fontSize: "12px",
+                        }}
+                        placeholder="Email Address"
+                        required
+                      />
+                    </div>
+                    <div className="form-group">
+                      <input
+                        style={{ fontSize: "12px" }}
+                        className="btn btn-success py-1"
+                        type="submit"
+                        value="SUMBIT"
+                      />
+                    </div>
+                  </form>
+
+                  <div className="socials">
+                    <div className="linkedIn">
+                      <img src="/static/social/linkedin.png" />
+                    </div>
+                    <div className="twitter">
+                      <img src="/static/social/twitter.png" />
+                    </div>
+                  </div>
+                </Col>
+                <Col md={4} xs={12} className="bmcn">
+                  <p style={{ fontSize: "14px" }}>Link to Other Services</p>
+                  <div className="mb-5">
+                    {!this.props.university && (
+                      <Link href="/university">
+                        <a>
+                          <img
+                            className="img-fluid"
+                            src="/static/images/footer/bmu.png"
+                          />
+                        </a>
+                      </Link>
+                    )}
+                  </div>
                   <Link href="/consulting-network">
                     <a>
                       <SvgLoader src="/static/svgs/images/yellowmount.svg" />
