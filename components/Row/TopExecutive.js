@@ -32,7 +32,7 @@ const CustomSlider = () => {
         </div>
         <div id="slide-2">
           <div className="overLay">2</div>
-          Gain the profssionalism, trust and confidentiality only outside
+          Gain the professionalism, trust and confidentiality only outside
           trusted advisor can provide
         </div>
         <div id="slide-3">
