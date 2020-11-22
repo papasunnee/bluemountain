@@ -75,12 +75,17 @@ const ConsultingItem = ({ details = {} }) => {
       <div className="aboutItem">
         <h4 className="mb-4">{details.name}</h4>
         <img src={`/static/images/consulting/${details.imageSrc}.png`} />
-        <p className="mt-4">
+        <p className="mt-4" style={{ lineHeight: 2 }}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt
           placeat, error unde eius eum minima, aspernatur corrupti totam
           quisquam nostrum earum commodi, dolore labore dolorem voluptates hic
           officia. Id, ex. Lorem ipsum dolor, sit amet consectetur adipisicing
         </p>
+        <Link href={`/organizational/${details.link}`}>
+          <a className="btn btn-primary py-1" style={{ fontSize: "12px" }}>
+            Read More
+          </a>
+        </Link>
       </div>
       <style jsx>{`
         .aboutItem {
@@ -108,8 +113,20 @@ const ConsultingItem = ({ details = {} }) => {
 };
 
 const ConsultingList = [
-  { name: "Cultural Tranformation", imageSrc: "cultural", link: "" },
-  { name: "Strategic Workforce Planning", imageSrc: "strategic", link: "" },
-  { name: "Organizational Effectiveness", imageSrc: "effect", link: "" },
-  { name: "Performance Managemt", imageSrc: "performance", link: "" },
+  { name: "Cultural Transformation", imageSrc: "cultural", link: "cultural" },
+  {
+    name: "Strategic Workforce Planning",
+    imageSrc: "strategic",
+    link: "strategic",
+  },
+  {
+    name: "Organizational Effectiveness",
+    imageSrc: "effect",
+    link: "effectiveness",
+  },
+  {
+    name: "Performance Management",
+    imageSrc: "performance",
+    link: "performance",
+  },
 ];
