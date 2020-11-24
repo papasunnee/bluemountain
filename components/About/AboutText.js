@@ -105,8 +105,10 @@ const AboutItem = (props) => {
             voluptates hic officia. Id, ex.
           </p>
         )}
-        {props.tv && <VideoPlayer />}
-        {props.image && <span>Image Here</span>}
+        {/* {props.tv && <VideoPlayer />} */}
+        {props.tv && (
+          <img className="img img-fluid" src="/static/images/about/tv-3.jpg" />
+        )}
         {props.joinNetwork && (
           <Link href="/consulting-network/apply-to-join">
             <a className="joinNetwork">APPLY TO JOIN OUR NETWORK</a>

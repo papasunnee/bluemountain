@@ -45,15 +45,27 @@ export const ManagementCard = (props) => {
           style={{
             backgroundColor: "#02375a",
             padding: "0.5rem 1rem",
-            color: "#fff !important",
           }}
         >
-          <p
-            className="text-primary font-weight-bold"
-            style={{ color: "#fff !important" }}
+          <span
+            style={{
+              display: "block",
+              marginBottom: "5px",
+              fontWeight: "bold",
+              color: "#fff !important",
+            }}
           >
-            <span style={{ color: "#fff !important" }}>{details.name}</span>
-          </p>
+            {details.name}
+          </span>
+          <span
+            style={{
+              fontWeight: "lighter",
+              fontSize: "12px",
+              color: "#fff !important",
+            }}
+          >
+            {details.title}
+          </span>
         </CardBody>
       </Card>
     </Fragment>
@@ -61,10 +73,10 @@ export const ManagementCard = (props) => {
 };
 
 const ManagementTeam = [
-  { name: "Jefferson Sanders" },
-  { name: "Jefferson Sanders" },
-  { name: "Jefferson Sanders" },
-  { name: "Jefferson Sanders" },
-  { name: "Jefferson Sanders" },
-  { name: "Jefferson Sanders" },
+  { name: "Jefferson Sanders", title: "President & CEO" },
+  { name: "Jefferson Sanders", title: "Chief Operating Officer" },
+  { name: "Jefferson Sanders", title: "Chief Financial Officer" },
+  { name: "Jefferson Sanders", title: "Untitled Officer" },
+  { name: "Jefferson Sanders", title: "Untitled Officer" },
+  { name: "Jefferson Sanders", title: "Untitled Officer" },
 ];
