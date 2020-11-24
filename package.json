@@ -43,6 +43,7 @@
     "react-dom": "^16.8.6",
     "react-ga": "^2.5.3",
     "react-particles-js": "^2.3.0",
+    "react-phone-input-2": "^2.13.9",
     "react-player": "^1.6.4",
     "react-slideshow-image": "^1.2.2",
     "reactstrap": "^6.4.0",

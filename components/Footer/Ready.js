@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Container, Col, Row } from "reactstrap";
 import SvgLoader from "bv-react-svgloader";
 import "./ready.scss";
-const Ready = props => {
+const Ready = (props) => {
   return (
     <Container>
       <Row className="mt-3 mb-3">
@@ -20,11 +20,11 @@ const Ready = props => {
   );
 };
 
-export const Flags = props => {
+export const Flags = (props) => {
   return (
     <div className="country">
       <Link href="/country/usa">
-        <a onClick={e => props.handleClick(e, "usa")}>
+        <a onClick={(e) => props.handleClick(e, "usa")}>
           {props.country == "usa" ? (
             <SvgLoader src="/static/svgs/country/usa2.svg" />
           ) : (
@@ -33,7 +33,7 @@ export const Flags = props => {
         </a>
       </Link>
       <Link href="/country/uk">
-        <a onClick={e => props.handleClick(e, "uk")}>
+        <a onClick={(e) => props.handleClick(e, "uk")}>
           {props.country == "uk" ? (
             <SvgLoader src="/static/svgs/country/uk2.svg" />
           ) : (
@@ -42,7 +42,7 @@ export const Flags = props => {
         </a>
       </Link>
       <Link href="/country/canada">
-        <a onClick={e => props.handleClick(e, "canada")}>
+        <a onClick={(e) => props.handleClick(e, "canada")}>
           {props.country == "canada" ? (
             <SvgLoader src="/static/svgs/country/canada2.svg" />
           ) : (
@@ -50,7 +50,7 @@ export const Flags = props => {
           )}
         </a>
       </Link>
-      <Link href="/country/australia">
+      {/* <Link href="/country/australia">
         <a onClick={e => props.handleClick(e, "australia")}>
           {props.country == "australia" ? (
             <SvgLoader src="/static/svgs/country/australia2.svg" />
@@ -58,7 +58,7 @@ export const Flags = props => {
             <SvgLoader src="/static/svgs/country/australia.svg" />
           )}
         </a>
-      </Link>
+      </Link> 
       <Link href="/country/germany">
         <a onClick={e => props.handleClick(e, "germany")}>
           {props.country == "germany" ? (
@@ -68,8 +68,9 @@ export const Flags = props => {
           )}
         </a>
       </Link>
+      */}
       <Link href="/country/sa">
-        <a onClick={e => props.handleClick(e, "sa")}>
+        <a onClick={(e) => props.handleClick(e, "sa")}>
           {props.country == "sa" ? (
             <SvgLoader src="/static/svgs/country/sa2.svg" />
           ) : (
@@ -77,17 +78,17 @@ export const Flags = props => {
           )}
         </a>
       </Link>
-      <Link href="/country/uae">
-        <a onClick={e => props.handleClick(e, "uae")}>
+      {/* <Link href="/country/uae">
+        <a onClick={(e) => props.handleClick(e, "uae")}>
           {props.country == "uae" ? (
             <SvgLoader src="/static/svgs/country/uae2.svg" />
           ) : (
             <SvgLoader src="/static/svgs/country/uae.svg" />
           )}
         </a>
-      </Link>
+      </Link> */}
       <Link href="/country/nigeria">
-        <a onClick={e => props.handleClick(e, "nigeria")}>
+        <a onClick={(e) => props.handleClick(e, "nigeria")}>
           {props.country == "nigeria" ? (
             <SvgLoader src="/static/svgs/country/nigeria2.svg" />
           ) : (

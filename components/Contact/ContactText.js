@@ -1,14 +1,21 @@
 import React, { Fragment, useState } from "react";
 import { Container, Col, Row } from "reactstrap";
 import { Flags } from "../Footer/Ready";
+import PhoneInput from "react-phone-input-2";
+import "./phoneStyle.css";
 
 const initialState = "canada";
 export default () => {
   const [state, setState] = useState(initialState);
+  const [form, setForm] = useState({ phone: "" });
   const handleClick = (e, flag) => {
     e.preventDefault();
     setState(flag);
   };
+  // const handleForm = (e) => {
+  //   const { value } = e.target;
+  //   setForm({ ...form, phone: value });
+  // };
   return (
     <Fragment>
       <Container fluid>
@@ -24,35 +31,53 @@ export default () => {
               <Col md={6}>
                 <div className="formWrapper">
                   <form action="" className="contactForm" onSubmit="alert()">
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="contact_number"
-                      placeholder="Contact Number"
-                      required
-                    />
-                    <input
-                      type="email"
-                      className="form-control"
-                      name="email_address"
-                      placeholder="Email Address"
-                      required
-                    />
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="address"
-                      placeholder="Address"
-                      required
-                    />
-                    <textarea
-                      style={{ height: "100px" }}
-                      className="form-control"
-                      name="address"
-                      row="10"
-                      placeholder="Message"
-                      required
-                    ></textarea>
+                    <div className="form-group mb-4">
+                      <label
+                        htmlFor=""
+                        style={{ color: "#0069d1", fontWeight: "bold" }}
+                      >
+                        <span style={{ color: "red" }}>*</span> Phone Number
+                      </label>
+                      <PhoneInput
+                        className="form-control mb-2"
+                        style={{ width: "100% !important" }}
+                        country={"us"}
+                        placeholder="Contact Number"
+                        value={form.phone}
+                        name="phone"
+                        onChange={(phone) => setForm({ phone })}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label
+                        htmlFor=""
+                        style={{ color: "#0069d1", fontWeight: "bold" }}
+                      >
+                        <span style={{ color: "red" }}>*</span> Email Address
+                      </label>
+                      <input
+                        type="email"
+                        className="form-control"
+                        name="email_address"
+                        required
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label
+                        htmlFor=""
+                        style={{ color: "#0069d1", fontWeight: "bold" }}
+                      >
+                        <span style={{ color: "red" }}>*</span> Message
+                      </label>
+                      <textarea
+                        style={{ height: "100px" }}
+                        className="form-control"
+                        name="address"
+                        row="10"
+                        required
+                      ></textarea>
+                    </div>
+
                     <button type="submit" className="btn btn-primary">
                       SUBMIT
                     </button>
@@ -112,6 +137,7 @@ export default () => {
             border-top: 40px solid #0069d1;
             padding-top: 20px;
           }
+          .react-tel-input .form-control,
           .contactForm .form-control {
             margin-bottom: 20px;
             border-radius: 0px;
@@ -119,6 +145,7 @@ export default () => {
             border-bottom: 1px solid #ffda44;
             outline: none;
             box-shadow: none;
+            width: 100% !important ;
           }
           .contactForm .form-control::placeholder {
             color: #0069d1;

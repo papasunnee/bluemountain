@@ -31,8 +31,11 @@ export default class EventForm extends Component {
                 </FormGroup>
                 <FormGroup>
                   <FormText color="muted">
-                    I accept to receive newsletters from Blue Mountain. Read the
-                    Blue Mountain Privacy Policy.
+                    <label htmlFor="">
+                      <input type="checkbox" name="" id="" /> I accept to
+                      receive newsletters from Blue Mountain. Read the Blue
+                      Mountain Privacy Policy.
+                    </label>
                   </FormText>
                 </FormGroup>
                 <Button>SUBSCRIBE</Button>

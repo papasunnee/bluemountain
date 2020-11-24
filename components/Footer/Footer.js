@@ -40,6 +40,11 @@ export default class Footer extends Component {
                         <a>Sectors</a>
                       </Link>
                     </li>
+                    <li>
+                      <Link href="/bmtn">
+                        <a>Blue Mountain TV Network</a>
+                      </Link>
+                    </li>
                   </ul>
                 </Col>
                 <Col md={2} xs={12}>

@@ -69,25 +69,9 @@ export default class extends Component {
             <Col md={6}>
               <div className="mt-5">
                 <h3>
-                  <span className="font-weight-bold">
-                    Nisl Tincidunt Eget Nullam Non
-                  </span>
-                  At consectetur lorem donec massa sapien. Auctor eu augue ut
-                  lectus arcu bibendum at
+                  <span className="font-weight-bold">Put Form Here</span>
                 </h3>
                 <hr style={{ borderBottom: "4px solid #000" }} />
-                <p>
-                  ulla pulvinar eleifend sem. Aliquam erat volutpat. Aenean
-                  placerat. Integer imperdiet lectus quis justo. Nulla turpis
-                  magna, cursus sit amet, suscipit a, interdum id, felis. Fusce
-                  nibh. Pellentesque habitant morbi tristique senectus et netus
-                  et malesuada fames ac turpis egestas.ulla pulvinar eleifend
-                  sem. Aliquam erat volutpat. Aenean placerat. Integer imperdiet
-                  lectus quis justo. Nulla turpis magna, cursus sit amet,
-                  suscipit a, interdum id, felis. Fusce nibh. Pellentesque
-                  habitant morbi tristique senectus et netus et malesuada fames
-                  ac turpis egestas
-                </p>
               </div>
             </Col>
           </Row>

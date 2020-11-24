@@ -16,7 +16,7 @@ export default class FindUs extends Component {
               md="6"
               style={{
                 backgroundColor: "rgba(229, 206, 0, 0.95)",
-                padding: "0px"
+                padding: "0px",
               }}
             >
               <div
@@ -25,7 +25,7 @@ export default class FindUs extends Component {
                   width: "70%",
                   marginLeft: "30%",
                   marginTop: "-20%",
-                  backgroundColor: "#F0F0F0"
+                  backgroundColor: "#F0F0F0",
                 }}
               >
                 <div
@@ -33,7 +33,7 @@ export default class FindUs extends Component {
                     backgroundColor: "#fff",
                     padding: "20px",
                     height: "280px",
-                    overflow: "hidden"
+                    overflow: "hidden",
                   }}
                 >
                   <h3>Lorem ipsum dolor sit amet</h3>
@@ -50,7 +50,7 @@ export default class FindUs extends Component {
                 <div
                   style={{
                     padding: "20px",
-                    backgroundColor: "rgba(229, 206, 0, 0.95)"
+                    backgroundColor: "rgba(229, 206, 0, 0.95)",
                   }}
                 >
                   <h3 className="display-6">Clients</h3>
@@ -62,7 +62,7 @@ export default class FindUs extends Component {
                     Sit ultricies, dignissim mauris a non, vel vestibulum dolor.
                     Vestibulum interdum suspendisse
                   </p>
-                  <p style={{ textAlign: "right" }}>
+                  {/* <p style={{ textAlign: "right" }}>
                     <Link href="/consulting-network/discuss-project" prefetch>
                       <a
                         style={{
@@ -78,7 +78,7 @@ export default class FindUs extends Component {
                         Discuss your project with us
                       </a>
                     </Link>
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </Col>
@@ -87,7 +87,7 @@ export default class FindUs extends Component {
               md="6"
               style={{
                 backgroundColor: "#031928",
-                padding: "0px"
+                padding: "0px",
               }}
             >
               <div
@@ -95,7 +95,7 @@ export default class FindUs extends Component {
                   display: "absolute",
                   width: "70%",
                   marginTop: "-20%",
-                  backgroundColor: "#DADADA"
+                  backgroundColor: "#DADADA",
                 }}
               >
                 <div
@@ -104,7 +104,7 @@ export default class FindUs extends Component {
                     color: "#fff",
                     padding: "20px",
                     height: "280px",
-                    overflow: "hidden"
+                    overflow: "hidden",
                   }}
                 >
                   <p>
@@ -119,7 +119,13 @@ export default class FindUs extends Component {
                     interdum suspendisse
                   </p>
                 </div>
-                <div style={{ padding: "20px", backgroundColor : "#031928", color : "#fff" }}>
+                <div
+                  style={{
+                    padding: "20px",
+                    backgroundColor: "#031928",
+                    color: "#fff",
+                  }}
+                >
                   <h3 className="display-6">Consultants</h3>
                   <p>
                     Lorem ipsum dolor sit amet, sollicitudin mattis id habitasse
@@ -129,7 +135,7 @@ export default class FindUs extends Component {
                     Sit ultricies, dignissim mauris a non, vel vestibulum dolor.
                     Vestibulum interdum suspendisse
                   </p>
-                  <p style={{ textAlign: "right" }}>
+                  {/* <p style={{ textAlign: "right" }}>
                     <Link href="/consulting-network/apply-to-join" prefetch>
                       <a
                         style={{
@@ -139,13 +145,13 @@ export default class FindUs extends Component {
                           padding: " 5px 10px ",
                           display: "inline-block",
                           borderRadius: "5px",
-                          textDecoration: "none"
+                          textDecoration: "none",
                         }}
                       >
                         Apply to Join our Network
                       </a>
                     </Link>
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </Col>

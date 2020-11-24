@@ -34,7 +34,7 @@ export default class extends Component {
         </Head>
         <Container className="pr-0 pl-0" fluid>
           {this.props.children}
-          <NewsLetter />
+          {!this.props.noNewsLetter && <NewsLetter />}
           <Footer university={this.props.noUniversity || null} />
         </Container>
       </Fragment>

@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import SectorRow from "../components/Row/SectorRow";
 import { Col, Container, Row } from "reactstrap";
 import ManagementRow from "../components/Management/managementRow";
+import Global from "../components/Global/Global";
 
 export default class extends Component {
   state = {};
@@ -38,7 +39,7 @@ export default class extends Component {
           </Row>
         </Container>
         <SectorRow title="" />
-        <ManagementRow title="Management Team" />
+        <Global title="GLOBAL INSIGHT" />
       </Layout>
     );
   }

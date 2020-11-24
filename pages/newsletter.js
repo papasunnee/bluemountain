@@ -9,7 +9,7 @@ export default class extends Component {
   state = {};
   render() {
     return (
-      <Layout>
+      <Layout noNewsLetter>
         <Head>
           <title>Blue Mountain Consulting Network - Newsletter</title>
         </Head>

@@ -7,6 +7,7 @@ import ImageContent from "../../components/cn/Row/ImageContent";
 import ServiceRow from "../../components/cn/Row/ServiceRow";
 import FooterTop from "../../components/cn/Row/FooterTop";
 import Layout from "../../components/cn/Layout";
+import NewsLetter from "../../components/NewsLetter";
 
 export default class extends Component {
   state = {};
@@ -20,7 +21,8 @@ export default class extends Component {
         <FindUs />
         <ImageContent />
         <ServiceRow />
-        <FooterTop>
+        <NewsLetter />
+        {/* <FooterTop>
           <div
             style={{
               width: "60%",
@@ -54,7 +56,7 @@ export default class extends Component {
               </Link>
             </p>
           </div>
-        </FooterTop>
+        </FooterTop> */}
       </Layout>
     );
   }

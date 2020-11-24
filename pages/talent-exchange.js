@@ -13,9 +13,12 @@ export default class extends Component {
         <Head>
           <title>Talent Exchange</title>
         </Head>
-        <Banner bgImage="executiveCoaching" min title="TALENT EXCHANGE" />
+        <Banner
+          bgImage="executiveCoaching"
+          min
+          title="GLOBAL TALENT EXCHANGE"
+        />
         <ServiceBodyUpgrade serviceImage="executivesearch" />
-        <Ready />
       </Layout>
     );
   }

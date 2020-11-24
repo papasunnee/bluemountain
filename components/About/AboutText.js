@@ -58,7 +58,7 @@ export default (props) => {
             <AboutItem title="Join Us" />
           </Col>
           <Col md={6}>
-            <AboutItem title="Partners" joinNetwork />
+            <AboutItem title="Partners" />
           </Col>
           <Col md={6}>
             <AboutItem title="Blue Mountain TV" tv />
@@ -106,6 +106,7 @@ const AboutItem = (props) => {
           </p>
         )}
         {props.tv && <VideoPlayer />}
+        {props.image && <span>Image Here</span>}
         {props.joinNetwork && (
           <Link href="/consulting-network/apply-to-join">
             <a className="joinNetwork">APPLY TO JOIN OUR NETWORK</a>
