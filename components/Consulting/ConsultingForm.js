@@ -45,29 +45,23 @@ export default () => {
 
 export const Services = [
   {
-    name: "Executive Assessment",
+    name: "Cultural Transformation",
     imageSrc: "assessment.png",
     href: "/executive-assessment",
   },
   {
-    name: "Executive Search",
+    name: "Strategic Workforce Planning",
     imageSrc: "search.png",
     href: "/executive-search",
   },
-  { name: "Board Services", imageSrc: "services.png", href: "/board-services" },
   {
-    name: "Leadership Development",
+    name: "Organizational Effectiveness",
+    imageSrc: "services.png",
+    href: "/board-services",
+  },
+  {
+    name: "Performance Management",
     imageSrc: "development.png",
     href: "/leadership-development",
-  },
-  {
-    name: "Global Talent Exchange",
-    imageSrc: "exchange.png",
-    href: "/talent-exchange",
-  },
-  {
-    name: "Executive Coaching",
-    imageSrc: "coaching.png",
-    href: "/executive-coaching",
   },
 ];

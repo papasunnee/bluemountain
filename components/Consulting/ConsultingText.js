@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 import { Container, Col, Row } from "reactstrap";
+import ConsultingForm from "./ConsultingForm";
 
 export default (props) => {
   return (
@@ -12,131 +13,22 @@ export default (props) => {
             <Col md={8}>
               <div>
                 <p style={{ lineHeight: 2, textAlign: "justify" }}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Laboriosam, laudantium! Perspiciatis nostrum deserunt vel
+                  incidunt vero voluptas, rerum obcaecati quis possimus nam
+                  libero harum iste dolor fugiat maxime optio ea. Lorem ipsum
+                  dolor sit, amet consectetur adipisicing elit. Laboriosam,
+                  laudantium! Perspiciatis nostrum deserunt vel incidunt vero
+                  voluptas, rerum obcaecati quis possimus nam libero harum iste
+                  dolor fugiat maxime optio ea.
                 </p>
                 <p style={{ lineHeight: 2, textAlign: "justify" }}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Similique doloremque, deserunt accusantium atque corrupti
+                  culpa voluptatibus alias cum quisquam dolore sit dignissimos
+                  eum quia iure. Incidunt labore rem laboriosam delectus!
                 </p>
-                <p style={{ lineHeight: 2, textAlign: "justify" }}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                </p>
-                <p style={{ lineHeight: 2, textAlign: "justify" }}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                </p>
-                <p style={{ lineHeight: 2, textAlign: "justify" }}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                </p>
-                <p style={{ lineHeight: 2, textAlign: "justify" }}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                </p>
-                <p style={{ lineHeight: 2, textAlign: "justify" }}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt illo amet similique repudiandae, dolorem maxime
-                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
-                  illum est cumque, non placeat tenetur distinctio doloribus!
-                </p>
+                <ConsultingForm />
               </div>
             </Col>
             <Col md={4}>
@@ -181,15 +73,13 @@ const ConsultingItem = ({ details = {} }) => {
     <Fragment>
       <div className="aboutItem">
         <h4 className="mb-4">{details.name}</h4>
-        <img
+        {/* <img
           className="img img-fluid"
           src={`/static/images/consulting/${details.imageSrc}.png`}
-        />
+        /> */}
         <p className="mt-4">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt
           placeat, error unde eius eum minima, aspernatur corrupti totam
-          quisquam nostrum earum commodi, dolore labore dolorem voluptates hic
-          officia. Id, ex. Lorem ipsum dolor, sit amet consectetur adipisicing
         </p>
         <Link href={`/organizational/${details.link}`}>
           <a className="btn btn-primary py-1" style={{ fontSize: "12px" }}>
