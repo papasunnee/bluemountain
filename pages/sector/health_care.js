@@ -14,10 +14,9 @@ export default class extends Component {
         <Head>
           <title>Health Care</title>
         </Head>
-        <Banner bgImage="health" />
-        <Title title=" " country="health" />
+        <Banner bgImage="health" title="HEALTHCARE" />
+
         <SectorBody />
-        {/* <Ready /> */}
       </Layout>
     );
   }

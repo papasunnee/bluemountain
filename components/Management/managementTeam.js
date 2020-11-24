@@ -1,15 +1,5 @@
 import React, { Component, Fragment } from "react";
-import Link from "next/link";
-import {
-  Col,
-  Row,
-  Card,
-  CardImg,
-  CardTitle,
-  CardText,
-  CardDeck,
-  CardBody,
-} from "reactstrap";
+import { Col, Row, Card, CardImg, CardBody } from "reactstrap";
 
 export default class extends Component {
   state = {};

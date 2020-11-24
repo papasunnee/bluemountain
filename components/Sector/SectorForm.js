@@ -15,8 +15,12 @@ export default () => {
         <div className="form-group">
           <label htmlFor="service">Select Sevice</label>
           <select name="service" id="service" className="form-control">
-            {Services.map(({ name }, index) => {
-              return <option value={index}>{name}</option>;
+            {Sectors.map(({ name }, index) => {
+              return (
+                <option key={index} value={index}>
+                  {name}
+                </option>
+              );
             })}
           </select>
         </div>

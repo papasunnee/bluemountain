@@ -14,10 +14,8 @@ export default class extends Component {
         <Head>
           <title>Government</title>
         </Head>
-        <Banner bgImage="government" />
-        <Title title="GN-P" country="government" />
+        <Banner bgImage="government" title="GOVERNMENT" />
         <SectorBody />
-        {/* <Ready /> */}
       </Layout>
     );
   }
