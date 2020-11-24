@@ -10,7 +10,7 @@ export default () => {
   }, [input]);
   const changeImage = () => {
     setInterval(() => {
-      setState(prev => {
+      setState((prev) => {
         let increment = ++prev;
         if (increment == 4) return 1;
         else return increment;
@@ -19,6 +19,11 @@ export default () => {
   };
   return (
     <Fragment>
+      <img
+        src="/static/images/university/main.png"
+        style={{ width: "100%" }}
+        alt=""
+      />
       <Row noGutters>
         <Col sm={{ size: 0 }} md={4}>
           <div className="university__student" />
@@ -33,7 +38,8 @@ export default () => {
       <style jsx>{`
         .university__student {
           min-height: 100vh;
-          background: url("/static/images/university/${state}.png") no-repeat 0px 0px;
+          background: url("/static/images/university/${state}.png") no-repeat
+            0px 0px;
         }
       `}</style>
     </Fragment>
