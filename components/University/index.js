@@ -21,7 +21,7 @@ export default () => {
     <Fragment>
       <img
         src="/static/images/university/main.png"
-        style={{ width: "100%" }}
+        style={{ width: "100%", maxHeight: "100vh" }}
         alt=""
       />
       <Row noGutters>
