@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Container, Col, Row } from "reactstrap";
 import { VideoPlayer } from "../Row/Video";
 
-export default props => {
+export default (props) => {
   return (
     <Fragment>
       <Container fluid>
@@ -89,7 +89,7 @@ export default props => {
   );
 };
 
-const AboutItem = props => {
+const AboutItem = (props) => {
   return (
     <Fragment>
       <div className="aboutItem">
@@ -107,7 +107,7 @@ const AboutItem = props => {
         )}
         {props.tv && <VideoPlayer />}
         {props.joinNetwork && (
-          <Link href="">
+          <Link href="/consulting-network/apply-to-join">
             <a className="joinNetwork">APPLY TO JOIN OUR NETWORK</a>
           </Link>
         )}

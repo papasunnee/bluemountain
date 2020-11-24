@@ -12,40 +12,20 @@ export default class Footer extends Component {
           <footer>
             <Container fluid>
               <Row>
-                <Col md="4" xs="12" className="footerLogo">
-                  <Link href="/consulting-network" prefetch>
-                    <a>
-                      <SvgLoader src="/static/svgs/images/yellowmount.svg" />
-                    </a>
-                  </Link>
-                  <div style={{ marginTop: "20px" }}>
-                    <p>
-                      <Link href="/privacy-policy">
-                        <a>Privacy Policy</a>
-                      </Link>
-                      |
-                      <Link href="/terms-and-condition">
-                        <a>Terms and Condition</a>
-                      </Link>
-                    </p>
-                    <p>Blue Mountain 2018. All Rights Reserved.</p>
-                  </div>
-                </Col>
-                <Col md="4" xs="12" className="follow">
+                <Col md="3" xs="12" className="follow">
                   <h4 style={{ fontWeight: "bold" }}>FOLLOW US</h4>
                   <div className="socials">
                     <div className="linkedIn">
                       <img src="/static/social/linkedin.png" />
                     </div>
-                    <div className="google">
-                      <img src="/static/social/google.png" />
-                    </div>
+                    <div className="youtube">Y</div>
                     <div className="twitter">
                       <img src="/static/social/twitter.png" />
                     </div>
                   </div>
                 </Col>
-                <Col md="4" xs="12" className="bmcn">
+
+                <Col md="3" xs="12" className="bmcn">
                   <Link href="/university">
                     <a>
                       <img
@@ -54,6 +34,8 @@ export default class Footer extends Component {
                       />
                     </a>
                   </Link>
+                </Col>
+                <Col md="3" xs="12" className="bmcn">
                   <Link href="/">
                     <a>
                       <SvgLoader src="/static/svgs/images/logo.svg" />
@@ -63,6 +45,33 @@ export default class Footer extends Component {
               </Row>
             </Container>
           </footer>
+          <Container fluid className="py-3 footerLogo">
+            <Row>
+              <Col xs={12} className="">
+                <Link href="/consulting-network" prefetch>
+                  <a>
+                    <SvgLoader src="/static/svgs/images/yellowmount.svg" />
+                  </a>
+                </Link>
+                <p
+                  style={{
+                    marginTop: "20px",
+                    display: "inline-block",
+                    color: "#fff",
+                  }}
+                >
+                  <Link href="/privacy-policy">
+                    <a>Privacy Policy </a>
+                  </Link>
+                  |
+                  <Link href="/terms-and-condition">
+                    <a>Terms and Condition</a>
+                  </Link>
+                  Blue Mountain 2020. All Rights Reserved.
+                </p>
+              </Col>
+            </Row>
+          </Container>
         </div>
       </Fragment>
     );

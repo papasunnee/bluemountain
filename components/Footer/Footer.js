@@ -78,6 +78,7 @@ export default class Footer extends Component {
                     <div className="linkedIn">
                       <img src="/static/social/linkedin.png" />
                     </div>
+                    <div className="youtube">Y</div>
                     <div className="twitter">
                       <img src="/static/social/twitter.png" />
                     </div>
