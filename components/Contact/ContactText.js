@@ -23,25 +23,39 @@ export default () => {
             <Row className="my-5">
               <Col md={6}>
                 <div className="formWrapper">
-                  <form action="" className="contactForm">
+                  <form action="" className="contactForm" onSubmit="alert()">
                     <input
                       type="text"
                       className="form-control"
                       name="contact_number"
                       placeholder="Contact Number"
+                      required
                     />
                     <input
                       type="email"
                       className="form-control"
                       name="email_address"
                       placeholder="Email Address"
+                      required
                     />
                     <input
                       type="text"
                       className="form-control"
                       name="address"
                       placeholder="Address"
+                      required
                     />
+                    <textarea
+                      style={{ height: "100px" }}
+                      className="form-control"
+                      name="address"
+                      row="10"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                    <button type="submit" className="btn btn-primary">
+                      SUBMIT
+                    </button>
                   </form>
                 </div>
               </Col>
@@ -84,7 +98,9 @@ export default () => {
           }
 
           .contactDetails {
-            background-color: #ffda44;
+            //background-color: #ffda44;
+            background-color: #031928;
+            color: #fff;
             padding: 50px;
           }
           .contactDetails div {
