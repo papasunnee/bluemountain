@@ -5,12 +5,120 @@ import { Container, Col, Row } from "reactstrap";
 export default (props) => {
   return (
     <Fragment>
-      <Container fluid>
+      <Container fluid className="px-5">
         <div className="aboutTitle">
           <h2 className="my-5">{props.title}</h2>
           <Row className="my-5">
-            <Col md={12}>
-              <div style={{ width: "90%" }}>
+            <Col md={8}>
+              <div>
+                <p style={{ lineHeight: 2, textAlign: "justify" }}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                </p>
+                <p style={{ lineHeight: 2, textAlign: "justify" }}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                </p>
+                <p style={{ lineHeight: 2, textAlign: "justify" }}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                </p>
+                <p style={{ lineHeight: 2, textAlign: "justify" }}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                </p>
+                <p style={{ lineHeight: 2, textAlign: "justify" }}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                </p>
+                <p style={{ lineHeight: 2, textAlign: "justify" }}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt illo amet similique repudiandae, dolorem maxime
+                  reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                  illum est cumque, non placeat tenetur distinctio doloribus!
+                </p>
                 <p style={{ lineHeight: 2, textAlign: "justify" }}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Incidunt illo amet similique repudiandae, dolorem maxime
@@ -31,20 +139,19 @@ export default (props) => {
                 </p>
               </div>
             </Col>
+            <Col md={4}>
+              {ConsultingList.map((cl, key) => {
+                return (
+                  <div key={key} className="mb-5">
+                    <ConsultingItem details={cl} />
+                  </div>
+                );
+              })}
+            </Col>
           </Row>
         </div>
       </Container>
-      <Container>
-        <Row className="my-5">
-          {ConsultingList.map((cl, key) => {
-            return (
-              <Col key={key} md={6} className="mb-5">
-                <ConsultingItem details={cl} />
-              </Col>
-            );
-          })}
-        </Row>
-      </Container>
+
       <style jsx>
         {`
           .aboutTitle {
@@ -74,8 +181,11 @@ const ConsultingItem = ({ details = {} }) => {
     <Fragment>
       <div className="aboutItem">
         <h4 className="mb-4">{details.name}</h4>
-        <img src={`/static/images/consulting/${details.imageSrc}.png`} />
-        <p className="mt-4" style={{ lineHeight: 2 }}>
+        <img
+          className="img img-fluid"
+          src={`/static/images/consulting/${details.imageSrc}.png`}
+        />
+        <p className="mt-4">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt
           placeat, error unde eius eum minima, aspernatur corrupti totam
           quisquam nostrum earum commodi, dolore labore dolorem voluptates hic
@@ -89,7 +199,7 @@ const ConsultingItem = ({ details = {} }) => {
       </div>
       <style jsx>{`
         .aboutItem {
-          margin: 20px 0;
+          // margin: 20px 0;
         }
         .aboutItem h4 {
           color: #0069d1;

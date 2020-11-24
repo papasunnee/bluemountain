@@ -3,6 +3,7 @@ import Router from "next/router";
 import Head from "next/head";
 import { Container } from "reactstrap";
 import Footer from "../components/Footer/Footer";
+import NewsLetter from "./NewsLetter";
 import NProgress from "nprogress";
 import "../scss/style.scss";
 
@@ -33,6 +34,7 @@ export default class extends Component {
         </Head>
         <Container className="pr-0 pl-0" fluid>
           {this.props.children}
+          <NewsLetter />
           <Footer university={this.props.noUniversity || null} />
         </Container>
       </Fragment>

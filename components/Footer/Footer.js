@@ -72,26 +72,8 @@ export default class Footer extends Component {
                     </li>
                   </ul>
                 </Col>
-                <Col md={4} xs={12}>
-                  <form action="" className="newsLetter">
-                    <div className="form-group">
-                      <label htmlFor="newsLetter">NewsLetter</label>
-                      <input
-                        type="email"
-                        className="form-control newsLetterInput"
-                        placeholder="Email Address"
-                        required
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        className="btn btn-success py-1 newsLetterButton"
-                        type="submit"
-                        value="SUMBIT"
-                      />
-                    </div>
-                  </form>
-
+                <Col md={2} xs={12}>
+                  <p style={{ fontSize: "14px" }}>Follow Us </p>
                   <div className="socials">
                     <div className="linkedIn">
                       <img src="/static/social/linkedin.png" />
@@ -101,8 +83,14 @@ export default class Footer extends Component {
                     </div>
                   </div>
                 </Col>
-                <Col md={4} xs={12} className="bmcn">
-                  <p style={{ fontSize: "14px" }}>Link to Other Services</p>
+                <Col md={3} xs={12} className="bmcn mt-3">
+                  <Link href="/consulting-network">
+                    <a>
+                      <SvgLoader src="/static/svgs/images/yellowmount.svg" />
+                    </a>
+                  </Link>
+                </Col>
+                <Col md={2} xs={12} className="bmcn">
                   <div className="mb-5">
                     {!this.props.university && (
                       <Link href="/university">
@@ -115,11 +103,6 @@ export default class Footer extends Component {
                       </Link>
                     )}
                   </div>
-                  <Link href="/consulting-network">
-                    <a>
-                      <SvgLoader src="/static/svgs/images/yellowmount.svg" />
-                    </a>
-                  </Link>
                 </Col>
               </Row>
             </Container>
@@ -139,8 +122,13 @@ export default class Footer extends Component {
                     color: "#fff",
                   }}
                 >
-                  <a href="">Privacy Policy</a> |{" "}
-                  <a href="">Terms and Condition.</a>
+                  <Link href="/privacy-policy">
+                    <a>Privacy Policy </a>
+                  </Link>
+                  |
+                  <Link href="/terms-and-condition">
+                    <a>Terms and Condition</a>
+                  </Link>
                   Blue Mountain 2020. All Rights Reserved.
                 </p>
               </Col>

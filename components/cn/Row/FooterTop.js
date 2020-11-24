@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { Container } from "reactstrap";
-import Link from "next/link";
 
 export default class FooterTop extends Component {
   constructor(props) {

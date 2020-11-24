@@ -7,7 +7,7 @@ import {
   faSearch,
   faPhone,
   faHome,
-  faBars
+  faBars,
 } from "@fortawesome/fontawesome-free-solid";
 import {
   Collapse,
@@ -20,7 +20,7 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
 } from "reactstrap";
 
 const baseUrl = "/consulting-network";
@@ -31,19 +31,19 @@ export default class Example extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
   }
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
   }
   render() {
     return (
       <div
         style={{
-          backgroundColor: "rgba(0,0,0,0.75)"
+          backgroundColor: "rgba(0,0,0,0.75)",
         }}
       >
         <Navbar expand="md">
@@ -58,30 +58,25 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/">
+                <NavLink href="/consulting-network">
                   <FontAwesomeIcon icon={faHome} size="md" color="#fff" />
                   <div style={{ width: "20px" }} />
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/contact">
-                  <FontAwesomeIcon icon={faSearch} size="md" color="#fff" />
-                  <div style={{ width: "20px" }} />
-                </NavLink>
+                <Link href="/contact">
+                  <a className="nav-link">
+                    <button
+                      className="btn btn-danger m-0 py-1"
+                      style={{ fontSize: "12px" }}
+                    >
+                      CONTACT US
+                    </button>
+                    <div style={{ width: "20px" }} />
+                  </a>
+                </Link>
               </NavItem>
-              <NavItem>
-                <NavLink href="/contact">
-                  <FontAwesomeIcon icon={faEnvelope} size="md" color="#fff" />
-                  <div style={{ width: "20px" }} />
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/contact">
-                  <FontAwesomeIcon icon={faPhone} size="md" color="#fff" />
-                  <div style={{ width: "20px" }} />
-                </NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
+              {/* <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav>
                   <FontAwesomeIcon icon={faBars} size="lg" />
                   <div style={{ width: "20px" }} />
@@ -89,7 +84,7 @@ export default class Example extends React.Component {
                 <DropdownMenu
                   right
                   style={{
-                    backgroundColor: "rgba(0, 105, 209, 0.9)"
+                    backgroundColor: "rgba(0, 105, 209, 0.9)",
                   }}
                 >
                   <DropdownItem>
@@ -118,7 +113,7 @@ export default class Example extends React.Component {
                     </Link>
                   </DropdownItem>
                 </DropdownMenu>
-              </UncontrolledDropdown>
+              </UncontrolledDropdown> */}
             </Nav>
           </Collapse>
         </Navbar>

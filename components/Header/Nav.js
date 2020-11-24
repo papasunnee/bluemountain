@@ -2,25 +2,18 @@ import React from "react";
 import Link from "next/link";
 import SvgLoader from "bv-react-svgloader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faBars } from "@fortawesome/fontawesome-free-solid";
 import {
-  faEnvelope,
-  faSearch,
-  faPhone,
-  faHome,
-  faBars,
-} from "@fortawesome/fontawesome-free-solid";
-import {
-  Collapse,
-  Navbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
+  Navbar,
+  Collapse,
 } from "reactstrap";
 
 export default class Example extends React.Component {

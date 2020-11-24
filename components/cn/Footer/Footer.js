@@ -20,10 +20,13 @@ export default class Footer extends Component {
                   </Link>
                   <div style={{ marginTop: "20px" }}>
                     <p>
-                      <a href="" style={{ fontWeight: "bold" }}>
-                        Privacy Policy
-                      </a>{" "}
-                      | <a href="">Terms and Condition</a>
+                      <Link href="/privacy-policy">
+                        <a>Privacy Policy</a>
+                      </Link>
+                      |
+                      <Link href="/terms-and-condition">
+                        <a>Terms and Condition</a>
+                      </Link>
                     </p>
                     <p>Blue Mountain 2018. All Rights Reserved.</p>
                   </div>
