@@ -16,7 +16,7 @@ export default class extends Component {
         </Head>
         <Banner bgImage="executiveAssessment" min title="BOARD SERVICES" />
         <ServiceBodyUpgrade serviceImage="executivesearch" />
-        <Ready />
+        {/* <Ready /> */}
       </Layout>
     );
   }

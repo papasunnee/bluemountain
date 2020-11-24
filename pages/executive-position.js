@@ -13,7 +13,7 @@ export default class extends Component {
         <Banner bgImage="executivepositions" />
         <Title title="EXECUTIVE POSITION" />
         <ExecutivePosition />
-        <Ready />
+        {/* <Ready /> */}
       </Layout>
     );
   }

@@ -36,24 +36,14 @@ export default class ServiceBodyUpgrade extends Component {
                   atque, neque repellendus minima ad.
                 </p>
               </div>
-              <div className="mb-5">
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Expedita officia beatae officiis. Sint, ad dolores. Hic
-                  commodi officia ab? At odio quasi cum modi nulla atque, neque
-                  repellendus minima ad. Lorem ipsum dolor sit, amet consectetur
-                  adipisicing elit. Expedita officia beatae officiis. Sint, ad
-                  dolores. Hic commodi officia ab? At odio quasi cum modi nulla
-                  atque, neque repellendus minima ad.
-                </p>
-              </div>
+
               <div className="mb-5">
                 <ServiceForm />
               </div>
             </Col>
             <Col md={4} className="my-5">
               {Services.map((service, index) => {
-                return <ServiceBox service={service} />;
+                return <ServiceBox service={service} key={index} />;
               })}
             </Col>
           </Row>
@@ -65,7 +55,6 @@ export default class ServiceBodyUpgrade extends Component {
 
 const ServiceBox = (props) => {
   const { service } = props;
-  console.log(service);
   return (
     <Fragment>
       <div className="serviceBox">
@@ -73,11 +62,11 @@ const ServiceBox = (props) => {
           <a style={{ textDecoration: "none" }}>
             <div className="mb-4">
               <h5>{service.name}</h5>
-              <img
+              {/* <img
                 src={`/static/images/home/${service.imageSrc}`}
                 className="img img-fluid"
                 alt=""
-              />
+              /> */}
             </div>
           </a>
         </Link>

@@ -20,7 +20,7 @@ export default class extends Component {
           title="EXECUTIVE ASSESSMENT"
         />
         <ServiceBodyUpgrade serviceImage="executivesearch" />
-        <Ready />
+        {/* <Ready /> */}
       </Layout>
     );
   }
