@@ -7,6 +7,7 @@ import NewsLetter from "./NewsLetter";
 import NProgress from "nprogress";
 import "../scss/style.scss";
 import Topnews from "./Global/Topnews";
+import CookieConsent, { Cookies } from "react-cookie-consent";
 
 // progress bar
 Router.onRouteChangeStart = () => {
@@ -39,6 +40,16 @@ export default class extends Component {
           {!this.props.noNewsLetter && <NewsLetter />}
           <Footer university={this.props.noUniversity || null} />
         </Container>
+        <CookieConsent
+          location="bottom"
+          buttonText="Sure man!!"
+          cookieName="myAwesomeCookieName2"
+          style={{ background: "#2B373B" }}
+          buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+          expires={150}
+        >
+          This website uses cookies to enhance the user experience.
+        </CookieConsent>
       </Fragment>
     );
   }
