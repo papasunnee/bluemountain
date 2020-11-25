@@ -22,7 +22,6 @@ export default () => {
             className="form-control"
           ></textarea>
         </div>
-
         <button className="btn btn-primary" type="submit">
           Send Request
         </button>

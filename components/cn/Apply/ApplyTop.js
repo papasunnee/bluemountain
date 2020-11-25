@@ -10,12 +10,8 @@ export default class ApplyTop extends Component {
         <Container>
           <Row>
             <Col md={7}>
-              <div
-                style={{
-                  backgroundColor: "#E5CE00",
-                  padding: "20px"
-                }}
-              >
+              <h4 className="font-weight-bold my-5">APPLY TO JOIN</h4>
+              <div>
                 Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
                 scelerisque ante sollicitudin commodo. Cras purus odio,
                 vestibulum in vulputate at, tempus viverra turpis. Fusce
@@ -27,13 +23,13 @@ export default class ApplyTop extends Component {
                 Donec lacinia congue felis in faucibus.
               </div>
             </Col>
-            <Col md={5}>
+            {/* <Col md={5}>
               <div
                 style={{
                   backgroundColor: "#0069D1",
                   padding: "20px",
                   color: "#fff",
-                  width: "90%"
+                  width: "90%",
                 }}
               >
                 <h4 className="mb-3 text-center">Talk To Us</h4>
@@ -46,7 +42,7 @@ export default class ApplyTop extends Component {
                   Apply to join our network
                 </TextWithBorderLeft>
               </div>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </Fragment>
