@@ -13,7 +13,7 @@ export default () => {
           <input type="email" className="form-control" name="email" />
         </div>
         <div className="form-group">
-          <label htmlFor="service">Select Sevice</label>
+          <label htmlFor="service">Select Sector</label>
           <select name="service" id="service" className="form-control">
             {Sectors.map(({ name }, index) => {
               return (

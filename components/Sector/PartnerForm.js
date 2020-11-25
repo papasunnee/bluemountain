@@ -13,18 +13,6 @@ export default () => {
           <input type="email" className="form-control" name="email" />
         </div>
         <div className="form-group">
-          <label htmlFor="service">Select Service</label>
-          <select name="service" id="service" className="form-control">
-            {Services.map(({ name }, index) => {
-              return (
-                <option key={index} value={index}>
-                  {name}
-                </option>
-              );
-            })}
-          </select>
-        </div>
-        <div className="form-group">
           <label htmlFor="message">Message</label>
           <textarea
             name=""

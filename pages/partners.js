@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Global from "../components/Global/Global";
 import ServiceRow from "../components/Row/ServiceRow";
 import { Col, Container, Row } from "reactstrap";
+import PartnerForm from "../components/Sector/PartnerForm";
 
 export default class extends Component {
   state = {};
@@ -69,9 +70,10 @@ export default class extends Component {
             <Col md={6}>
               <div className="mt-5">
                 <h3>
-                  <span className="font-weight-bold">Put Form Here</span>
+                  <span className="font-weight-bold">Be a Partner</span>
                 </h3>
                 <hr style={{ borderBottom: "4px solid #000" }} />
+                <PartnerForm />
               </div>
             </Col>
           </Row>
