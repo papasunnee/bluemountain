@@ -6,6 +6,7 @@ import Footer from "../components/Footer/Footer";
 import NewsLetter from "./NewsLetter";
 import NProgress from "nprogress";
 import "../scss/style.scss";
+import Topnews from "./Global/Topnews";
 
 // progress bar
 Router.onRouteChangeStart = () => {
@@ -32,6 +33,7 @@ export default class extends Component {
           />
           <link rel="stylesheet" href="/static/css/genericStyles.css" />
         </Head>
+        <Topnews />
         <Container className="pr-0 pl-0" fluid>
           {this.props.children}
           {!this.props.noNewsLetter && <NewsLetter />}
