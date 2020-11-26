@@ -3,7 +3,7 @@
   "author": "Adetona Sunday <papasunnee@gmail.com>",
   "version": "0.0.1",
   "scripts": {
-    "start": "concurrently \"yarn start:api\" \"yarn dev:client\"",
+    "start": "yarn start:api",
     "start:api": "cd api && yarn start",
     "start:client": "cd client && yarn start",
     "dev:client": "cd client && yarn dev",
