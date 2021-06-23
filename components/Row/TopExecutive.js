@@ -25,6 +25,7 @@ const slideImages = [
 const CustomSlider = () => {
   return (
     <div className="slider">
+      <h4 className="mb-3">WHY CHOOSE US</h4>
       <div className="slides">
         <div id="slide-1">
           <div className="overLay">1</div>

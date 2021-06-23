@@ -34,7 +34,7 @@ export default class extends Component {
           />
           <link rel="stylesheet" href="/static/css/genericStyles.css" />
         </Head>
-        <Topnews />
+        {/* <Topnews /> */}
         <Container className="pr-0 pl-0" fluid>
           {this.props.children}
           {!this.props.noNewsLetter && <NewsLetter />}
