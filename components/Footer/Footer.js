@@ -135,7 +135,7 @@ export default class Footer extends Component {
                   <Link href="/terms-and-condition">
                     <a>Terms and Condition</a>
                   </Link>
-                  Blue Mountain 2020. All Rights Reserved.
+                  Blue Mountain 2021. All Rights Reserved.
                 </p>
               </Col>
             </Row>

@@ -14,18 +14,20 @@ lib-cov
 
 # dependencies
 node_modules
+client
+api
+
 
 # testing
 /coverage
-/old
-# production
-api/routes/client
-client/build
-client/dist
-client/.next
-client/out
 
-/mycss
+# production
+
+build
+dist
+.next
+out
+
 
 # misc
 .DS_Store
