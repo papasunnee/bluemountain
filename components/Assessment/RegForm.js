@@ -1,23 +1,16 @@
 import React from "react";
 import { Mutation } from "react-apollo";
-import {
-  Col,
-  Row,
-  Button,
-  Form,
-  FormGroup,
-  Input,
-} from "reactstrap";
+import { Col, Row, Button, Form, FormGroup, Input } from "reactstrap";
 
-import { COUNTRIES, SERVICES, COMPANY_SIZES } from '../../../constants'
+import { COUNTRIES, SERVICES, COMPANY_SIZES } from "../../constants";
 import { REGISTER_ORGANIZATION } from "../../lib/graphql/mutations";
 import Loading from "../Loading";
 
 const placeholders = {
-  service: 'Select Service',
-  country: 'Select Country',
-  companySize: 'Size of Company'
-}
+  service: "Select Service",
+  country: "Select Country",
+  companySize: "Size of Company",
+};
 
 const initState = {
   name: "",
@@ -27,45 +20,47 @@ const initState = {
   country: placeholders.country,
   companySize: placeholders.companySize,
   successMessage: "",
-  errorMessage: ""
+  errorMessage: "",
 };
 
-const inputStyle = { height: "60px", fontSize: "1.2em" }
+const inputStyle = { height: "60px", fontSize: "1.2em" };
 
 export default class Example extends React.Component {
   state = {
-    ...initState
+    ...initState,
   };
 
-  handleChange = (name, value) => this.setState({
-    [name]: value,
-    successMessage: "",
-    errorMessage: ""
-  });
+  handleChange = (name, value) =>
+    this.setState({
+      [name]: value,
+      successMessage: "",
+      errorMessage: "",
+    });
 
+  displayError = (errorMessage) => this.setState({ errorMessage });
 
-  displayError = errorMessage => this.setState({ errorMessage });
-
-  onError = error => {
+  onError = (error) => {
     console.log(error);
-    if (error.graphQLErrors.length==0)
-      this.displayError("There was an issue submitting your request try again later.")
+    if (error.graphQLErrors.length == 0)
+      this.displayError(
+        "There was an issue submitting your request try again later."
+      );
 
-    error.graphQLErrors.forEach(error=>{
-      switch(error.message) {
+    error.graphQLErrors.forEach((error) => {
+      switch (error.message) {
         case `Validation failed`:
-        console.log(error);
+          console.log(error);
           if (error.extensions.exception.errors.email) {
-            this.displayError("This email is already registered")
+            this.displayError("This email is already registered");
           }
-        break;
+          break;
         default:
-        this.props.showLoginError("Please Try Again Later")
+          this.props.showLoginError("Please Try Again Later");
       }
-    })
-  }
+    });
+  };
 
-  isPlaceholder = (name) => placeholders[name] === this.state[name]
+  isPlaceholder = (name) => placeholders[name] === this.state[name];
   render() {
     const { successMessage, errorMessage } = this.state;
     return (
@@ -74,46 +69,53 @@ export default class Example extends React.Component {
         onCompleted={() =>
           this.setState({
             ...initState,
-            successMessage: "Thank you for your message. It has been sent."
+            successMessage: "Thank you for your message. It has been sent.",
           })
         }
         onError={this.onError}
       >
         {(registerOrganization, { loading }) => (
           <Form
-            onSubmit={async e => {
+            onSubmit={async (e) => {
               e.preventDefault();
               e.stopPropagation();
 
               const { service, country, companySize } = this.state;
 
               console.log(this.state);
-              if (!this.isPlaceholder('service')) {
-                if (!this.isPlaceholder('country')) {
-                  if (!this.isPlaceholder('companySize')) {
-                    registerOrganization({ variables: {
-                      ...this.state,
-                      service: SERVICES.find(({label})=>service === label).value,
-                      country: COUNTRIES.find(({label})=>country === label).value,
-                      companySize: COMPANY_SIZES.find(({label})=>companySize === label).value
-                    } });
+              if (!this.isPlaceholder("service")) {
+                if (!this.isPlaceholder("country")) {
+                  if (!this.isPlaceholder("companySize")) {
+                    registerOrganization({
+                      variables: {
+                        ...this.state,
+                        service: SERVICES.find(({ label }) => service === label)
+                          .value,
+                        country: COUNTRIES.find(
+                          ({ label }) => country === label
+                        ).value,
+                        companySize: COMPANY_SIZES.find(
+                          ({ label }) => companySize === label
+                        ).value,
+                      },
+                    });
                   } else {
                     this.setState({
-                      errorMessage: "Select Your company size"
+                      errorMessage: "Select Your company size",
                     });
                   }
                 } else {
                   this.setState({
-                    errorMessage: "Select a country"
+                    errorMessage: "Select a country",
                   });
                 }
               } else {
                 this.setState({
-                  errorMessage: "Select a Service"
+                  errorMessage: "Select a Service",
                 });
               }
             }}
-            >
+          >
             <Row>
               <Col xs={12} md={12}>
                 <FormGroup>
@@ -121,7 +123,7 @@ export default class Example extends React.Component {
                     style={inputStyle}
                     placeholder="Name"
                     required
-                    onChange={e=>this.handleChange("name", e.target.value)}
+                    onChange={(e) => this.handleChange("name", e.target.value)}
                   />
                 </FormGroup>
               </Col>
@@ -135,7 +137,7 @@ export default class Example extends React.Component {
                     type="email"
                     placeholder="Email"
                     required
-                    onChange={e=>this.handleChange("email", e.target.value)}
+                    onChange={(e) => this.handleChange("email", e.target.value)}
                   />
                 </FormGroup>
               </Col>
@@ -145,12 +147,14 @@ export default class Example extends React.Component {
                     style={inputStyle}
                     type="select"
                     required
-                    onChange={e=>this.handleChange("service", e.target.value)}
+                    onChange={(e) =>
+                      this.handleChange("service", e.target.value)
+                    }
                   >
                     <option>{placeholders.service}</option>
-                    {SERVICES.map(({label, value}) => <option key={value}>
-                      {label}
-                    </option>)}
+                    {SERVICES.map(({ label, value }) => (
+                      <option key={value}>{label}</option>
+                    ))}
                   </Input>
                 </FormGroup>
               </Col>
@@ -163,12 +167,14 @@ export default class Example extends React.Component {
                     style={inputStyle}
                     type="select"
                     required
-                    onChange={e=>this.handleChange("country", e.target.value)}
+                    onChange={(e) =>
+                      this.handleChange("country", e.target.value)
+                    }
                   >
                     <option>{placeholders.country}</option>
-                    {COUNTRIES.map(({label, value}) => <option key={value}>
-                      {label}
-                    </option>)}
+                    {COUNTRIES.map(({ label, value }) => (
+                      <option key={value}>{label}</option>
+                    ))}
                   </Input>
                 </FormGroup>
               </Col>
@@ -178,12 +184,14 @@ export default class Example extends React.Component {
                     style={inputStyle}
                     type="select"
                     required
-                    onChange={e=>this.handleChange("companySize", e.target.value)}
+                    onChange={(e) =>
+                      this.handleChange("companySize", e.target.value)
+                    }
                   >
                     <option>{placeholders.companySize}</option>
-                    {COMPANY_SIZES.map(({label, value}) => <option key={value}>
-                      {label}
-                    </option>)}
+                    {COMPANY_SIZES.map(({ label, value }) => (
+                      <option key={value}>{label}</option>
+                    ))}
                   </Input>
                 </FormGroup>
               </Col>
@@ -196,30 +204,30 @@ export default class Example extends React.Component {
                     style={{
                       height: "160px",
                       fontSize: "1.2em",
-                      resize: "none"
+                      resize: "none",
                     }}
                     type="textarea"
                     placeholder="Your Message Here"
                     required
-                    onChange={e=>this.handleChange("message", e.target.value)}
+                    onChange={(e) =>
+                      this.handleChange("message", e.target.value)
+                    }
                   />
                 </FormGroup>
               </Col>
             </Row>
 
-            {errorMessage && (
-              <p className="error-text">{errorMessage}</p>
-            )}
+            {errorMessage && <p className="error-text">{errorMessage}</p>}
             {errorMessage ? null : successMessage ? (
               <p>{successMessage}</p>
             ) : (
               <br />
             )}
-            {loading ?
+            {loading ? (
               <Loading />
-              :
+            ) : (
               <Button type="submit">SEND MESSAGE</Button>
-            }
+            )}
             <style jsx>
               {`
                 .input {
