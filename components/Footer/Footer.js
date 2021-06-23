@@ -88,6 +88,23 @@ export default class Footer extends Component {
                       <img src="/static/social/twitter.png" />
                     </div>
                   </div>
+                  <div style={{ display: "block", marginTop: "20px" }}>
+                    <Link href="/newsletter" prefetch>
+                      <a
+                        style={{
+                          backgroundColor: "#E5CE00",
+                          color: "#000",
+                          fontSize: "12px",
+                          padding: " 5px 10px ",
+                          display: "inline-block",
+                          borderRadius: "5px",
+                          textDecoration: "none",
+                        }}
+                      >
+                        Sign Up To Our Newsletter
+                      </a>
+                    </Link>
+                  </div>
                 </Col>
                 <Col md={3} xs={12} className="bmcn mt-3">
                   <Link href="/consulting-network">

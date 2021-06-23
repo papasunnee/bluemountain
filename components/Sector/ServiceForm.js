@@ -61,10 +61,15 @@ export const Services = [
     href: "/leadership-development",
   },
   {
-    name: "Global Talent Exchange",
+    name: "Expatraites",
     imageSrc: "exchange.png",
-    href: "/talent-exchange",
+    href: "/expatraites",
   },
+  // {
+  //   name: "Global Talent Exchange",
+  //   imageSrc: "exchange.png",
+  //   href: "/talent-exchange",
+  // },
   {
     name: "Executive Coaching",
     imageSrc: "coaching.png",

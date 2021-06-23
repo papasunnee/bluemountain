@@ -37,7 +37,7 @@ export default class extends Component {
         {/* <Topnews /> */}
         <Container className="pr-0 pl-0" fluid>
           {this.props.children}
-          {!this.props.noNewsLetter && <NewsLetter />}
+          {/* {!this.props.noNewsLetter && <NewsLetter />} */}
           <Footer university={this.props.noUniversity || null} />
         </Container>
         <CookieConsent

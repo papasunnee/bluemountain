@@ -23,7 +23,7 @@ export default class extends Component {
         />
         <TopExecutive />
         <ServiceRow />
-        <EventTop />
+        {/* <EventTop /> */}
         <Global title="GLOBAL INSIGHT" />
       </Layout>
     );
