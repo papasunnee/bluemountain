@@ -60,11 +60,11 @@ export default class Footer extends Component {
                         <a>Insight</a>
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link href="/events">
                         <a>Events</a>
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link href="/organisational-consulting">
                         <a>Organisational Consulting</a>
