@@ -58,28 +58,25 @@ const ServiceBox = (props) => {
   return (
     <Fragment>
       <div className="serviceBox">
+        <h4 className="mb-4">{service.name}</h4>
+        <p className="mt-4">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt
+          placeat, error unde eius eum minima, aspernatur corrupti totam
+        </p>
         <Link href={service.href}>
-          <a style={{ textDecoration: "none" }}>
-            <div className="mb-4">
-              <h5>{service.name}</h5>
-              {/* <img
-                src={`/static/images/home/${service.imageSrc}`}
-                className="img img-fluid"
-                alt=""
-              /> */}
-            </div>
+          <a className="btn btn-primary py-1" style={{ fontSize: "12px" }}>
+            Read More
           </a>
         </Link>
       </div>
       <style jsx>{`
         .serviceBox {
-          margin-bottom: 30px;
-          border-left: 1px solid #e2e2e2;
-          border-bottom: 1px solid #e2e2e2;
+          margin-bottom: 60px;
           padding-left: 10px;
         }
-        .serviceBox:hover img {
-          filter: grayscale(70%);
+        .serviceBox h4 {
+          color: #0069d1;
+          font-weight: bold;
         }
       `}</style>
     </Fragment>

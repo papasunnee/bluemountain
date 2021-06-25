@@ -43,7 +43,7 @@ const LeadershipSolution = (props) => {
           src={`/static/images/home/${service.imageSrc}`}
           className="img-fluid"
         />
-        <Link href={service.href}>
+        <Link href={`/solutions/${service.href}`}>
           <a>
             <div className="leader-title">
               <p>{service.name}</p>

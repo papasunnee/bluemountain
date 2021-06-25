@@ -47,32 +47,32 @@ export const Services = [
   {
     name: "Executive Assessment",
     imageSrc: "assessment.png",
-    href: "/executive-assessment",
+    href: "executive-assessment",
   },
   {
     name: "Executive Search",
     imageSrc: "search.png",
-    href: "/executive-search",
+    href: "executive-search",
   },
-  { name: "Board Services", imageSrc: "services.png", href: "/board-services" },
+  { name: "Board Services", imageSrc: "services.png", href: "board-services" },
   {
     name: "Leadership Development",
     imageSrc: "development.png",
-    href: "/leadership-development",
+    href: "leadership-development",
   },
   {
-    name: "Expatraites",
+    name: "Expatriates",
     imageSrc: "exchange.png",
-    href: "/expatraites",
+    href: "expatriates",
   },
   // {
   //   name: "Global Talent Exchange",
   //   imageSrc: "exchange.png",
-  //   href: "/talent-exchange",
+  //   href: "talent-exchange",
   // },
   {
     name: "Executive Coaching",
     imageSrc: "coaching.png",
-    href: "/executive-coaching",
+    href: "executive-coaching",
   },
 ];
