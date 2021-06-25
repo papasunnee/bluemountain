@@ -75,7 +75,7 @@ export default class Example extends React.Component {
                   />
                   <div style={{ width: "20px" }} />
                 </DropdownToggle>
-                <DropdownMenu right>
+                <DropdownMenu right style={{ backgroundColor: "#d9c402" }}>
                   <DropdownItem>
                     <Link href="/">
                       <a>Home</a>
@@ -143,8 +143,11 @@ export default class Example extends React.Component {
             a:hover,
             a:active,
             a:visited {
+              display: block;
               text-decoration: none;
               color: #000;
+              text-transform: uppercase;
+              font-weight: 600;
             }
           `}
         </style>

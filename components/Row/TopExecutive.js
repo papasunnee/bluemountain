@@ -28,39 +28,56 @@ const CustomSlider = () => {
       <h4 className="mb-3">WHY CHOOSE US</h4>
       <div className="slides">
         <div id="slide-1">
-          <div className="overLay">1</div>
-          Access difficuly-to-reach candidates at the top of their game
+          <div className="overLay">
+            Access difficuly-to-reach candidates at the top of their game
+          </div>
+          1
         </div>
         <div id="slide-2">
-          <div className="overLay">2</div>
-          Gain the professionalism, trust and confidentiality only outside
-          trusted advisor can provide
+          <div className="overLay">
+            Gain the professionalism, trust and confidentiality only outside
+            trusted advisor can provide
+          </div>
+          2
         </div>
         <div id="slide-3">
-          <div className="overLay">3</div>
-          Ensure objectivity, based on the experience of many searches across
-          industries, markets and roles
+          <div className="overLay">
+            Ensure objectivity, based on the experience of many searches across
+            industries, markets and roles
+          </div>
+          3
         </div>
         <div id="slide-4">
-          <div className="overLay">4</div>
-          Find and attract diverse candidates with highly marketable skills
+          <div className="overLay">
+            Find and attract diverse candidates with highly marketable skills
+          </div>
+          4
         </div>
         <div id="slide-5">
-          <div className="overLay">5</div>
-          Leverage deep industry, market and functional expertise
+          <div className="overLay">
+            Leverage deep industry, market and functional expertise
+          </div>
+          5
         </div>
         <div id="slide-6">
-          <div className="overLay">6</div>Assess candidates to identify the
-          right talent
+          <div className="overLay">
+            Assess candidates to identify the right talent
+          </div>
+          6
         </div>
         <div id="slide-7">
-          <div className="overLay">7</div>
-          Plan for succession, assessing internal talent and mapping the
-          external marketplace
+          <div className="overLay">
+            Plan for succession, assessing internal talent and mapping the
+            external marketplace
+          </div>
+          7
         </div>
         <div id="slide-8">
-          <div className="overLay">8</div>Reduce the risk of the wrong hire
+          <div className="overLay">Reduce the risk of the wrong hire</div>8
         </div>
+      </div>
+      <div style={{ fontSize: "11px", fontStyle: "italic" }}>
+        drag Black knob to scroll
       </div>
     </div>
   );

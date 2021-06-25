@@ -24,40 +24,42 @@ export const ManagementCard = (props) => {
   const { details = {} } = props;
   return (
     <Fragment>
-      <Card className="mb-3">
-        <CardImg
-          top
-          width="100%"
+      <div
+        style={{
+          border: "1px solid #b2b2b2",
+          textAlign: "center",
+          padding: "20px",
+          boxSizing: "border-box",
+          marginBottom: "20px",
+        }}
+      >
+        <img
           src="/static/images/management/manager.jpg"
-          alt="Card image cap"
-        />
-        <CardBody
           style={{
-            backgroundColor: "#02375a",
-            padding: "0.5rem 1rem",
+            borderRadius: "50%",
+            maxWidth: "200px",
+            display: "block",
+            margin: "auto",
+          }}
+          className="img-fluid"
+        />
+        <div
+          style={{
+            marginBottom: "5px",
+            fontWeight: "bold",
           }}
         >
-          <span
-            style={{
-              display: "block",
-              marginBottom: "5px",
-              fontWeight: "bold",
-              color: "#fff !important",
-            }}
-          >
-            {details.name}
-          </span>
-          <span
-            style={{
-              fontWeight: "lighter",
-              fontSize: "12px",
-              color: "#fff !important",
-            }}
-          >
-            {details.title}
-          </span>
-        </CardBody>
-      </Card>
+          {details.name}
+        </div>
+        <div
+          style={{
+            fontWeight: "lighter",
+            fontSize: "12px",
+          }}
+        >
+          {details.title}
+        </div>
+      </div>
     </Fragment>
   );
 };
