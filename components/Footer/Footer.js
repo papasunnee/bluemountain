@@ -60,11 +60,6 @@ export default class Footer extends Component {
                         <a>Insight</a>
                       </Link>
                     </li>
-                    {/* <li>
-                      <Link href="/events">
-                        <a>Events</a>
-                      </Link>
-                    </li> */}
                     <li>
                       <Link href="/organisational-consulting">
                         <a>Organisational Consulting</a>
@@ -96,9 +91,11 @@ export default class Footer extends Component {
                           color: "#000",
                           fontSize: "12px",
                           padding: " 5px 10px ",
-                          display: "inline-block",
+                          display: "block",
                           borderRadius: "5px",
                           textDecoration: "none",
+                          textTransform: "uppercase",
+                          textAlign: "center",
                         }}
                       >
                         Sign Up To Our Newsletter

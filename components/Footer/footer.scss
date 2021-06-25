@@ -1,10 +1,11 @@
 footer {
   text-align: left;
-  background-color: #031928;
+  // background-color: #031928;
+  background-color: #010d14;
   background-image: url(/static/svgs/images/world.svg);
   background-blend-mode: multiply;
   padding: 60px;
-  color: #fff;
+  color: rgb(255, 255, 255);
   ul {
     text-align-last: left;
     list-style: none;
@@ -21,7 +22,7 @@ footer {
     }
   }
   a {
-    color: #fff;
+    color: rgb(185, 185, 185);
     text-decoration: none !important;
   }
   .socials {
@@ -37,7 +38,8 @@ footer {
       padding: 7px;
       position: relative;
       overflow: hidden;
-
+      flex-shrink: 0;
+      text-align: center;
       &.linkedIn {
         background-color: #0077b5;
       }
@@ -92,7 +94,7 @@ footer {
 
 .footerLogo {
   border-top: 1px solid #fff;
-  background-color: #031928;
+  background-color: #010d14;
   p {
     font-size: 12px;
   }
