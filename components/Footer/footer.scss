@@ -1,8 +1,8 @@
 footer {
   text-align: left;
   // background-color: #031928;
-  background-color: #010d14;
-  background-image: url(/static/svgs/images/world.svg);
+  background-color: #07273a;
+  background-image: url(/static/images/footerbg.png);
   background-blend-mode: multiply;
   padding: 60px;
   color: rgb(255, 255, 255);
@@ -93,8 +93,8 @@ footer {
 }
 
 .footerLogo {
-  border-top: 1px solid #fff;
-  background-color: #010d14;
+  // border-top: 1px solid #fff;
+  background-color: #000309;
   p {
     font-size: 12px;
   }
