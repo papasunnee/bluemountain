@@ -100,6 +100,7 @@ export default (props) => {
           .aboutTitle {
             // padding: 0 50px;
             margin: 40px 0px;
+            text-align: left;
           }
           .aboutTitle h3 {
             font-weight: bold;
