@@ -106,7 +106,10 @@ export default class Footer extends Component {
                 <Col md={3} xs={12} className="bmcn mt-3">
                   <Link href="/consulting-network">
                     <a>
-                      <SvgLoader src="/static/svgs/images/yellowmount.svg" />
+                      <SvgLoader
+                        className="img-fluid"
+                        src="/static/svgs/images/yellowmount.svg"
+                      />
                     </a>
                   </Link>
                 </Col>

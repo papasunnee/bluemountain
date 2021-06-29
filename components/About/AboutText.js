@@ -6,10 +6,40 @@ import { VideoPlayer } from "../Row/Video";
 export default (props) => {
   return (
     <Fragment>
-      <Container fluid>
+      <Container>
         <div className="aboutTitle">
-          <h2>{props.title}</h2>
+          <h3 className="my-5">{props.title}</h3>
           <div>
+            <Row>
+              <Col md={6}>
+                <div style={{ width: "90%" }}>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Incidunt illo amet similique repudiandae, dolorem maxime
+                    reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                    illum est cumque, non placeat tenetur distinctio doloribus!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Incidunt illo amet similique repudiandae, dolorem maxime
+                    reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                    illum est cumque, non placeat tenetur distinctio doloribus!
+                  </p>
+                </div>
+              </Col>
+              <Col md={6}>
+                <div style={{ width: "90%" }}>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Incidunt illo amet similique repudiandae, dolorem maxime
+                    reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                    illum est cumque, non placeat tenetur distinctio doloribus!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Incidunt illo amet similique repudiandae, dolorem maxime
+                    reiciendis aspernatur nesciunt mollitia corrupti ab, fugiat
+                    illum est cumque, non placeat tenetur distinctio doloribus!
+                  </p>
+                </div>
+              </Col>
+            </Row>
             <Row>
               <Col md={6}>
                 <div style={{ width: "90%" }}>
@@ -43,7 +73,7 @@ export default (props) => {
           </div>
         </div>
       </Container>
-      <Container>
+      {/* <Container>
         <Row>
           <Col md={6}>
             <AboutItem title="Vision" />
@@ -64,14 +94,14 @@ export default (props) => {
             <AboutItem title="Blue Mountain TV" tv />
           </Col>
         </Row>
-      </Container>
+      </Container> */}
       <style jsx>
         {`
           .aboutTitle {
-            padding: 0 50px;
+            // padding: 0 50px;
             margin: 40px 0px;
           }
-          .aboutTitle h2 {
+          .aboutTitle h3 {
             font-weight: bold;
           }
           @media (max-width: 576px) {
@@ -79,7 +109,7 @@ export default (props) => {
               padding: 0 10px;
               margin: 40px 0px;
             }
-            .aboutTitle h2 {
+            .aboutTitle h3 {
               font-size: 25px;
             }
           }

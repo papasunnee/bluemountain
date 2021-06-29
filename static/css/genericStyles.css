@@ -3,3 +3,26 @@
   margin: 0;
   padding: 0;
 }
+
+.dropdown-item > .submenu div a {
+  padding: 5px 15px;
+}
+
+.dropdown-item > .submenu {
+  display: none;
+  position: absolute;
+  right: 310px;
+  top: 40px;
+  color: black;
+  background-color: #d9c402;
+}
+.submenu:hover div {
+  display: block;
+}
+.submenu div:hover {
+  background-color: #fff;
+}
+
+.dropdown-item:hover > .submenu {
+  display: inline-block;
+}

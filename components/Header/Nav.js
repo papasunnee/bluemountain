@@ -83,9 +83,42 @@ export default class Example extends React.Component {
                   </DropdownItem>
                   <DropdownItem>
                     <Link href="/about">
-                      <a>About Us</a>
+                      <a
+                        className="withSubmenu"
+                        style={{ position: "relative" }}
+                      >
+                        About Us
+                      </a>
                     </Link>
+                    <div className="submenu">
+                      <div>
+                        <Link href="/about/vision-and-mission">
+                          <a>VISION AND MISSION</a>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link href="/about/strategy">
+                          <a>STRATEGY</a>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link href="/about/management-team">
+                          <a>MANAGEMENT TEAM</a>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link href="/about/partner">
+                          <a>PARTNER</a>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link href="/about/join-us">
+                          <a>JOIN US</a>
+                        </Link>
+                      </div>
+                    </div>
                   </DropdownItem>
+
                   <DropdownItem>
                     <Link href="/solutions">
                       <a>Solutions</a>
@@ -112,11 +145,6 @@ export default class Example extends React.Component {
                       <a>Insight</a>
                     </Link>
                   </DropdownItem>
-                  {/* <DropdownItem>
-                    <Link href="/events">
-                      <a>Events</a>
-                    </Link>
-                  </DropdownItem> */}
                   <DropdownItem>
                     <Link href="/organisational-consulting">
                       <a>Organisational Consulting</a>
