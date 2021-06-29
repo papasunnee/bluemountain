@@ -69,6 +69,6 @@ export const InsightCard = (props) => {
 
 const InsightCardArray = [
   { title: "", content: "", date: "", link: "/insight-detail" },
-  { title: "", content: "", date: "", link: "/insight-detail" },
-  { title: "", content: "", date: "", link: "/insight-detail" },
+  // { title: "", content: "", date: "", link: "/insight-detail" },
+  // { title: "", content: "", date: "", link: "/insight-detail" },
 ];

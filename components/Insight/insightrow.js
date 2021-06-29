@@ -25,12 +25,12 @@ export default class InsightRow extends Component {
                 <Col md={4}>
                   <InsightCard />
                 </Col>
-                <Col md={4}>
+                {/* <Col md={4}>
                   <InsightCard />
                 </Col>
                 <Col md={4}>
                   <InsightCard />
-                </Col>
+                </Col> */}
               </Row>
             );
           })}

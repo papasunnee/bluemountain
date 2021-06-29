@@ -14,15 +14,15 @@ export default class Global extends Component {
         <Container>
           <Row>
             <Col
-              xs={12}
-              className="text-primary text-center"
+              xs={4}
+              className="text-primary"
               style={{ fontweight: "bolder" }}
             >
               <h3 className="globalTitle">{this.props.title}</h3>
             </Col>
           </Row>
           <Row className="mt-3 mb-3">
-            <Col xs={12}>
+            <Col xs={4}>
               <Insight />
             </Col>
           </Row>
